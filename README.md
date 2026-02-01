@@ -1,2 +1,2 @@
 # sprolive-tests
-Playwright tests on Servsuite
+Playwright test folder
