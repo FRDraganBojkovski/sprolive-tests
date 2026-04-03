@@ -1,0 +1,41 @@
+{
+  "dependencies": {
+    "@types/express": "^5.0.6",
+    "express": "^5.2.1",
+    "force": "^0.0.3",
+    "rxjs": "^7.8.2",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^10.4.0",
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.5.1",
+    "playwright-xray": "^0.6.22"
+  },
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:chromium": "playwright test --project=chromium",
+    "test:chromium:report": "playwright test --project=chromium && playwright show-report",
+    "server": "ts-node --transpile-only server.ts"
+  },
+  "name": "sprolive-tests",
+  "version": "1.0.0",
+  "description": "Playwright test folder",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FalconQA/sprolive-tests.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FalconQA/sprolive-tests/issues"
+  },
+  "homepage": "https://github.com/FalconQA/sprolive-tests#readme"
+}

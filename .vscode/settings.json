@@ -1,0 +1,20 @@
+{
+  "mcp": {
+    "servers": {
+      "playwright": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@playwright/mcp@latest",
+          "--browser",
+          "msedge"
+        ]
+      }
+    }
+  },
+  "editor.defaultFormatter": "ms-playwright.playwright",
+  "github.branchProtection": true,
+  "github.copilot.chat.languageContext.fix.typescript.enabled": true,
+  "github.copilot.chat.languageContext.inline.typescript.enabled": true,
+  "npm.enableRunFromFolder": true
+}
