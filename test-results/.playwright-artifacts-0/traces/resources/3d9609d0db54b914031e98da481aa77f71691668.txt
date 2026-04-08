@@ -1,0 +1,48 @@
+<div style='margin: 10px 15px 15px 15px; min-height: 380px;'>
+<div style='word-wrap:break-word; overflow:auto;'>
+<p style="text-align: center;"><span style="font-size: 18pt; color: #ff6600;"><strong>Mobile Update 8/16/2023</strong></span></p>
+<p style="text-align: center;"><span style="font-size: 14pt;">&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-size: 14pt;"><strong>Version 2.12.67 of the Mobile App will be available from&nbsp;August 16&nbsp;for&nbsp;all devices through the App Store and Google Play.</strong></span></p>
+</div>
+<hr style='margin-bottom: 10px; margin-top:10px;' />
+<div style='height:400px; word-wrap:break-word; overflow:auto;'>
+<div style='margin-top: 5px;'>
+<p><span style="font-size: 14pt;">Available for Seasonal programs, a new capability to <strong>add Special Job Instructions</strong> that will display on the Schedule screen of the Mobile app, along with the service information.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 14pt;">In <strong>Setup</strong>, <strong>Organizational Preferences</strong>, on the Account options tab, check the option &ldquo;<strong>Enable Special Job Instructions</strong>&rdquo;.<br /><br /> </span></p>
+<p><img src="https://explore.theservicepro.net/wp-content/uploads/2023/08/org-preferences.png" alt="" width="900" height="510" /></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 14pt;">This will add a &ldquo;<strong>Special Job Instructions</strong>&rdquo; and an &ldquo;<strong>ASAP</strong>&rdquo; checkbox on the edit event screen.<br /><br /> </span></p>
+<p><span style="font-size: 14pt;"><img src="https://explore.theservicepro.net/wp-content/uploads/2023/08/special-job-instructions.png" alt="" width="500" height="278" /></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 14pt;">By check marking &ldquo;Special Job Instructions&rdquo; any information entered in Job Instructions <strong>will display on the Schedule screen of the Mobile app</strong>. If you checkmark &ldquo;ASAP&rdquo; this legend will display on said screen as well.</span></p>
+<p>&nbsp;</p>
+<p><img src="https://explore.theservicepro.net/wp-content/uploads/2023/08/mobile-app-1.png" alt="" width="600" height="443" /></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 14pt;"><strong>Pending Observations</strong> will show on the Mobile app until they are marked as resolved. The Pending Observation will also include the date in which it was initially added.</span></p>
+<p>&nbsp;</p>
+<p><img src="https://explore.theservicepro.net/wp-content/uploads/2023/08/pending-obs.png" alt="" width="350" height="622" /></p>
+<p>&nbsp;</p>
+<p><br /><span style="font-size: 14pt;">The &ldquo;<strong>Disclaimer</strong>&rdquo; box on the <strong>UK Default Completed Work Order</strong> form will be removed if no data has been added to this field.<br /><br /></span></p>
+<p><img src="https://explore.theservicepro.net/wp-content/uploads/2023/08/disclaimer.png" alt="" width="350" height="610" />&nbsp;</p>
+<p><span style="font-size: 14pt;">There is a new <strong>Mobile User Role available</strong>: <strong>Disable unit of measure to be changed</strong>, which disables the technician&rsquo;s ability to change the unit of measure for materials when completing a Work Order.<br /><br /></span></p>
+<p><span style="font-size: 14pt;"><img src="https://explore.theservicepro.net/wp-content/uploads/2023/08/uom.png" alt="" width="350" height="621" /><br /></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<div style='margin-top: 5px;'>
+<div id='accordion'>
+
+</div>
+</div>
+<div style='margin-top: 5px; word-wrap:break-word; overflow:auto;' >
+
+</div>
+</div>
+<div style='margin-bottom:20px;'>
+<hr style='margin-bottom: 10px; margin-top:10px;' />
+<div style='float:right; color:gray;'>
+version: 8/16/2023
+</div>
+</div>
+</div>

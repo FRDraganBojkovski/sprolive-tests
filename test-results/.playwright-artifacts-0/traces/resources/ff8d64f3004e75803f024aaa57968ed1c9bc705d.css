@@ -1,0 +1,763 @@
+
+
+body #container {
+    margin-top: 50px;
+    padding: 4px 13px !important;
+}
+
+/********** BUTTONS EDIT STYLE ******************/
+.button {
+    background-image: linear-gradient(to bottom, #337ab7 0px, #265a88 100%) !important;
+    background-repeat: repeat-x !important;
+    border: solid 1px #245580 !important;
+    border-radius: 3px !important;
+    font-size: 12px !important;
+    text-decoration: none !important;
+    font-weight: normal !important;
+    padding: 6px 10px !important;
+    color: #fff !important;
+}
+
+    .button:hover {
+        background: #2C5D86 !important;
+        cursor: pointer;
+    }
+/********** BUTTONS EDIT STYLE ******************/
+
+#cmbcounty_textFilter {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+#cmbcounty_divWraper {
+    margin-top: 10px;
+}
+
+#tradd1 .control-label-inline, #tradd4 > div:first-child, #tradd4 {
+    display: none !important;
+}
+
+#tradd3 div:nth-child(2) div:nth-child(3) {
+    margin-left: 33px;
+}
+
+#tradd3 div:nth-child(2) div:nth-child(2) div span:nth-child(3) {
+    border-radius: 0 4px 4px 0;
+}
+
+#txtState {
+    margin-left: 22px;
+    margin-bottom: -5px;
+}
+
+#tradd4 div, #tradd3 > div:nth-child(2) div, #tradd1 > div:nth-child(2) div, #billing_addr .form-group, #tradd2 > div:nth-child(2) {
+    margin-bottom: 0 !important;
+}
+
+h3 {
+    margin-top: 10px !important;
+}
+
+body .page-header {
+    margin-top: 0 !important;
+}
+
+input[type=text], select {
+    border: 1px solid #ccc !important;
+    border-radius: 4px !important;
+}
+
+body #txtStreetName, #txtCity, #txtPostalCode, #txtStreetNumber, #ddlproptype, #ddllocalenew, #ddltaxtype, #acServiceAddress_ddllocalenew {
+    border-radius: 4px 0 0 4px !important;
+}
+
+body .input-group input, #Label6, .required {
+    border-radius: 0 4px 4px 0 !important;
+}
+
+#Label6, #Label3, #lblRequireTaxType {
+    padding: 7px 14px;
+    font-size: 14px;
+    margin-left: -5px;
+    margin-top: -2px;
+    font-weight: 400;
+    color: #555;
+    text-align: center;
+    background-color: #eee;
+    border: 1px solid #ccc;
+}
+
+#btnValidateEmail {
+    margin-top: 5px;
+}
+
+#lbl_447, #lbl_9464, #lbl1_77, #lbl2_86, #lbl2_77 {
+    font-weight: 600;
+}
+
+#group .content_toggle {
+    display: none;
+}
+
+    #group .content_toggle.current {
+        display: block;
+    }
+
+#next, #prev {
+    border: solid 1px #ddd;
+    padding: 5px 14px;
+    border-radius: 50px;
+}
+
+    #next:active, #prev:active {
+        box-shadow: inset 0 0 10px #cccccc;
+    }
+
+    #next:hover, #prev:hover {
+        background-color: #EDEDED;
+        cursor: pointer;
+        color: #FEA22E;
+    }
+
+body .menu__item:hover .menu__link, body .container .menu__item--current:hover a {
+    color: #FEA22E !important;
+}
+
+body .container .menu__item--current, body .container .menu__item--current .menu__link {
+    background-color: #458CC6;
+    color: #fff !important;
+    border-radius: 4px;
+}
+
+.panel-heading {
+    color: #31708f;
+    background-color: #d9edf7;
+    border: solid 1px #bce8f1;
+    padding: 0px 10px 10px 10px !important;
+}
+
+.panel-title {
+    font-size: 15px !important;
+}
+
+.panel-body {
+    background-color: #fff;
+    border: solid 1px #bce8f1;
+    font-size: 13px;
+}
+
+#trsiterow, #trsiterow2 {
+    border: solid 1px #ccc;
+    border-radius: 4px;
+}
+
+body #trsiterow {
+    margin-top: 80px !important;
+}
+
+body #trsiterow2 {
+    margin-top: 20px !important;
+}
+
+#trsiterow #txtsitelast, #trsiterow #txtsitebusiness {
+    width: 95% !important;
+}
+
+body .col-xs-12, body .row {
+    margin-bottom: 0 !important;
+}
+
+#lbl_294, #lbl_17569 {
+    padding: 0 !important;
+}
+
+#chksameasacct_456, .telemarket_chk label {
+    margin: 0 !important;
+}
+
+body nav .menu--antonio .menu__item {
+    margin-top: 0 !important;
+}
+
+#trsiterow {
+    margin-top: 60px !important;
+}
+
+body .row #trsiterow .input-group #txtsitephone, #acServiceAddress_txtCity, #acServiceAddress_txtStreetNumber, #acServiceAddress_txtStreetName {
+    border-radius: 4px 0 0 4px !important;
+}
+
+#acServiceAddress_txtCity {
+    margin-bottom: 10px;
+}
+
+#txtsitebusiness {
+    width: 67%;
+}
+
+#acServiceAddress_tradd4 div:nth-child(2) div > span {
+    display: none !important;
+}
+
+#acServiceAddress_trmain .required {
+    border-radius: 0 4px 4px 0 !important;
+}
+
+#acServiceAddress_txtState {
+    margin-right: -2px;
+    margin-top: -1px;
+}
+
+#acServiceAddress_tradd3 div div:nth-child(2) .required {
+    border-radius: 0 4px 4px 0 !important;
+}
+
+#acServiceAddress_tradd3 div div:nth-child(3) .required, #acServiceAddress_txtPostalCode, #acServiceAddress_tradd3 div:nth-child(2) div:nth-child(3) .required,
+#acServiceAddress_tradd3 div:nth-child(1) div .required {
+    border-radius: 0 !important;
+}
+
+#acServiceAddress_txtState_textFilter {
+    border-radius: 4px !important;
+}
+
+.input-group {
+    width: 100%;
+}
+
+#acServiceAddress_tblAddress span, #trsiterow span {
+    font-size: 13px !important;
+}
+
+#acServiceAddress_tblAddress .control-label-inline, #trsiterow .control-label-inline {
+    display: none !important;
+}
+
+body .row #trsiterow .input-group #txtsitephone, #acServiceAddress_txtCity, #acServiceAddress_txtStreetNumber, #acServiceAddress_txtStreetName {
+    border-radius: 4px 0 0 4px !important;
+}
+
+#txtsitebusiness {
+    width: 100%;
+}
+
+#acServiceAddress_trmain .required {
+    border-radius: 0 4px 4px 0 !important;
+}
+
+#acServiceAddress_tradd3 div div:nth-child(3) {
+    margin-left: 24px;
+}
+
+#acServiceAddress_txtState {
+    margin-right: -2px;
+    margin-top: -1px;
+}
+
+#acServiceAddress_tradd3 div div:nth-child(2) .required {
+    border-radius: 0 4px 4px 0 !important;
+}
+
+#acServiceAddress_tradd3 div div:nth-child(3) .required, #acServiceAddress_txtPostalCode, #acServiceAddress_tradd3 div:nth-child(2) div:nth-child(3) .required,
+#acServiceAddress_tradd3 div:nth-child(1) div .required {
+    border-radius: 0 !important;
+}
+
+#acServiceAddress_txtState_textFilter {
+    border-radius: 4px !important;
+}
+
+.input-group {
+    width: 100%;
+}
+
+#ddltaxtype, #ddlproptype {
+    width: 100%;
+}
+
+#acServiceAddress_tblAddress span {
+    font-size: 13px !important;
+}
+
+#trsiterow span {
+    font-size: 14px !important;
+}
+
+#acServiceAddress_tblAddress .control-label-inline, #trsiterow .control-label-inline {
+    display: none !important;
+}
+
+#trsiterow .col-sm-3 input, #trsiterow .col-sm-3 select, #txtsitebusiness {
+    border-radius: 4px !important;
+}
+
+#trsiterow .col-sm-3, #trsiterow .col-sm-4, #trsiterow .col-sm-6 {
+    padding-left: 0;
+}
+
+#trsiterow #lbl_77 {
+    font-size: 17px !important;
+    color: #428bca !important;
+    font-weight: normal;
+}
+
+
+
+
+/******************Combo-Box***********************/
+.combo-box-paging-info {
+    color: #0f7ab5 !important;
+    font-family: "Open Sans",sans-serif !important;
+    font-size: 12px !important;
+    font-weight: bold !important;
+    margin-left: 9px !important;
+    margin-top: 10px !important;
+}
+
+.combo-box-content-table {
+    height: 238px !important;
+    margin-left: 9px !important;
+    margin-right: 9px !important;
+    margin-top: 12px !important;
+    font-family: "Open Sans",sans-serif !important;
+    font-size: 12px;
+}
+
+body .combo-box-content {
+    background-color: #fff !important;
+    height: auto !important;
+}
+
+.pagination a {
+    text-decoration: none !important;
+    color: #0f7ab5 !important;
+}
+
+.pagination {
+    margin: 0 5px !important;
+    font-size: 95% !important;
+    font-family: "Open Sans",sans-serif !important;
+}
+
+body .pagination .current {
+    background: linear-gradient(to left,#128ec9 0,#1081bc 100%) !important;
+    background: -webkit-linear-gradient(to left,#128ec9 0,#1081bc 100%) !important;
+    background: -moz-linear-gradient(to left,#128ec9 0,#1081bc 100%) !important;
+    background: -o-linear-gradient(to left,#128ec9 0,#1081bc 100%) !important;
+    border: none !important;
+    border-radius: 2px;
+    padding: 5.5px 7px;
+    font-size: 10px;
+}
+
+.pagination .current:hover, .pagination a:hover {
+    cursor: pointer;
+    background: linear-gradient(to left,#1184ba 0,#1171b0 100%) !important;
+    background: -webkit-linear-gradient(to left,#1184ba 0,#1171b0 100%) !important;
+    background: -moz-linear-gradient(to left,#1184ba 0,#1171b0 100%) !important;
+    background: -o-linear-gradient(to left,#1184ba 0,#1171b0 100%) !important;
+    color: #fff !important;
+}
+
+.pagination .current.prev, .pagination .current.next {
+    background: #fff none repeat scroll 0 0 !important;
+    border: solid 1px #428BCA !important;
+}
+
+    .pagination .current.prev:hover, .pagination .current.next:hover {
+        border: solid 1px #428BCA !important;
+        background: linear-gradient(to left,#128ec9 0,#1081bc 100%) !important;
+        background: -webkit-linear-gradient(to left,#128ec9 0,#1081bc 100%) !important;
+        background: -moz-linear-gradient(to left,#128ec9 0,#1081bc 100%) !important;
+        background: -o-linear-gradient(to left,#128ec9 0,#1081bc 100%) !important;
+        color: #fff;
+    }
+
+    .pagination .current:active, .pagination .current.prev:active, .pagination .current.next:active {
+        box-shadow: inset 0px 0px 15px #0a4f84;
+    }
+/******************Combo-Box***********************/
+
+/******************Fade-In/Out tabs effect***********************/
+.tabcontent {
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+}
+
+@-webkit-keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+/******************Fade-In/Out tabs effect***********************/
+
+
+body #billing_addr .form-group .input-group .input-group-btn .btn-default {
+    background: url("images/globus-map.png") 0px 0px no-repeat !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+}
+
+body #trsiterow2 .form-group .input-group .input-group-btn .btn-default {
+    background: url("images/globus-map.png") 0px 0px no-repeat !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+}
+
+#tradd3 > div:nth-child(2) > div {
+    display: inline-block;
+}
+
+
+#txtState_textFilter {
+    margin-left: 20px;
+}
+
+#acServiceAddress_tradd2 div:nth-child(2) {
+    padding: 0;
+}
+
+body #ddlsubdiv_textFilter {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+#srvaddresscontrol #trlocalenew select {
+    width: 106%;
+}
+
+#ddlsubdiv, #ddlsubdiv table {
+    width: 100% !important;
+}
+
+body .combo-box-dropdownbutton {
+    background-size: 21px auto !important;
+    height: 34px !important;
+    width: 21px !important;
+    margin-left: -2px;
+    margin-top: 0px !important;
+}
+
+#txtState_select {
+    margin-left: 23px !important;
+}
+
+#txtPostalCode {
+    /*margin-left: -30px;*/
+    width: 170px !important;
+    margin-left: 15px;
+}
+
+#tradd3 .input-group-addon {
+    width: 32px;
+}
+
+#addresscontrol {
+    padding-right: 15px;
+}
+
+#tradd2 > div {
+    padding-right: 0;
+}
+
+#cmbcounty, #cmbcounty_divWraper table {
+    width: 100% !important;
+}
+
+.modal-content input {
+    width: 100% !important;
+}
+
+.modal-content {
+    width: 90% !important;
+    margin: 0 auto;
+}
+
+#Label8 {
+    display: none;
+}
+
+@-moz-document url-prefix() {
+    #lbl_440 {
+        margin-left: 13px;
+    }
+}
+
+.combo-box-content {
+    overflow: scroll !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 1px;
+    height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #e4e4e4;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #128cc6;
+}
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #09628c;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 2000px) {
+
+    #lblStreetNameBill {
+        padding-left: 25% !important;
+    }
+}
+
+
+@media (max-width: 1199px) {
+
+    #lblStreetNameBill {
+        padding-left: 23% !important;
+    }
+}
+
+@media (max-width: 877px) {
+
+    #lblStreetNameBill {
+        padding-left: 22% !important;
+    }
+}
+
+@media (max-width: 813px) {
+
+    #lblStreetNameBill {
+        padding-left: 20.6% !important;
+    }
+}
+
+
+@media (max-width: 767px) {
+    body .col-xs-12 .center-btns {
+        text-align: center !important;
+        margin-bottom: 6px !important;
+    }
+
+        body .col-xs-12 .center-btns input {
+            width: 200px;
+        }
+
+    #lblStreetNameBill {
+        padding-left: 5px !important;
+    }
+}
+
+@media (max-width: 712px) {
+    #txtState {
+        margin-left: 22px;
+        margin-bottom: 0px;
+        width: 130px;
+    }
+}
+
+@media (max-width: 767px) {
+    ul .menu__item, #acServiceAddress_txtState, #acServiceAddress_txtState div, #acServiceAddress_txtState div table {
+        width: 100% !important;
+    }
+
+    #tradd1 > div:first-child {
+        margin-top: 20px;
+    }
+
+    #acServiceAddress_tradd1, #acServiceAddress_tradd3 {
+        margin-top: 10px;
+    }
+
+        #tradd1 div:first-child, #tradd1 > div:nth-child(2) div, #tradd2, #tradd3, #lbllat_314_div, #lbllong_315_div, #lblcounty_313_div, #ddlbillcenter,
+        #acServiceAddress_tradd1 > div:nth-child(2) div, #acServiceAddress_tradd3 > div:nth-child(2) div {
+            margin-bottom: 8px !important;
+        }
+
+    #txtCity {
+        margin-bottom: 10px;
+    }
+
+    #txtPostalCode {
+        width: 60px !important;
+    }
+
+    #nav {
+        margin-left: -10px !important;
+    }
+
+    #tradd3 > div:nth-child(2) > div {
+        display: inline-block;
+    }
+
+    #tradd3 div:nth-child(2) div:nth-child(3) {
+        margin-left: 5px;
+    }
+
+    #tradd2 #txtPostalCode, #tradd2 #txtCity {
+        width: 100% !important;
+        margin-bottom: 10px;
+        margin-left: 0;
+    }
+
+    #acServiceAddress_tradd3 div div:nth-child(3) {
+        margin-left: 0px;
+    }
+
+    #srvaddresscontrol #trlocalenew select {
+        width: 108%
+    }
+}
+
+@media (max-width: 548px) {
+
+    #txtPostalCodeEx {
+        width: 413px !important;
+    }
+
+    #txtPostalCode {
+        width: 410px !important;
+        margin-top: 8px;
+        margin-left: 7px;
+    }
+}
+
+@media (max-width: 493px) {
+
+    #txtPostalCodeEx {
+        width: 303px !important;
+    }
+
+    #txtPostalCode {
+        width: 300px !important;
+        margin-top: 8px;
+        margin-left: 7px;
+    }
+}
+
+@media (max-width: 465px) {
+    .dis-block {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+}
+
+@media (max-width: 414px) {
+    #srvaddresscontrol #trlocalenew select {
+        width: 113%
+    }
+}
+
+@media (max-width: 414px) {
+    .combo-box-content {
+        width: 321px !important;
+    }
+}
+
+@media (max-width: 396px) {
+    #txtCity {
+        width: 100% !important;
+    }
+
+    #srvc_inf .telemarket_chk {
+        display: block !important;
+    }
+
+
+    .mar-top {
+        margin-top: 10px !important;
+    }
+
+    .al-center {
+        text-align: center;
+    }
+}
+
+@media (max-width: 383px) {
+
+
+    #txtPostalCodeEx {
+        width: 278px !important;
+    }
+
+    #txtPostalCode {
+        width: 274px !important;
+        margin-top: 8px;
+        margin-left: 7px;
+    }
+
+    .combo-box-content {
+        width: 275px !important;
+    }
+}
+
+@media (max-width: 375px) {
+    .combo-box-content {
+        width: 288px !important;
+    }
+}
+
+@media (max-width: 320px) {
+    .combo-box-content {
+        width: 235px !important;
+    }
+}

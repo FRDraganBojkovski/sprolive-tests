@@ -1,0 +1,56 @@
+table.msg-settings span
+{
+    color: Black;
+    font-family: arial, sans-serif;
+}
+
+table.msg-settings tr td
+{
+    border-bottom: 2px solid silver;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+table.msg-settings .title
+{
+    font-weight: bold;
+    font-size: 12px;
+}
+
+table.msg-settings .description
+{
+    font-weight: normal;
+    font-size: 9px;
+    display: block;
+}
+
+table.msg-settings a.option,
+table.msg-settings a.option:visited,
+table.msg-settings a.option:active
+{
+    font-weight: normal;
+    font-size: 11px!important;
+    font-family: arial, sans-serif;
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    color: black;
+    text-decoration: none;
+}
+
+table.msg-settings a.option:hover
+{
+    text-decoration: underline;
+}
+
+table.msg-settings a.option-active,
+table.msg-settings a.option-active:visited,
+table.msg-settings a.option-active:active,
+table.msg-settings a.option-active:hover
+{
+    color: green;
+    font-weight: bold;
+    text-decoration: underline;
+}

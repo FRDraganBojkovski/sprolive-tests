@@ -1,0 +1,92 @@
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  font-size: 10pt;
+  height: 100%; }
+
+input, textarea, select {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  font-size: 10pt; }
+
+/* 1. HEADER */
+.logo {
+    position: absolute;
+    margin: 1rem;
+    width: 100%;
+    height: 33px;
+    background: url("../../images/logo.svg") no-repeat;
+    margin: 10px !important;
+}
+
+/* 2. CONTENT */
+ul {
+  padding: 0;
+  margin: 0; }
+  ul li {
+    margin: 0;
+    padding: 0; }
+
+ol li {
+  list-style: decimal; }
+
+p.lead {
+  font-weight: 500; }
+
+a:hover {
+  text-decoration: none; }
+
+/* DA PROBAME */
+#aspnetForm {
+  height: 100%;
+  overflow-y: auto; }
+
+.mainContainer {
+  margin: 0;
+  padding: 6.75rem 0 0 0;
+  height: 100%; }
+
+.fixed-header #main,
+#main-1,
+#content,
+#inbox-content,
+.main-wrap {
+  height: 100% !important; }
+
+#page-0 {
+  height: 100%;
+  width: 100%; }
+  #page-0.customize-page-preview {
+    height: auto; }
+
+#DisabledInfoAlert {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000; }
+
+#holdstheframe {
+  height: 100%; }
+
+#ifrmWizard {
+  /*width: 100%;
+  height: 100%;*/
+  border: none; }
+
+#pages-content {
+  height: 100% !important; }
+
+.row.customize-page-preview {
+  height: 100%; }
+  .row.customize-page-preview [class^="col-"] {
+    height: 100%; }
+  .row.customize-page-preview .holds-the-iframe {
+    height: 100%; }
+
+@media (max-width: 768px) {
+  .mainContainer {
+    padding: 11rem 0 0 0; }
+  .logo {
+    height: 32px; } }

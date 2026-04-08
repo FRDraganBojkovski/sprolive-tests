@@ -1,0 +1,97 @@
+ 
+   .style1
+            {
+                width: 45%;
+            }
+             /*Task:[20151219931] Zip + 4 field is huge 2/5/2015  */
+         #txtPostalCodeEx
+         { width: 80px !important; 
+
+         }
+         #acBillingAddress_txtPostalCodeEx
+         { width: 80px !important; 
+
+         }
+
+
+
+         
+         /* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
+
+
+.has-error .checkbox, .has-error .checkbox-inline, .has-error .control-label, .has-error .help-block, .has-error .radio, .has-error .radio-inline, .has-error.checkbox label, .has-error.checkbox-inline label, .has-error.radio label, .has-error.radio-inline label {
+    color: #a94442;
+}
+.has-error {
+    border-color: #cc1913 !important;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 3px #e10d0d !important;
+}
+.has-errorDDL {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 3px #e10d0d !important;
+}
+.has-error .form-control:focus {
+    border-color: #843534  !important;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 6px #ce8483  !important;
+}
+.has-error .input-group-addon {
+    background-color: #f2dede !important;
+    border-color: #a94442 !important;
+    color: #a94442 !important;
+    border-left:none !important;
+}
+.has-error .form-control-feedback {
+    color: #a94442;
+}
+.has-feedback label ~ .form-control-feedback {
+    top: 25px;
+}
+.has-feedback label.sr-only ~ .form-control-feedback {
+    top: 0;
+}
+.help-block {
+    color: #737373;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+
+
+
+
+
+.telemarket_chk {
+    height: 20px !important;
+    padding: 2px 10px 0 !important;
+}
+
+.no-mar-bottom {
+   margin-bottom:0px !important;
+}
+
+.inline-block{
+    display:inline-block !important;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .menu__item {
+        width:22% !important;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .container {
+        width:100% !important;
+    }
+}
+
+
+
+
+ @media screen and (max-width: 798px) {
+   
+
+
+}

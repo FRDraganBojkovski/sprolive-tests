@@ -1,0 +1,149 @@
+.ui-autocomplete-input {
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555;
+    display: block;
+    font-size: 12px;
+    height: 28px;
+    line-height: 1.42857;
+    padding: 6px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width: 100%;
+    font-family: "Open Sans",sans-serif !important;
+    margin-top:2px !important;
+}
+
+
+.combo-box-dropdownbutton {
+    background-image: url("img/drop_down_img.png") !important;
+    background-size: 16px auto !important;
+    height: 28px !important;
+    margin-top: 2px !important;
+    width: 18px !important;
+}
+
+    
+.combo-box-content {
+    border-radius: 4px;
+}
+.combo-box-content {
+    height:338px !important;
+}
+.combo-box-content-table {
+    height: 238px  !important;
+    margin-left: 9px  !important;
+    margin-right: 9px  !important;
+    margin-top: 12px  !important;
+    font-family: "Open Sans",sans-serif !important;
+    font-size: 12px;
+}
+
+.pagination {
+    margin: 0 5px !important;
+    font-size: 95%  !important;
+    font-family: "Open Sans",sans-serif !important;
+}
+
+.pagination .current {
+    background: #059345 none repeat scroll 0 0 !important;
+    border: 1px solid #059345 !important;
+}
+
+.pagination .current.prev, .pagination .current.next {
+    background: #fff none repeat scroll 0 0  !important;
+}
+
+
+.pagination span {
+    padding: 0.3em 0.8em !important;
+    border-radius: 4px;
+}
+
+
+.ac_results {
+    width: 229px !important;
+    border: 1px solid #ccc !important;
+    border-radius: 4px !important;
+}
+
+.ac_results .ac_even, .ac_results .ac_odd {
+    font-family: "Open Sans",sans-serif !important;
+    font-size: 12px !important;
+    background-color:#fff;
+    color: #555;
+}
+
+.combo-box-list li a, .combo-box-list li a:visited {
+    font-family: "Open Sans",sans-serif !important;
+    font-size: 12px !important;
+    color: #555  !important;
+}
+.combo-box-list li a:hover {
+    background:none !important;
+    background-color:#428bca !important;
+    color: #fff;
+}
+
+.ac_over {
+    background-color:#51A1E2 !important;
+    color: #fff  !important;
+}
+
+
+.combobox {
+    display:inline-table !important;
+}
+
+.control-label-inline {
+    display:table-cell !important;
+}
+.required {
+    color:red !important;
+}
+
+.no-pad-left {
+    padding-left:0px !important;
+}
+
+.no-pad-right {
+    padding-right:0px !important;
+}
+
+.no-mar-left {
+    margin-left:0px !important;
+}
+
+.no-mar-right {
+    margin-right:0px !important;
+}
+
+label {
+    font-weight: normal !important;
+}
+
+
+.radio-inline {
+    margin-top: 4px !important;
+}
+
+.radio-inline {
+    margin-top: 4px !important;
+}
+
+
+
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    margin-bottom:8px !important;
+}
+
+
+.form-control input[type="checkbox"] {
+    margin-right:5px !important;
+}
+
+.checkbox-container label {
+    display:inherit !important;
+}

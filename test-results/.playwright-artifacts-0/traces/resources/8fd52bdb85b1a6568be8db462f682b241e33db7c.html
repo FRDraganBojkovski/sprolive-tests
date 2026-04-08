@@ -1,0 +1,3965 @@
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head id="_ctl0_Head1"><script type="text/javascript" src="/scripts/jquery-3.6.4.min.js?v=751AE140" fetchpriority="high"></script><script type="text/javascript" src="/scripts/JQuery-UI-1.13.2/jquery-ui-1.13.2.min.js?v=DC9EEC91" fetchpriority="high"></script><meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript" src="/scripts/jquery-migrate3.0.0.js?v=9D21989C" ></script><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>
+
+</title>
+    <!-- SmartAdmin Styles : Caution! DO NOT change the order -->
+    
+
+
+     
+    <!-- Material icons -->
+    <link rel="stylesheet" text="text/css" href="/UserInterfaceV2/css/servSuite/iconfont/material-icons.css?v=F51620D4" media="all" />
+<link rel="stylesheet" text="text/css" href="/UserInterfaceV2/fonts/font-awesome-4.7.0/css/font-awesome.css?v=DA46749" media="all" />
+<link rel="stylesheet" text="text/css" href="/UserInterfaceV2/css/servSuite/main.css?v=367089F9" media="all" />
+
+
+     
+
+    <!-- JARVIS WIDGETS -->
+    <script type="text/javascript" src="/UserInterfaceV2/js/smartwidgets/jarvis.widget.min.js?v=A3E18640" ></script>
+
+
+    <!-- EASY PIE CHARTS -->
+    <script type="text/javascript" src="/UserInterfaceV2/js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js?v=A5B2D3FB" ></script>
+
+
+    <!-- SPARKLINES -->
+    <script type="text/javascript" src="/UserInterfaceV2/js/plugin/sparkline/jquery.sparkline.min.js?v=37E7498C" ></script>
+
+
+    <!-- JQUERY VALIDATE -->
+    <script type="text/javascript" src="/UserInterfaceV2/js/plugin/jquery-validate/jquery.validate.min.js?v=4E48274B" ></script>
+
+
+    <!-- JQUERY MASKED INPUT -->
+    <script type="text/javascript" src="/UserInterfaceV2/js/plugin/masked-input/jquery.maskedinput.min.js?v=9FCC4448" ></script>
+
+
+    <!-- JQUERY SELECT2 INPUT -->
+    <script type="text/javascript" src="/UserInterfaceV2/js/plugin/select2/select2.min.js?v=E9A99CB5" ></script>
+
+
+    <!-- JQUERY UI + Bootstrap Slider -->
+    <script type="text/javascript" src="/UserInterfaceV2/js/plugin/bootstrap-slider/bootstrap-slider.min.js?v=1AA99FE6" ></script>
+
+
+    <!-- browser msie issue fix -->
+    <script type="text/javascript" src="/UserInterfaceV2/js/plugin/msie-fix/jquery.mb.browser.min.js?v=102FDF24" ></script>
+
+
+    <!-- FastClick: For mobile devices -->
+    <script type="text/javascript" src="/UserInterfaceV2/js/plugin/fastclick/fastclick.min.js?v=E7FEE86C" ></script>
+<script type="text/javascript" src="/UserInterfaceV2/js/libs/jquery-ui-1.10.3.min.js?v=D189028" ></script>
+
+  
+
+    <!-- JS TOUCH : include this plugin for mobile drag / drop touch events-->
+    <script type="text/javascript" src="/UserInterfaceV2/js/plugin/jquery-touch/jquery.ui.touch-punch.min.js?v=77F91851" ></script>
+
+
+    <script type="text/javascript">
+        // DO NOT REMOVE WITHOUT ASKING JOSH
+        // override getelementbyid to work with the masterpage id scheme
+        document.getElementById = function (id) {
+            var ctl = $("[id $= '" + id + "']");
+            if (ctl.length > 0) return ctl[0];
+            return null;
+        }
+    </script>
+
+    <style>
+        .body-holder {
+    margin-left: 20px;
+    margin-top: 25px;
+    margin-right: 20px;
+}
+    </style>
+    
+    <script type="text/javascript" src="/scripts/ajaxgetpage.js?v=440FFA6A" ></script>
+
+
+    <!-- JQUERY UI -->
+
+    <script type="text/javascript" src="/scripts/CalendarPopup.js?v=69C7CE62" ></script>
+
+    <script type="text/javascript" src="/scripts/internationaldate.js?v=7FC85EC" ></script>
+
+    <script type="text/javascript" src="/scripts/dates.js?v=559E050C" ></script>
+
+    <script type="text/javascript" src="/msrs/script/date.js?v=58C574D8" ></script>
+
+
+    <script src="/user/salespro/Scripts/knockout-3.js"></script>
+   
+    <script type="text/javascript" src="/scripts/bootstrap-3.4.1/bootstrap.min.js?v=C9924D42" ></script>
+
+    <script type="text/javascript" src="/scripts/jshashtable.js?v=91381BF1" ></script>
+
+    <script type="text/javascript" src="/msrs/script/TspBase.js?v=D77D6863" ></script>
+
+    
+    <script language="JavaScript">document.write(getCalendarStyles());</script>
+
+    <style type="text/css">
+        body {
+            background: #f5f5f5 !important;
+        }
+
+        .dashboarddiv {
+            width: 600px;
+            border-style: solid;
+            border-color: gray;
+            box-shadow: 5px 5px 5px #888888;
+        }
+
+        #divReportDashboard {
+            display: block;
+            clear: both;
+        }
+
+        .divInnerReportDashboard {
+            margin-right: 10px;
+            margin-top: 10px;
+            padding-top: 12px;
+            border-radius: 15px;
+            box-shadow: 5px 5px 5px #888888;
+            display: inline-table;
+        }
+
+        form[action^="home.aspx"] #myDashboard li .edit-box li a.cpOtherMonthDate,
+        form[action^="home.aspx"] #myDashboard li .edit-box li a.cpCurrentMonthDate,
+        form[action^="home.aspx"] #myDashboard li .edit-box li a.cpCurrentDate,
+        form[action^="home.aspx"] #myDashboard li .edit-box li a.cpTodayText,
+        form[action^="home.aspx"] #myDashboard li .edit-box li a.cpMonthNavigation {
+            background-color: transparent !important;
+            color: #337ab7 !important;
+            border-radius: 0px !important;
+        }
+
+        .sDashboard > li {
+            min-height: 400px;
+        }
+
+        .rowpanel {
+            display: inline-block;
+            margin: 15px 20px 0px;
+        }
+
+            ul.ss-navbar .ss-navitem .ss-nav-link.icon-link {
+                padding: 1.35rem 0rem !important;
+            }
+
+
+        /*Panel tabs*/
+        .panel-tabs {
+            position: relative;
+            /*bottom: 30px;*/
+            clear: both;
+            border-bottom: 1px solid transparent;
+        }
+
+        .panel-heading {
+            padding: 5px 15px !important;
+            background: #053c81 !important;
+        }
+
+        .panel-tabs > li {
+            float: left;
+            margin-bottom: -1px;
+        }
+
+            .panel-tabs > li > a {
+                margin-right: 2px;
+                margin-top: 0;
+                line-height: .85;
+                border: 1px solid transparent;
+                border-radius: 4px 4px 0 0;
+                color: #ffffff;
+            }
+
+                .panel-tabs > li > a:hover {
+                    border-color: transparent !important;
+                    color: #ffffff !important;
+                    background-color: transparent !important;
+                }
+
+        .nav > li > a {
+            padding: 10px 10px !important;
+        }
+
+        .btn.btn-primary {
+            background-color: #053c81 !important;
+            border-color: #053c81 !important;
+            background-image: none !important;
+        }
+
+        .panel-tabs > li.active > a,
+        .panel-tabs > li.active > a:hover,
+        .panel-tabs > li.active > a:focus {
+            color: #fff;
+            cursor: default;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            background-color: rgba(255,255,255, .23);
+            border-bottom-color: transparent;
+        }
+
+        .panel-primary {
+            border-color: #053c81 !important;
+        }
+
+        .welcomeuser {
+            color: #053c81 !important;
+            font-weight: 500;
+            font-size: 14pt;
+        }
+
+        #notif-content2 {
+            margin-left: 3.5rem !important;
+            margin-top: 10px;
+        }
+
+        #notif-content_notify {
+            left: 200px !important;
+        }
+
+        .recent_holder {
+            margin-left: 200px;
+            margin-top: 5px !important;
+            float: left;
+        }
+
+        .notify_holder {
+            margin-left: 10px;
+            float: left;
+            margin-top: -2px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .notify_holder {
+                margin-left: 0 !important;
+                margin-top: 0px;
+                width: 55px;
+                text-align: center;
+            }
+        }
+
+        /*.logo {
+            margin: 8px 0 0 10px;
+        }*/
+
+        .main-wrap {
+            height: auto !important;
+        }
+
+        body {
+            background: #EDECEC;
+        }
+
+        .nav-tabs {
+            display: flex;
+            width: 100%;
+            overflow-x: auto;
+            border-bottom: 2px solid #DDD;
+            -ms-overflow-style: none; /*// IE 10+*/
+            overflow: -moz-scrollbars-none; /*// Firefox*/
+        }
+
+            .nav-tabs > li.active > a,
+            .nav-tabs > li.active > a:focus,
+            .nav-tabs > li.active > a:hover {
+                border-width: 0;
+            }
+
+            .nav-tabs > li > a {
+                border: none;
+                color: #666;
+                line-height: 1.528571 !important;
+                border-radius: 0px 0px 0 0 !important;
+            }
+
+                .nav-tabs > li.active > a,
+                .nav-tabs > li > a:hover {
+                    border: none;
+                    color: #053c81 !important;
+                    background: transparent;
+                }
+
+                .nav-tabs > li > a::after {
+                    content: "";
+                    background: #053c81;
+                    height: 2px;
+                    position: absolute;
+                    width: 100%;
+                    left: 0px;
+                    bottom: 1px;
+                    transition: all 250ms ease 0s;
+                    transform: scale(0);
+                }
+
+            .nav-tabs > li.active > a::after,
+            .nav-tabs > li:hover > a::after {
+                transform: scale(1);
+            }
+
+        .tab-nav > li > a::after {
+            background: #21527d none repeat scroll 0% 0%;
+            color: #fff;
+        }
+
+        .tab-pane {
+            padding: 10px 0;
+        }
+
+
+
+        .nav-tabs::-webkit-scrollbar {
+            display: none; /*Safari and Chrome*/
+        }
+
+        .container {
+            background: #fff;
+            /*height: 100%;*/
+            box-shadow: 0px 2px 4px 0px #ccc;
+        }
+
+        /*ul.ss-navbar .ss-navitem .ss-nav-link.icon-link {
+            padding: 1.4rem 1rem 1.4rem 0.45rem !important;
+        }*/
+
+        .badge-danger {
+            color: #fff;
+            background-color: #D71A21 !important;
+        }
+
+        /*.badge-primary {
+            color: #fff;
+            background-color: #053c81 !important;
+        }*/
+
+        #msgnotif-group span#msgsactivity {
+            margin:13px 0 0 !important;
+        }
+
+        .secondary-navbar {
+            padding-right: 8px !important;
+        }
+
+        ul.ss-navbar .ss-navitem {
+            padding: 1px 0px;
+        }
+
+        #msgnotif-content {
+            text-align:left !important;
+        }
+
+
+        /*.card {
+            background: #FFF none repeat scroll 0% 0%;
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+        }*/
+       .loader {
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #1685bc;
+            border-bottom: 16px solid #1685bc;
+            width: 50px;
+            height: 50px;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+        }      
+
+       .loading-circle {
+    display: block;
+    left: 50%;
+    top: 10%;
+    width: 125px;
+    height: 125px;
+    margin: -62.5px 0 0 -62.5px;
+    border: 3px solid #78b428;
+}
+
+    .loading-circle:after {
+        content: "";
+        position: absolute;
+        border: 3px solid #1a2640;
+        left: 15px;
+        right: 15px;
+        top: 15px;
+        bottom: 15px;
+    }
+
+    .loading-circle:before {
+        content: "";
+        position: absolute;
+        border: 3px solid #1a2640;
+        left: 5px;
+        right: 5px;
+        top: 5px;
+        bottom: 5px;
+    }
+
+.loading-circle {
+    border: 3px solid transparent;
+    border-top-color: #1a2640;
+    border-bottom-color: #1a2640;
+    border-radius: 50%;
+    -webkit-animation: loader 1s cubic-bezier(0.18, 0.89, 0.32, 1.28) infinite;
+    -moz-animation: loader 1s cubic-bezier(0.18, 0.89, 0.32, 1.28) infinite;
+    -o-animation: loader 1s cubic-bezier(0.18, 0.89, 0.32, 1.28) infinite;
+    animation: loader 1s cubic-bezier(0.18, 0.89, 0.32, 1.28) infinite;
+    animation-iteration-count: 20;
+}
+
+    .loading-circle:before {
+        border: 3px solid transparent;
+        border-top-color: #78b428;
+        border-bottom-color: #78b428;
+        border-radius: 50%;
+        -webkit-animation: loader 1s cubic-bezier(1, 0, 0, 0.99) infinite;
+        -moz-animation: loader 1s cubic-bezier(1, 0, 0, 0.99) infinite;
+        -o-animation: loader 1s cubic-bezier(1, 0, 0, 0.99) infinite;
+        animation: loader 1s cubic-bezier(1, 0, 0, 0.99) infinite;
+        animation-iteration-count: 20;
+    }
+
+    .loading-circle:after {
+        border: 3px solid transparent;
+        border-top-color: #fd7733;
+        border-bottom-color: #fd7733;
+        border-radius: 50%;
+        -webkit-animation: loader 0.75s cubic-bezier(0.18, 0.89, 0.32, 1.28) infinite;
+        animation: loader loader 0.75s cubic-bezier(0.18, 0.89, 0.32, 1.28) infinite;
+        -moz-animation: loader 0.75s cubic-bezier(0.18, 0.89, 0.32, 1.28) infinite;
+        -o-animation: loader 0.75s cubic-bezier(0.18, 0.89, 0.32, 1.28) infinite;
+        animation-iteration-count: 20;
+    }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // flag the menu item as selected
+            $('#_ctl0_mainmenu_lnkHome_140').parent().addClass('selected-0');
+            ShowMessage();
+            load_reminders();
+
+            $("#form1").submit(function () {
+                formsubmit()
+            });
+
+            if ($('#body_msgContent').html() != '') {
+                $('#modalSplash').reveal();
+            }
+            if ($('.notificationContentDB').html() != '') {
+                $('.notificationDB').reveal();
+            }
+        });
+
+        function createRequestObject() {
+            var request_o; //declare the variable to hold the object.
+            var browser = navigator.appName; //find the browser name
+            if (browser == "Microsoft Internet Explorer") {
+                /* Create the object using MSIE's method */
+                request_o = new ActiveXObject("Microsoft.XMLHTTP");
+            } else {
+                /* Create the object using other browser's method */
+                request_o = new XMLHttpRequest();
+            }
+            return request_o; //return the object
+        }
+
+        var http = createRequestObject();
+
+        function close_reminder(remid) {
+            //var urlvalue = 'remindercall.aspx?action=close&remid=' + remid
+            //Task SSC-611 Server Error when opening View Log if not Administrator (regardless if User role:"View account/site log" is checked or not)
+            var urlvalue = '/user/remindercall.aspx?action=close&remid=' + remid
+            http = createRequestObject();
+            http.open('get', urlvalue);
+            http.onreadystatechange = handleLoad;
+
+            http.send(null);
+        }
+
+        function load_reminders() {
+            var user = document.getElementById('huid');
+            //var surl = "remindercall.aspx?uid=" + user.value;
+            //Task SSC-611 Server Error when opening View Log if not Administrator (regardless if User role:"View account/site log" is checked or not)
+            var surl = "/user/remindercall.aspx?uid=" + user.value;
+            http = createRequestObject();
+            http.open('get', surl);
+            http.onreadystatechange = handleLoad;
+
+            http.send(null);
+        }
+
+        function handleLoad() {
+            if (http.readyState == 4) {
+                var response = http.responseText;
+
+                if ($("#divmsg").length > 0) {
+                    $("#divmsg").html(response);
+                }
+            }
+        }
+
+        function ShowMessage() {
+            var user = document.getElementById('huid');
+            //var slink = "globalmsg.aspx?uid=" + user.value;
+            //Task SSC-611 Server Error when opening View Log if not Administrator (regardless if User role:"View account/site log" is checked or not)
+            var slink = "/user/globalmsg.aspx?uid=" + user.value;
+            ajaxpage(slink, "dglobal", "");
+        }
+
+        function get_message(num) {
+            var fld = $("#hdmessages").val();
+            var myarray = fld.split(";");
+            return myarray[num];
+        }
+
+        //$(function () {
+        //    var tab = "1"
+        //    if (get("tab") != null) {
+        //        tab = get("tab");
+        //    }
+
+        //    // alert(tab);
+        //    var tabs = $("#tabs").tabs();
+        //    $("#tabs").tabs();
+        //    if (tab == "2") {
+        //        tabs.tabs("select", 1)
+        //    }
+        //    else {
+        //        tabs.tabs("select", 0)
+        //          }
+        //});
+
+        function get(name) {
+            if (name = (new RegExp('[?&]' + encodeURIComponent(name) + '=([^&]*)')).exec(location.search))
+                return decodeURIComponent(name[1]);
+        }
+        function Dahboardtab(reportid, reporttype) {
+            var tab = "1"
+            if (get("tab") == null) {
+                //  alert("post");
+                //window.location.search = '?tab=2';
+                //var reportid = "3";
+                //var reporttype = "StandardReport";
+                var accountid = 0;
+                var rp = document.URL;
+                var sParams = "&reportid=" + reportid + "&reporttype=" + reporttype + "&accid=" + accountid + "&params=" + rp;
+                jQuery.ajax({
+                    type: "POST",
+                    url: "../msrs/POSTpages/reportPOST.aspx",
+                    data: "Function=GetDashboardReports&DataType=json" + sParams,
+                    dataType: "json",
+                    success: function (json) {
+                        if (json.Table) {
+                            if (checkJSON2(json.Table[0].reportName) != '') {
+                                document.getElementById('divReportDashboard').innerHTML = checkJSON2(json.Table[0].reportParams);
+                            }
+                        }
+                    }
+                });
+            }
+
+        }
+        function checkJSON2(obj) {
+            if (obj || obj == 0) { return obj; }
+            return '';
+        }
+
+    </script>
+    <!--DASHVIEWER DATA-->
+
+    <!--CSS-->
+    <!-- load the dashboard css -->
+
+
+    <link rel="stylesheet" text="text/css" href="/scripts/JQuery-UI-1.13.2/jquery-ui-1.13.2.min.css?v=9D9276B2" media="all" />
+
+
+    <link rel="stylesheet" text="text/css" href="/msrs/dashboardview/css/frontsDashboard.css?v=30C4FAEB" media="all" />
+
+    <!-- load gitter css -->
+    <link rel="stylesheet" text="text/css" href="/msrs/dashboardview/css/gitter/css/jquery.gritter.css?v=2544522C" media="all" />
+
+    <!-- load Extra css -->
+    <link rel="stylesheet" text="text/css" href="/msrs/dashboardview/css/frontcustom.css?v=282D48D8" media="all" />
+
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" text="text/css" href="/msrs/dashboardview/css/bootstrap.min.css?v=36C2C1E2" media="all" />
+
+    <!-- font Awesome -->
+    <link rel="stylesheet" text="text/css" href="/msrs/dashboardview/css/font-awesome.min.css?v=A2CDD5D3" media="all" />
+
+    <!-- Ionicons -->
+    <link rel="stylesheet" text="text/css" href="/msrs/dashboardview/css/ionicons.min.css?v=32867BD7" media="all" />
+
+    <!-- Theme style -->
+    <link rel="stylesheet" text="text/css" href="/msrs/dashboardview/css/AdminLTE.css?v=3744D5A6" media="all" />
+
+    <!-- animate -->
+    <link rel="stylesheet" text="text/css" href="/msrs/dashboardview/css/animate.min.css?v=7BF9675E" media="all" />
+
+    <!-- alertify -->
+    <link rel="stylesheet" text="text/css" href="/msrs/dashboardview/css/alertify.core.css?v=A99B614F" media="all" />
+
+    <link rel="stylesheet" text="text/css" href="/msrs/dashboardview/css/alertify.default.css?v=19972585" media="all" />
+
+    <link rel="stylesheet" text="text/css" href="/msrs/dashboardview/js/amcharts/export.css?v=72F6C37F" media="all" />
+
+
+    <!--JAVASCRIPT-->
+    <!-- load jquery library -->
+
+    <script type="text/javascript" src="/scripts/JQuery-UI-1.13.2/jquery-ui-1.13.2.min.js?v=DC9EEC91" ></script>
+
+
+    <script type="text/javascript" src="/msrs/dashboardview/js/amcharts/amcharts.js?v=3E5B4B92" ></script>
+
+    <script type="text/javascript" src="/msrs/dashboardview/js/amcharts/serial.js?v=8C8A35B5" ></script>
+
+    <script type="text/javascript" src="/msrs/dashboardview/js/amcharts/gauge.js?v=46B47F46" ></script>
+
+    <script type="text/javascript" src="/msrs/dashboardview/js/amcharts/pie.js?v=A04DC7ED" ></script>
+
+    <script type="text/javascript" src="/msrs/dashboardview/js/amcharts/funnel.js?v=5CCF40AB" ></script>
+
+    <script type="text/javascript" src="/msrs/dashboardview/js/amcharts/xy.js?v=7A7F8CAE" ></script>
+
+    <script type="text/javascript" src="/msrs/dashboardview/js/amcharts/radar.js?v=58BE4892" ></script>
+
+    <script type="text/javascript" src="/msrs/dashboardview/js/amcharts/themes/dark.js?v=1DDCFA76" ></script>
+
+    <script type="text/javascript" src="/msrs/dashboardview/js/amcharts/themes/light.js?v=8820585B" ></script>
+
+    <script type="text/javascript" src="/msrs/dashboardview/js/amcharts/themes/chalk.js?v=567ABB3E" ></script>
+
+    <script type="text/javascript" src="/msrs/dashboardview/js/amcharts/themes/black.js?v=A2DCED00" ></script>
+
+    <script type="text/javascript" src="/msrs/dashboardview/js/amcharts/themes/patterns.js?v=7FA4C163" ></script>
+
+    <script type="text/javascript" src="/msrs/dashboardview/js/amcharts/export.js?v=F43A3EF1" ></script>
+
+
+    <!-- load touch punch library to enable dragging on touch based devices -->
+    <script type="text/javascript" src="/msrs/dashboardview/js/libs/touchpunch/jquery.ui.touch-punch.js?v=11CEFAD3" ></script>
+
+    <!-- load gitter notification library -->
+    <script type="text/javascript" src="/msrs/dashboardview/js/libs/gitter/jquery.gritter.js?v=7133952B" ></script>
+
+
+    <!-- load flotr2 charting library -->
+    <!--[if IE]>
+		<script language="javascript" type="text/javascript" src="js/libs/flotr2/flotr2.ie.min.js"></script>
+		<![endif]-->
+    <script type="text/javascript" src="/msrs/dashboardview/js/libs/flotr2/flotr2.js?v=8F3F634F" ></script>
+
+
+    <!-- alertify -->
+    <script type="text/javascript" src="/msrs/dashboardview/js/libs/alertify/alertify.min.js?v=2B282E0B" ></script>
+
+
+
+    <!-- load dashboard library -->
+    <script type="text/javascript" src="/msrs/dashboardview/js/front-jquery-sDashboard.js?v=DD7F482F" ></script>
+
+
+
+    <!-- sample data external script file -->
+    <script type="text/javascript" src="/msrs/dashboardview/js/frontexampleData.js?v=1F471D7B" ></script>
+
+
+
+    <!-- dashboard load external script file -->
+    <script type="text/javascript" src="/msrs/dashboardview/js/frontdashLoad.js?v=F0CDDF74" ></script>
+
+
+
+
+    <style>
+           .spinner {
+    /* margin: 100px auto 0; */
+    width: 90px;
+    text-align: center;
+    position: relative;  
+    z-index: 999;
+    height: 2em;
+    display:none;
+    /* width: 2em; */
+    overflow: visible;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    vertical-align: middle;    
+}
+
+
+.spinner:before {
+     content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    /*background-color: #777;*/
+}
+
+
+.spinner > div {
+  width: 26px;
+  height: 26px;
+  /*background-color: #053c81;*/
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+  background-color: #1a2640;
+   -webkit-animation-play-state:paused;
+    -moz-animation-play-state:paused;
+    -o-animation-play-state:paused; 
+    animation-play-state:paused;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+  background-color: #78b428;
+   -webkit-animation-play-state:paused;
+    -moz-animation-play-state:paused;
+    -o-animation-play-state:paused; 
+    animation-play-state:paused;
+}
+
+.spinner .bounce3 {
+    background-color: #fd7733;
+     -webkit-animation-play-state:paused;
+    -moz-animation-play-state:paused;
+    -o-animation-play-state:paused; 
+    animation-play-state:paused;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% { 
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+
+
+}
+
+
+.blockPage {
+    border: none !important;
+}
+    </style>
+
+
+    <!--DASHVIEWER DATA-->
+
+    <script type="text/javascript" src="/msrs/script/jquery.blockUI.js?v=EBDCD6CB" ></script>
+
+    <script type="text/javascript" src="/msrs/script/moment.js?v=DA8C265F" ></script>
+
+
+    <link rel="stylesheet" text="text/css" href="/scripts/JQPlugins/JQueryReveal/reveal.css?v=1678518B" media="all" />
+
+    <script type="text/javascript" src="/scripts/JQPlugins/JQueryReveal/jquery.reveal.js?v=84263727" ></script>
+
+
+<script type="text/javascript" src="/scripts/JQPlugins/jquery.log.js?v=20166136" ></script><script type="text/javascript" src="/office/messaging/scripts/messaging.js?v=14B48C42" ></script><script type="text/javascript" src="/office/messaging/scripts/messaging_settings.js?v=75B29FFD" ></script><link rel="stylesheet" text="text/css" href="/office/messaging/styles/messaging_settings.css?v=89F88EF2" media="all" /><link rel="stylesheet" text="text/css" href="/scripts/JQuery-UI-1.13.2/jquery-ui-1.13.2.min.css?v=9D9276B2" media="all" /><script type="text/javascript" src="/scripts/swfobject.js?v=52DA8F1A" ></script></head>
+<body class="fixed-header">
+    <form name="aspnetForm" method="post" action="./home.aspx" id="aspnetForm">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTUwMTAzNzU3MA8WAh4TVmFsaWRhdGVSZXF1ZXN0TW9kZQIBFgJmD2QWAgIDD2QWBAIDD2QWJgIDDw8WAh4EVGV4dAUGUmVjZW50ZGQCBA8WAh4JaW5uZXJodG1sBfUVPGRpdiBjbGFzcz0nbWlkZGxlaGVhZGVydG9wJz5SZWNlbnQgQWNjb3VudHM8L2Rpdj4NCjxkaXYgY2xhc3M9J21pZGRsZWhlYWRlcndoaXRlJz48YSB0YXJnZXQ9J19ibGFuaycgaHJlZj0nLi4vYWNjb3VudC9jdXN0b21lcmhvbWUuYXNweD9hY2NpZD0zMzgwMCZjcz0xJz4zMzgwMCAtIEZhbGNvbjwvYT48L2Rpdj4NCjxkaXYgY2xhc3M9J21pZGRsZWhlYWRlcm90aGVyJz48YSB0YXJnZXQ9J19ibGFuaycgaHJlZj0nLi4vYWNjb3VudC9jdXN0b21lcmhvbWUuYXNweD9hY2NpZD0zMzc5OSZjcz0xJz4zMzc5OSAtIEZhbGNvbjwvYT48L2Rpdj4NCjxkaXYgY2xhc3M9J21pZGRsZWhlYWRlcndoaXRlJz48YSB0YXJnZXQ9J19ibGFuaycgaHJlZj0nLi4vYWNjb3VudC9jdXN0b21lcmhvbWUuYXNweD9hY2NpZD0zMzc5NiZjcz0xJz4zMzc5NiAtIEZhbGNvbjwvYT48L2Rpdj4NCjxkaXYgY2xhc3M9J21pZGRsZWhlYWRlcm90aGVyJz48YSB0YXJnZXQ9J19ibGFuaycgaHJlZj0nLi4vYWNjb3VudC9jdXN0b21lcmhvbWUuYXNweD9hY2NpZD0zMzc5OCZjcz0xJz4zMzc5OCAtIEZhbGNvbjwvYT48L2Rpdj4NCjxkaXYgY2xhc3M9J21pZGRsZWhlYWRlcndoaXRlJz48YSB0YXJnZXQ9J19ibGFuaycgaHJlZj0nLi4vYWNjb3VudC9jdXN0b21lcmhvbWUuYXNweD9hY2NpZD0zMzc5NyZjcz0xJz4zMzc5NyAtIEZhbGNvbjwvYT48L2Rpdj4NCjxkaXYgY2xhc3M9J21pZGRsZWhlYWRlcm90aGVyJz48YSB0YXJnZXQ9J19ibGFuaycgaHJlZj0nLi4vYWNjb3VudC9jdXN0b21lcmhvbWUuYXNweD9hY2NpZD0zMzc5NSZjcz0xJz4zMzc5NSAtIEZhbGNvbjwvYT48L2Rpdj4NCjxkaXYgY2xhc3M9J21pZGRsZWhlYWRlcndoaXRlJz48YSB0YXJnZXQ9J19ibGFuaycgaHJlZj0nLi4vYWNjb3VudC9jdXN0b21lcmhvbWUuYXNweD9hY2NpZD0zMzc5MyZjcz0xJz4zMzc5MyAtIEZhbGNvbjwvYT48L2Rpdj4NCjxkaXYgY2xhc3M9J21pZGRsZWhlYWRlcm90aGVyJz48YSB0YXJnZXQ9J19ibGFuaycgaHJlZj0nLi4vYWNjb3VudC9jdXN0b21lcmhvbWUuYXNweD9hY2NpZD0zMzc5NCZjcz0xJz4zMzc5NCAtIEZhbGNvbjwvYT48L2Rpdj4NCjxkaXYgY2xhc3M9J21pZGRsZWhlYWRlcndoaXRlJz48YSB0YXJnZXQ9J19ibGFuaycgaHJlZj0nLi4vYWNjb3VudC9jdXN0b21lcmhvbWUuYXNweD9hY2NpZD0zMzc5MiZjcz0xJz4zMzc5MiAtIEZhbGNvbjwvYT48L2Rpdj4NCjxkaXYgY2xhc3M9J21pZGRsZWhlYWRlcm90aGVyJz48YSB0YXJnZXQ9J19ibGFuaycgaHJlZj0nLi4vYWNjb3VudC9jdXN0b21lcmhvbWUuYXNweD9hY2NpZD0zMzc5MSZjcz0xJz4zMzc5MSAtIEZhbGNvbjwvYT48L2Rpdj4NCjxkaXYgY2xhc3M9J21pZGRsZWhlYWRlcndoaXRlJz48YSB0YXJnZXQ9J19ibGFuaycgaHJlZj0nLi4vYWNjb3VudC9jdXN0b21lcmhvbWUuYXNweD9hY2NpZD0zMzc5MCZjcz0xJz4zMzc5MCAtIEZhbGNvbjwvYT48L2Rpdj4NCjxkaXYgY2xhc3M9J21pZGRsZWhlYWRlcm90aGVyJz48YSB0YXJnZXQ9J19ibGFuaycgaHJlZj0nLi4vYWNjb3VudC9jdXN0b21lcmhvbWUuYXNweD9hY2NpZD0zMzc4OSZjcz0xJz4zMzc4OSAtIEZhbGNvbjwvYT48L2Rpdj4NCjxkaXYgY2xhc3M9J21pZGRsZWhlYWRlcndoaXRlJz48YSB0YXJnZXQ9J19ibGFuaycgaHJlZj0nLi4vYWNjb3VudC9jdXN0b21lcmhvbWUuYXNweD9hY2NpZD0zMzc4OCZjcz0xJz4zMzc4OCAtIEZhbGNvbjwvYT48L2Rpdj4NCjxkaXYgY2xhc3M9J21pZGRsZWhlYWRlcm90aGVyJz48YSB0YXJnZXQ9J19ibGFuaycgaHJlZj0nLi4vYWNjb3VudC9jdXN0b21lcmhvbWUuYXNweD9hY2NpZD0zMzc4NyZjcz0xJz4zMzc4NyAtIEZhbGNvbjwvYT48L2Rpdj4NCjxkaXYgY2xhc3M9J21pZGRsZWhlYWRlcndoaXRlJz48YSB0YXJnZXQ9J19ibGFuaycgaHJlZj0nLi4vYWNjb3VudC9jdXN0b21lcmhvbWUuYXNweD9hY2NpZD0zMzc4NiZjcz0xJz4zMzc4NiAtIEZhbGNvbjwvYT48L2Rpdj4NCjxkaXYgY2xhc3M9J21pZGRsZWhlYWRlcnRvcCc+UmVjZW50IEFjdGlvbnM8L2Rpdj48ZGl2IGNsYXNzPSdtaWRkbGVoZWFkZXJ3aGl0ZSc+PGEgdGFyZ2V0PSdfYmxhbmsnIGhyZWY9Jy4uL29mZmljZS9vZmZpY2V0eC5hc3B4P29wdGlvbj0zJz5QcmludCBJbnZvaWNlczwvYT48L2Rpdj48ZGl2IGNsYXNzPSdtaWRkbGVoZWFkZXJvdGhlcic+PGEgdGFyZ2V0PSdfYmxhbmsnIGhyZWY9Jy4uL29mZmljZS9vZmZpY2V0eC5hc3B4P29wdGlvbj01Jz5QcmludCBTdGF0ZW1lbnRzPC9hPjwvZGl2PjxkaXYgY2xhc3M9J21pZGRsZWhlYWRlcndoaXRlJz48YSB0YXJnZXQ9J19ibGFuaycgaHJlZj0nLi4vb2ZmaWNlL29mZmljZXR4LmFzcHg/b3B0aW9uPTEnPlByaW50IFdvcmsgT3JkZXJzPC9hPjwvZGl2PjxkaXYgY2xhc3M9J21pZGRsZWhlYWRlcm90aGVyJz48YSB0YXJnZXQ9J19ibGFuaycgaHJlZj0nLi4vb2ZmaWNlL29mZmljZXR4LmFzcHg/b3B0aW9uPTgnPlJlbGVhc2UgV29ya29yZGVycyBmb3IgdGhlIE1vbnRoPC9hPjwvZGl2PjxkaXYgY2xhc3M9J21pZGRsZWhlYWRlcndoaXRlJz48YSB0YXJnZXQ9J19ibGFuaycgaHJlZj0nLi4vb2ZmaWNlL29mZmljZXR4LmFzcHg/b3B0aW9uPTInPkVudGVyIENvbXBsZXRlZCBXb3JrIE9yZGVyczwvYT48L2Rpdj48ZGl2IGNsYXNzPSdtaWRkbGVoZWFkZXJ0b3AnPkZyZXF1ZW50IEFjdGlvbnM8L2Rpdj48ZGl2IGNsYXNzPSdtaWRkbGVoZWFkZXJ3aGl0ZSc+PGEgdGFyZ2V0PSdfYmxhbmsnIGhyZWY9Jy4uL29mZmljZS9vZmZpY2V0eC5hc3B4P29wdGlvbj02Jz5TaG93IEJhdGNoZXM8L2E+PC9kaXY+ZAIHD2QWAgIBDxYEHgRocmVmBQ8vdXNlci9ob21lLmFzcHgfAgUESG9tZWQCCQ8WAh4Fc3R5bGUFDWRpc3BsYXk6bm9uZTsWAgIBDxYEHwMFGC9zZXR1cG5ldy9zZXR1cG1lbnUuYXNweB8CBQVTZXR1cGQCCg9kFgICAQ8WBB8DBRgvc2V0dXBuZXcvc2V0dXBtZW51LmFzcHgfAgUFU2V0dXBkAgsPZBYCAgEPFgQfAwUaL29mZmljZU5ldy9vZmZpY2VtZW51LmFzcHgfAgUGT2ZmaWNlZAIMDxYCHwQFDWRpc3BsYXk6bm9uZTtkAg0PZBYCAgEPFgIfAgUJU2NoZWR1bGVyZAIOD2QWAgIBDxYEHwMFX2h0dHBzOi8vc3Byb2xpdmUudGhlc2VydmljZXByby5uZXQvbmV3c2NoZWR1bGVyL1VzZXJBY2NvdW50L0Zyb21Db3JlP3VybD0vbmV3c2NoZWR1bGVyL0NhbGVuZGFyHwIFCVNjaGVkdWxlcmQCDw9kFgICAQ8WBB8DBXFodHRwczovL3Nwcm9saXZlcmVwb3J0aW5nLnRoZXNlcnZpY2Vwcm8ubmV0L21zcnMvUmVwb3J0RW5naW5lTmV3LmFzcHg/Y29yZWxpbms9aHR0cHM6Ly9zcHJvbGl2ZS50aGVzZXJ2aWNlcHJvLm5ldB8CBQdSZXBvcnRzZAIQD2QWAgIBDxYEHwMFHi9hY2NvdW50L3F1aWNrYWRkY3JpdGVyaWEuYXNweB8CBQ9BZGQgTmV3IEFjY291bnRkAhEPZBYCAgEPFgQfAwUcL2FjY291bnQvcXVpY2thZGRlbnRyeTEuYXNweB8CBRVBZGQgTmV3IEFjY291bnQgKG5ldylkAhIPFgIfBAUJZGlzcGxheTo7ZAITDxYCHwIFB01vZHVsZXNkAhQPZBYCAgEPZBYkAgEPZBYCAgEPFgQfAwUYL2FjY291bnQvd29kcmF3aW5ncy5hc3B4HwIFCERyYXdpbmdzZAIDD2QWAgIBDxYEHwMFES9zZXR1cC9pbnZlbnRvcnkvHwIFCUludmVudG9yeWQCBQ8WAh8DBTBodHRwczovL3Nwcm9saXZlLnRoZXNlcnZpY2Vwcm8ubmV0L2ludmVudG9yeS9hcHBkAgcPZBYCAgEPFgQfAwU3L29mZmljZS9NYXJrZXRpbmdMZXR0ZXIvTWFya2V0aW5nTGV0dGVycHJldmlld2xpc3QuYXNweB8CBQlNYXJrZXRpbmdkAgkPZBYCAgEPFgQfAwUHL2ZsZWV0Lx8CBQVGbGVldGQCCw9kFgICAQ8WBB8DBREvR1BTL2dwc2hvbWUuYXNweB8CBQNHUFNkAg0PZBYCAgEPFgQfAwUfL29mZmljZS90c3Byb3V0aW5nL1JvdXRpbmcuYXNweB8CBQdSb3V0aW5nZAIPD2QWAgIBDxYEHwMFGi9vZmZpY2UvbGVhZHNwcm9wb3NhbC5hc3B4HwIFEUxlYWRzICYgUHJvcG9zYWxzZAIRDxYEHwMFIi9yZXBvcnRpbmdkYXNoYm9hcmQvZGFzaGJvYXJkLmFzcHgfAgUTUmVwb3J0aW5nIERhc2hib2FyZGQCEw8WBB8DBSkvb2ZmaWNlL21vYmlsZW1hbmFnZW1lbnQvUHJvY2Vzc0RhdGEuYXNweB8CBRBTZXJ2U3VpdGUgTW9iaWxlZAIVD2QWAgIBDxYEHwMFOi9vZmZpY2UvUGhvbmVDYWxsQWhlYWQvcGhvbmVjYWxsYWhlYWQuYXNweD9jb21lZnJvbT1tb2R1bGUfAgUNTm90aWZpY2F0aW9uc2QCFw8WAh8EBQ1kaXNwbGF5Om5vbmU7FgICAQ8WBB8EBQ1kaXNwbGF5Om5vbmU7HwIFFFNlcnZTdWl0ZSBDYWxsIEFnZW50ZAIZD2QWAgIBDxYEHwMFHy9vZmZpY2Uvb2ZmaWNldHguYXNweD9vcHRpb249NzkfAgUOQ29sbGVjdGlvbiBOZXdkAhsPFgIeB1Zpc2libGVoZAIdDxYCHwMFPWh0dHBzOi8vc3Byb2xpdmUudGhlc2VydmljZXByby5uZXQvc2VydnNhbGVzL2FjY291bnQvZnJvbWNvcmVkAh8PZBYCAgEPFgIfAwUxaHR0cHM6Ly9zcHJvbGl2ZS50aGVzZXJ2aWNlcHJvLm5ldC9tdWx0aXJvdXRlL2FwcGQCIQ9kFgICAQ8WBB8DBTIvb2ZmaWNlL21lc3NhZ2luZy9wYWdlcy9NZXNzYWdlTWFuYWdlbWVudF9OZXcuYXNweB8CBQtDb250YWN0IExvZ2QCIw9kFgICAQ8WBB8DBSYvbW9kdWxlcy9lbWFpbGFuYWx5dGljcy9kYXNoYm9hcmQuYXNweB8CBRdFbWFpbCBBbmFseXRpY3MgU2VydmljZWQCFQ8WAh8CBQ1CZXRhIEZlYXR1cmVzZAIWD2QWAgIBD2QWCAIBD2QWAgIBDxYEHwMFPi9vZmZpY2UvUmVtb3RlTW9uaXRvcmluZy9yZW1vdGVtb25pdG9yaW5nLmFzcHg/Y29tZWZyb209bW9kdWxlHwIFEVJlbW90ZSBNb25pdG9yaW5nZAIDD2QWAgIBDxYCHwMFJC9zcy11aS1jdXN0b20tcGFnZXMvT2ZmaWNlUGFnZXMuYXNweGQCBQ9kFgICAQ8WAh8DBSMvc3MtdWktY3VzdG9tLXBhZ2VzL1NldHVwUGFnZXMuYXNweGQCBw9kFgICAQ8WAh8CBQpTZXJ2U2Vuc29yZAIXD2QWEAIBDxYCHwMFGC91c2VyL2NoYW5nZWNvbXBhbnkuYXNweBYEAgEPDxYCHwEFB0NvbXBhbnlkZAIDDw8WAh8BBQ9EaWdpdGFsIExvZ2Jvb2tkZAIDDxYCHwIFCUZhdm9yaXRlc2QCBw9kFgJmD2QWAgIBDw8WAh8BBQpXaGF0J3MgTmV3ZGQCCQ8WAh8DBRovdXNlci9wYXNzd29yZGV4cGlyZWQuYXNweBYCAgEPDxYCHwEFD0NoYW5nZSBwYXNzd29yZGRkAg0PFgIfAgUJTGl2ZSBDaGF0ZAIPDxYCHwIFB1N1cHBvcnRkAhEPZBYEZg8WAh8CBQdTdXBwb3J0ZAIBDxYEHwIFEVNlcnZTdWl0ZSBFeHBsb3JlHwMFKWphdmFzY3JpcHQ6IF9fZG9Qb3N0QmFjaygnbGVhcm5kYXNoJywgJycpZAITDxYCHwQFCWRpc3BsYXk6OxYCAgEPFgIfAwUML2xvZ291dC5hc3B4FgICAQ8PFgIfAQUHTG9nIE91dGRkAhkPDxYIHg9KUXVlcnlVSVZlcnNpb24LKWxUc3BXZWJDb250cm9scy5KUXVlcnlVSVZlcnNpb25FbnVtLCBBcHBfQ29kZS5tdDNqZmRweCwgVmVyc2lvbj0wLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPW51bGwFHhRKUXVlcnlWZXJzaW9uTWlncmF0ZQspcVRzcFdlYkNvbnRyb2xzLkpRdWVyeVZlcnNpb25NaWdyYXRlRW51bSwgQXBwX0NvZGUubXQzamZkcHgsIFZlcnNpb249MC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsAR4NSlF1ZXJ5VmVyc2lvbgspalRzcFdlYkNvbnRyb2xzLkpRdWVyeVZlcnNpb25FbnVtLCBBcHBfQ29kZS5tdDNqZmRweCwgVmVyc2lvbj0wLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPW51bGwKHglTV0ZPYmplY3RnZGQCBQ9kFhACAQ9kFgQCBg8WAh8EBQ1kaXNwbGF5Om5vbmU7ZAIIDxYCHwQFDWRpc3BsYXk6bm9uZTsWAgIFDxYCHwIFE0NsaWNrIEhlcmUgZm9yIE1vcmVkAgMPDxYCHwEFGFdlbGNvbWUsJm5ic3A7RHJhZ2FuIEZSU2RkAgUPDxYCHwEFNURpZ2l0YWwgTG9nYm9vayBbcmRzMDUuc2VydnN1aXRlY2xvdWQubmV0XS5GUlNBTEVTMDFEZGQCBw8PFgIfAQUGU2VhcmNoZGQCCQ8PFgIfAQUJRGFzaGJvYXJkZGQCCw9kFoQBAiIPD2QWAh4LcGxhY2Vob2xkZXIFDkVudGVyIENyaXRlcmlhZAIkD2QWAgIBDw8WAh8BBQZTZWFyY2hkZAImD2QWAgIBDw8WAh8BBRlTaG93L0hpZGUgQWR2YW5jZWQgU2VhcmNoZGQCKA9kFgICAQ8PFgIfAQUFQ2xlYXJkZAIqDxAPFgIfAQUaQ2xlYXIgQ3JpdGVyaWEgdXBvbiBTZWFyY2hkZGRkAiwPDxYCHwEFCkZpcnN0IE5hbWVkZAItDw9kFgIfCgUKRmlyc3QgTmFtZWQCLw8PFgIfAQUJTGFzdCBOYW1lZGQCMQ8PZBYCHwoFCUxhc3QgTmFtZWQCMw8PFgIfAQUMQ29tcGFueSBOYW1lZGQCNQ8PZBYCHwoFDENvbXBhbnkgTmFtZWQCNw8PFgIfAQUIU3RyZWV0ICNkZAI5Dw9kFgIfCgUIU3RyZWV0ICNkAjsPDxYCHwEFC1N0cmVldCBOYW1lZGQCPQ8PZBYCHwoFC1N0cmVldCBOYW1lZAI/Dw8WAh8BBQRDaXR5ZGQCQQ8PZBYCHwoFBENpdHlkAkMPDxYCHwEFBVN0YXRlZGQCRQ8PZBYCHwoFBVN0YXRlZAJHDw8WAh8BBQNaaXBkZAJJDw9kFgIfCgUDWmlwZAJLDw8WAh8BBQVMb3QgI2RkAk0PD2QWAh8KBQVMb3QgI2QCTw8PFgIfAQUITWFwIENvZGVkZAJTDw8WAh8BBQdCdWlsZGVyZGQCVw8PFgIfAQULU3ViZGl2aXNpb25kZAJbDxAPFgIfAQUPU2VhcmNoIEFjY291bnRzZGRkZAJdDxAPFgIfAQUMU2VhcmNoIFNpdGVzZGRkZAJfDxAPFgIfAQUQU2VhcmNoIFByb3NwZWN0c2RkZGQCYQ8QDxYCHwEFC0FjdGl2ZSBvbmx5ZGRkZAJjDxAPFgIfAQUSTGlzdCBBY2NvdW50IFNpdGVzZGRkZAJlDw8WAh8BBQZTZWFyY2hkZAJnDw8WAh8BBc8BQWNjb3VudHMgd2l0aCA8Yj5Bc3RlcmlzazwvYj4gYXJlIDxiPkFjdGl2ZTwvYj4sJm5ic3AmbmJzcCZuYnNwJm5ic3A8Yj4nQSc8L2I+IGluZGljYXRlcyBBY2NvdW50IERhdGEsJm5ic3AmbmJzcCZuYnNwJm5ic3A8Yj4nUyc8L2I+IGluZGljYXRlcyBTaXRlIERhdGEsJm5ic3AmbmJzcCZuYnNwJm5ic3A8Yj4nUCc8L2I+IGluZGljYXRlcyBQcm9zcGVjdCBEYXRhZGQCaQ9kFhACAQ8PFgIfAQUGQWNjICMgZGQCAw8PFgIfAQUKRmlyc3QgTmFtZWRkAgUPDxYCHwEFCUxhc3QgTmFtZWRkAgcPDxYCHwEFDENvbXBhbnkgTmFtZWRkAgkPDxYCHwEFB0FkZHJlc3NkZAILDw8WAh8BBQRDaXR5ZGQCDQ8PFgIfAQUDWmlwZGQCDw8PFgIfAQUFU3RhdGVkZAJrDw8WAh8BBQlBY2NvdW50ICNkZAJtDw8WAh8BBQpGaXJzdCBOYW1lZGQCbw8PFgIfAQUJTGFzdCBOYW1lZGQCcQ8PFgIfAQUMQ29tcGFueSBOYW1lZGQCcw8PFgIfAQUIU3RyZWV0ICNkZAJ1Dw8WAh8BBQtTdHJlZXQgTmFtZWRkAncPDxYCHwEFBENpdHlkZAJ5Dw8WAh8BBQVTdGF0ZWRkAnsPDxYCHwEFA1ppcGRkAn0PDxYCHwEFCU15IFNlYXJjaGRkAn8PDxYCHwEFBUxvdCAjZGQCgQEPDxYCHwEFB0J1aWxkZXJkZAKDAQ8PFgIfAQULU3ViZGl2aXNpb25kZAKFAQ8PFgIfAQUITWFwIENvZGVkZAKHAQ8PFgIfAQUMUGF5bWVudCBEYXRlZGQCiQEPDxYCHwEFDlBheW1lbnQgQW1vdW50ZGQCjQEPDxYCHwEFCUFjY291bnQgI2RkAo8BDw8WAh8BBQpGaXJzdCBOYW1lZGQCkQEPDxYCHwEFCUxhc3QgTmFtZWRkApMBDw8WAh8BBQxDb21wYW55IE5hbWVkZAKVAQ8PFgIfAQUIU3RyZWV0ICNkZAKXAQ8PFgIfAQULU3RyZWV0IE5hbWVkZAKZAQ8PFgIfAQUEQ2l0eWRkApsBDw8WAh8BBQVTdGF0ZWRkAp0BDw8WAh8BBQNaaXBkZAKfAQ8PFgIfAQUJTXkgU2VhcmNoZGQCoQEPDxYCHwEFBUxvdCAjZGQCowEPDxYCHwEFB0J1aWxkZXJkZAKlAQ8PFgIfAQULU3ViZGl2aXNpb25kZAKnAQ8PFgIfAQUITWFwIENvZGVkZAKpAQ8PFgIfAQUMUGF5bWVudCBEYXRlZGQCqwEPDxYCHwEFDlBheW1lbnQgQW1vdW50ZGQCDQ8WAh8CZWQCDw8WAh8CZWQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgUFOF9jdGwwOmJvZHk6c2FsZWxwcm9Db250cm9sOmNoa0NsZWFyU2VhcmNoQ3JpYXRlcmlhXzIwNTkzBTJfY3RsMDpib2R5OnNhbGVscHJvQ29udHJvbDpjaGtTZWFyY2hBY2NvdW50c18xNjczOAUuX2N0bDA6Ym9keTpzYWxlbHByb0NvbnRyb2w6Y2JTZWFyY2hTaXRlc18xMjg5OAUzX2N0bDA6Ym9keTpzYWxlbHByb0NvbnRyb2w6Y2hrU2VhcmNoUHJvc3BlY3RzXzE2NzY4BSxfY3RsMDpib2R5OnNhbGVscHJvQ29udHJvbDpjYkFjdGl2ZU9ubHlfMjE4OfiIM0uqqGxB9DEuRCSfaqZn82AR4M35OAdTHOV7u8OE" />
+
+<script type="text/javascript">
+<!--
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+// -->
+</script>
+
+
+<input type="hidden" id="hdcalendar" value="/;M/d/yyyy" runat="server">
+<input type="hidden" id="hdcalmonths" value="January;February;March;April;May;June;July;August;September;October;November;December;" runat="server">
+<input type="hidden" id="hdcaldaysabbrev" value="S;M;T;W;T;F;S" runat="server">
+<input type="hidden" id="hdcaltodayname" value="Today" runat="server">
+<input type="hidden" id="hdcaldtformat" value="M/d/yyyy" runat="server">
+<script language="javascript"> document.title="ServSuite.net web-edition"</script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="E46F31A7" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAL8CtOw4BuIqUYvsC0IJyOTFNXAJ7YcHXLP8GKY7kqUOuPlRyZcMkEV7v9waBbVLwYyPW3zvNEgi9b/Avyg0lxFBF8+971bGvZnDlrqZQkT6j7A/LQiY3kCYm2CAzwf5n9xlxfr/sH3XWrI0ypbYFUOX0ZjlrRFdbbiCxcdqyb6v/e3nqUu8tJMWCZ57+GSIqG2AIchoG9Xv+wm26mCw6bDA7/b+d2ftJJ0UjAk2/Zc7zDmYnX5Jqqai3VHo6P14QyRVnJBbk9dEdNmp1/1h+yLWtpjxF1myRiFGfqlWFZ+mDhd9PtvLRic2XxLMVJ/gU9KErV0RKe+BgVpMBjm8luM6M0CvhEqznqFjNWI+HydVi6TjWYIvPuqZGGK9xHG9yXMR7Sg67UTRf7zK/VrsI0KWCMNUyVcVJ69nxVeHQ4KFSt291yV6x6z89TCZ6YDy+BX0XWIS//JPnlPNxGZLhTeeh/iXa9r+G4WsizI0j4bJ3Dul9viAdYSRkiKyoGholRkX5DKRWc47G3lLdEWDn6P16yjoRpEjtimllfFSMDuu5iTJhgz/rQM99n/KPPfKMga+SBbpLYVrBcTlDsFcjc7ntntsbOEf9Yt5Q/zwcRdrupH9IzRIjJFG5UmxA1jx1r7bq+iK1YINw/7jekfbK38BxqCR6UMPio4Y+O+Yp2Us9Xuj1pegpMl7KWgo38VkXBirHWQkw1XHO4iMMloJMnGAkGh81TdnpY1zJ5VAQdpGwvIbcECvpgU9vSklCPP4JkJxpcbe56vG41ct2LM3AQsl0L1IH4/9CBphG8U7kAJyfdcYB9o1a2EQvbw927CaJtb6ngblrVt7+qZFE2/o3JTZAC63DTiFg982Kolrzn+SuU6Qf/0mENLRpartKyZPRKEBZkI1hMImYY1rBHrhxoJKLgEwEdQ+1YWqDTmgkL2WLKVgoJuP7iUwXmLaNPXth/WSf7lQ4W4uHjRD4YV6WThFDCZ7y8jwYMldgKYsCbvLE4fN3+sWnWiriH7RiCxR3GLS4HTWHKjHNZaviOkwg47mbIkUKFeDxRUxKtFwTKfL9hY+umQxG7NbVa0ekjnD58NDtrDsk58zH0nZO2AVfNOFaDS618jmn5Wn1a9A2gnWM/Tg1w09cSmVkYldlCXh4cqzlGyOCMc6+GA0pwg3d/VBCujdGtEWLrzoOc3heWuamHyLgYS4SlLYZIkQ7834/n4r+asP1hCQyxtCXikoGyrXvXGZAgwZlRhY4549Kz/qtxS7vndVqkbigyEkF7fZUrzT93WxtGfetQyZ0S0ZmqSH3VCg0yud+rIK1G/sfWngN2sQqhNuOcXiHzFFNWHdcbcwhfMhCC2S4ewnMHNbX9PuhViie/GgPQ5sSHQTkQiMPyz15cClSaRCJLxl83Xk9StsSSjvtNgTorQYv/tsJkjG4cBeeVPR2RIIykTpYlGAuJHqgKcRRvtrv9C3ZBvVr2dDdouVPvN0nXF5xOpFpyMJh59Rk/bzafDMOtMriwYJhSRFsa9AYrHlyn3+hsGEAgPpYH6fNJv7kH9zhniT8DIe1w9/1U8IBcw3+ZOdE4hsZacNu4478l1PQsoMSUgZg5pjxvxYtwNkxwlL1ty4iIFkVQx32YWlQo8hMI903xpnn5BDZh5maVP95DwlGmHd1KJ5HS54luW4fKcmwE7X/nqBAJFO9o42FGW70aGUPA0/sJO7MHgUqvmH3uXTHlYCTcELTzQpxufGjHVcGxGTCcR/97xu+UEM6i8ojCxwRmeAN8RaY2NslLOnbQeyfPTJyPj+NH8+tj07G6KNMyb6Wu9KxrhaYSzcFl+hj+0sdgaDmpvbTs28+vg1zJNSlJFVfD9XvWW7ffP0Xk8H4PzSKj7QasqrWYr8q1vt0bBfZvfOi10ZtLWOaNv+szwFpseTaAKJl6/+CJex9se2hCHUN3v6PkWvJxMV/vhepZeIWP0yK6cFlWr1Fl/nRJ/lFDA4mcekzS2eVZreh95bcoXo4JXvY76zd+HbcljgcbYHr2xv7kpO/hcu7bl9H0yv/hN1BnXr10WMoDMfgyk3tdPDBWm9/Y91Cqxj64bZ/SLjvlmcOz22BKP6Vd37MFPYucU6x1Nc5FIgvMBhgtOADE1DwAcYKawR6GW1lW75/DcQERwX3atqumZOh3X2dB0GII+jQAgnmwgNvkPABulUUp2qepv0TCALfP3PfToLaCnIIWVnRUKHGlWB49kRu2UbnTC64cv244LIooj9fzh/0TTWUIxZmHGkLEcr663SdhH0Sye+tcMFUBmHkpWNGMt0MADGrnoxO/QB/Z9HzWDVWbPA4raCe8iRPDlNhGzFc+mY1PGL+Q8MsaPhO9OVnldtGePtXTXiPQAeu/Im6H+nxzqnWg+o2fdfniOKmxh8chNqbmd33I9ug3ipXBzog8ehEqzefAEPPfdETXnvZU3dIMZtskwAZnyaSK4swzZaTFaIbAkjB0Wzi+LPvbsJSZySMgKS1R5Y4yj6YXLPf9FhSfjXIrX5hRhsanDRqoQ7CyQBCf4p37G2qaDF4n/YE7hMfAI+REHUmNyWWeRd4cOv6COPVVx8cN6p3n+JraGHq6O59U94qJ4NsyTHQcV5hz1smGSMUyxBtBAvoWI0EN4zAy0o0pVK1O8MiteTFYNZG8lYieXL9bComhnSXxCqbgk84BdEF2O33jXUWB73QV1/qa8n2QtMWCEdJKhUMZGEhj9mSuFjU+H192RDRYJXf99PUYMwPSXKGidxmC3OYDNdYJy2JdaLKUQFN0V+k4Td5PHX+4YJPu/9hFQCU6DKV+zho8YTZjq9/cFJSkWHPgR9KK5I0+RQVQTTBKUC8djIBpd2wRZrTWF+09y98apY4l47eSx7MaDR86t6R9yaQ6Nc9/TFutgtXhbIlPEYOAAMC82k/jezqxjKWndiPVZbZQmlm1K1iHFOOnDunx1SpPHuXiDp/KnG7IIM/Kq9xwUVo+/iJZlv7Aui6FoFhU1Sd49CFKVH9tkFoXRIwzuTMxCLxMrTjYdrv+RS8QpGhfD5J8C9pInD/uQrzdLxeKRK3bzqZ1SLBWeQxEUysvAlygPxhOjEYyb0V2OtDESCS09xdAUmh1M1ZjdW2SSuY3GJFjoJncCZ93r8eg5s6Gv8wjzWP/aQPYnKcj4G1N1QJ3RmrHObqk9kPBL7TVCLnT58qlp1cO58d7BzeBEK0OYXUPdxXgsG4dUsR1LQVtGQ91ppFyg6WbM5kuYd6miR0BFsGCcyBUyQSviJ5tT7eZ7i2reuWzl9XW6I3mWaOfDhm6wQiv/b5pFZejChOlRiqiG5uSHyKsdrcaillLiukLu2pHdd/FL6yWO3FFsKofvOtxeF6pOuPkzHkoGJFKouGMYsVvPfLQK4qYCFDZpS8Kl3b0ulD1kNWfV8dWPShIZ2CnS5jmZw4N2ir0oBpM9J4OXQwifXXyNbWiD9VTO4etSYT5zXNrlFQA3wfeIuVL6VNy4w+QHXa0bfbqfCWSXHbpw3LmwAm8zmUhgJatmr+6VUSJHz6riQ7BZHVLcJ2AcUpdnw8OteD92wkm0qHJq+RWRRwNZM2CjBtAvZB5daE+BsIPMVQonUMB1S2d32cdSf7HhZJ0g9cdfv7Yjw7T+dyJPanWz0vk65S7q0UUv2+Eayg9BlmsLlAHzXiNH8L5CW7uOMOg5eR0i38zwJnq/Xz4r5zvjq2r1rbX7TAXMPPtH3lV36poTutMRgkirJHpB0KxETGcT+muPeeK+xX0CQb6LSusaRQuSpzKoOsaMQY0EJEWhy1hZ59d+Uno+DHaYTqYdaf0QSQBVywIdhnEdjmWKQvNg4FEAOOLcpZZOS4ikv7XwaeNsTyucmrt8nZ8kyc2fEGS+W4UudQUTTf/DojIRI1hCsnbqWXeN88R+WKVZs1rsutyrMd1r+sZZAeq8RyFkQjgE+AkNZ5QWFlOv78XVOj7RTUGBdFd32I1UDvPpS7SiOzswfiF3VOGt0lz4DwQuR2HVur+8vJqJgiXS6tqyBSUkUL2kbMxKq3Yzko2tf2pkeHYObt+YZskS3c8DriWTZtyNjVyYDi3gSc2zW5evcpa/ZIgnD1BrhDZOeu0iaX/XYAPl+ylt4LmpkoB7Hc/JMB4mldBAO3iKX2se37O1hQhFnDuq4w2esLz/OfMabvFuVonRKCHDEza4GfzrgXhKYMXv5lWvBZuavRG+fhZxPM4YbH2+uQlATb+ZiNpxayCspSCaQDxwgdI5/GH31EwDE2aOw4dwu+ldc+hGd/T77I5bbaxg39BrB6YllBoBSFNhnwQsy5Xt+2enlO590dq4UVRGVBNkTBT4WIZjUq+xPZVmFqCJp1V3vOgOkv1+WLVeaRb9OoENMFFgBdVRHd6PIZ6zm4rIMuG2aorrancu3/hg5shay2VEvddCpjvZ1obNWK1nPnQmxI3RSA/Q486tb6iYmIOC0ge7PzrNNMI1VVvHjGeBRhwWaKUX9+fYXyCJkhY5tmqUWKac1PDMg+qVppUCx0rxoIjUKn9joB7evQvROgJEK8RsJweLqt7LfyfA7494/VCw95s81fK2tKj9euQITsnWagtWsZAhjPRgPG7q+j7c0oNYGR7c7zl9sE0sM0YLlKEtfQ2+99WuDgIpS9iQ5n67v/9b+/+eSMQftZmRwSmiJVBWMpU+nh5htaXEkPr407PbImY3JdjtRLU5dIWto0iqoj1+EqTB+Ze//siqhjYi60dcEu+wkUZ10N7/TITWmADGpNXmEdUElPMolOEj4IPYoM+wq9fsCTrOP2hzgjYfkl2hZr2zsIzQbPkAc8rKNiiUlS912aoeTTNgKNEmVDpiJUkxBVLMGD3YGmvjvFvIY3uvU07alSrEVK2t9h7+dAfwGwPR0YBmKxDd8WDhQBaFjhEPysVVroqk6KSA3eFaxJmdAn1cQFmtWI0dKwboYoJUi68CLsMsEIfaED8lb5Ox2kanlOJMdJk7W8SXdWKGZZmkRCqH7XoiUQo6DHyjyyXN7ExXXz1lPXbasTm2D90eYsoLy6TWq0WCVTWOYTOkcCplBzd8mrMVeCc4Wn0B7gis++8s4zOZJfIdg/mIUJb34QzVvb3+96rbcgMGwJyv8o1q+2J1WdNHUgL3fncaUPQIyIGvUnruEUZVIcIhKlhJyXsyaidKvWqZ2+sfgnSe8zteh+GEtYfk4a773d/8fJsUHBbqIobBrGxkEmd4LEBruVI7Qk37hOY48XXoRzbXCMF9JMUNGpKV7lK9QmfPHIvplOSpCTvC5tyGd08NVO9BHdkg/FKRtAEz6oIzVqBM2iEXIFpfvyACdNx6gomNsuEYIIbQ/f12mfmgLztOaJ3qVoKLSfK5mG1eQTlGlw7lnNUn/5dE12fdnf8lg5o1JZRu5aQWcoeTump2Ahbu6szoY86hl7ihpla6zvYN88f1BTKGHQu2etlmjVdo5bzHQ5zDQYKJfZjjO3uJXRKZOrGe9cMUjv0sOI9oEmvoJXd25zGaW+0UMo4vkYQVzKsEUj/tIgLvXo7WyLqXwjLyG3pnfihvt++qWyDaJ8lA9uMAlPdX0ysiOyVqOQw2iuW/d7rAP4aCo+cRo6JChmHphz8Z/PIzNA6VX+gOz3bOa8lUtrleJ1w2sKeujglU+KM31yyrT2ONLhCHTLW3d0tZzvn5OT8b9WO8KXX4TAgxyS1XgGu/QmEVd7C9T3FhbAFp9aasvgroqMLR4wP5gNI+6Gz5v4swuS7ntqL3pN00HGNw7+ElrvF0ZWI/3bsQ8wlmAL8lkSwNBqnFwAINBC0X05at1UwHlYkuIsWYDL9a2TbjqDJvz5qrQY1H+UfZ5dN40Vzf3KPBKH0V3WT1QBO/H2LGorWNvwb5IJMLSJwsIfh2EOXNb0VIwXX97yfCmzkhj71HVR3Tw14YWhX9a1u9vvHWhxGqE2YNp/PH6l+Q2NyjS12lGumCINzozDn0KrJbB1+H6ipVaucb7c/2NONZ5ulUO/g/CNRUlouQXl2is+CK18yERx8XF2HWAP1MQ/xNaQ2SqTKD6zN3c3M1PKzHtT1PgLxRRCQWDt4Uk7vjaq274O3E+M6aLe/LHIKGOLIJBWw8b9fszcSRInxf+6JG6gYT0T5lNbDkCYwElU/2LGsMw+YED091kCuj1wBfepWJBSsZ/g6434P4V2Co2wqCvPbm0R+9KZb1hYaAomyrLARS+CGMgzy6efCm+x+mAfpLGQgWXyQdvSM7QIZDFg7yRcntZUZVet6rh+Uefy7zu6VBPz3UCX7tGc/hZUAc/Y3nOtO37CuYYfUyimhbptilNa0lGQv5k33HC9HG6/fnOhlV93lsH8n47DNA2S3k0CtwVmpGaq2y23ss3II0wmzieqe35m2MXOJuCWw3tZyMcgls26jBEtkPTTitbZNn78hyLoBqzk9avxW7u3FovXy32j4nw6ssm1fFKKO6dovIVbrLialZkPlzZCLokON3W3SMLQ3GjDcOUJwPprkjtDxwccsqv7cyAjGkxFL5bdnbBgiBAw2rNOZQ78b5/yxqoPUb8oloxN2df6slbl285n2oYXGsmufsQ8dQ87ThInmnyXDkFP+eFSrWvYotlJfZQeSxu8t9KgH60fbmRPgWcs7E/vSP5ql/57wckvDyf3BdPqHbZHnGe5PK+F2x9Clg5TjcuPV4rBc366bFnJ7OWeSBOXzFTHel33hHFG/nqm/7cCw4m6sGxOFdtqE6vY/xwmF/I/DDL0Cwi0dKQRa3j93QbmKLNqkV2G77PxO29cgwfldsJ76KdMzUzyX3NjG65I4YQ/DoUShykSD42zoEBvN58AQw396TqiZW6meXJf0t7Y8iM1MiQ" />
+
+       <span id="_ctl0_jslibs"></span>
+
+      <script type="text/javascript" src="/UserInterfaceV2/js/userhome.js?v=D1E7FEE6" ></script>
+
+<script type="text/javascript" src="/scripts/coreUtilsFunctions.js?v=A020A918" ></script>
+
+ 
+
+<link rel="stylesheet" text="text/css" href="/UserInterfaceV2/css/ServSuite/navigation.css?v=92E0DE0" media="all" />
+
+<!--[if IE 7]><link rel="stylesheet" href="/styles/topnav_ie7.css" /><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<style>
+    .notificationBox {
+        position: absolute;
+        display: none;
+        text-align: left;
+        z-index: 905;
+        top: 100%;
+        /*left: 240px;*/
+        width: 19rem !important;
+        margin-left: -8rem;
+        background: #FFFFFF;
+        color: #484848;
+        border: 1px solid #e1e1e1;
+    }
+
+    .recentlist {
+        position: relative !important;
+    }
+
+   ul > li.ss-navitem > a:hover {
+       text-decoration: none !important;
+   }
+
+   #releasedoctoolbar a {
+       text-decoration: none !important;
+   }
+
+
+    ul.recents_holder {
+        position: absolute;
+        width: 100%;
+        left: 0px;
+        top: 0;
+        text-align: center;
+        left: 0;
+        overflow-y: scroll;
+        background: #d8dde7;
+        -webkit-box-shadow: 8px 0px 12px -3px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 8px 0px 12px -3px rgba(0, 0, 0, 0.25);
+        box-shadow: 8px 0px 12px -3px rgba(0, 0, 0, 0.25);
+    }
+
+    .notification-body > li > div {
+        display: block;
+        padding: 0px !important;
+        width: 100%;
+    }
+
+        .notification-body > li > div:hover {
+            background: #fff !important;
+        }
+
+    .notificationBox .notification-footer {
+        text-align: center;
+        padding: 1rem;
+        border-top: 1px solid #e1e1e1;
+        background: #f2f2f2;
+    }
+
+    .notificationBox .notification-header {
+        text-align: center;
+        padding: 0px !important;
+        border-bottom: 1px solid #e1e1e1;
+        background: #f2f2f2;
+    }
+
+    .recent__class {
+        margin: 0px;
+        padding: 6px;
+        font-weight: 600;
+        font-size: 11pt;
+    }
+
+    .lower-header {
+        margin-left: 0px !important;
+    }
+
+    ul.recents_holder .recentlist .middleheadertop {
+        padding: 0.3rem 1rem !important;
+    }
+
+    #notif-group2 span#activity {
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        cursor: default !important;
+        display: inline-block;
+        font-weight: 700;
+        height: 24px;
+        width: 24px;
+        padding: 2px;
+        text-align: center;
+        text-decoration: none !important;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        background: #fff;
+        color: #284e90 !important;
+        color: #c4bab6;
+        font-size: 19px;
+        margin: 10px 0 0;
+        position: relative;
+    }
+
+    #notif-content2:before, #notif-content2::before {
+        left: 50.5% !important;
+    }
+
+    #notif-content2:after, #notif-content2::after {
+        left: 50.5% !important;
+    }
+
+    #notif-group2 span#activity {
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        cursor: pointer !important;
+        display: inline-block;
+        font-weight: 700;
+        width: 30px;
+        height: 30px;
+        padding: 2px;
+        text-align: center;
+        text-decoration: none !important;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        color: #fff;
+        font-size: 19px;
+        margin: 0 0 0;
+        position: relative;
+    }
+
+        #notif-group2 span#activity:hover {
+            transition: all 0s;
+            cursor: pointer !important;
+        }
+
+    #notif-content2 {
+        margin-left: 40px;
+    }
+
+    @media screen and (max-width: 768px) {
+        #notif-group2 {
+            display: inline-block !important;
+            /*padding-left: 0px !important;
+    padding-right: 0px !important;*/
+        }
+
+        #NotificationIcon {
+            padding-top: 6px !important;
+        }
+    }
+</style>
+
+<script type="text/javascript">
+
+function CoreApp() {
+       var rootUrl = $('#hcorerootpage');
+
+        $.ajax({
+            type: 'GET',
+            url: '../Office/RemoteMonitoring/datapageremote.aspx?type=checkcore',
+            success: function (xmlData) {
+                var xmlDoc = $.parseXML(xmlData);
+                var $xml = $(xmlDoc);
+                $xml.find('tbl0').each(function () {
+                    lid = $(this).find('lid').text();
+                    did = $(this).find('did').text();
+                    cid = $(this).find('cid').text();
+                    exp = $(this).find('exp').text();
+
+
+                    if (rootUrl.val()) {
+                        window.open(`${rootUrl.val()}scheduler/webpopup.htm`, '', urlSettings);
+                         window.open($("#hdservsensorurl").val() + "&lid=" + lid + "&did=" + did + "&cid=" + cid + "&exp=" + exp, '_blank');
+                    } else {
+                        window.open('../scheduler/webpopup.htm', '', urlSettings);
+                    }
+
+
+
+
+                });
+            },
+            error: function () { },
+            dataType: 'text'
+        });
+    }
+
+
+    function redirectOldSchedule() {
+        var rootUrl = $('#hcorerootpage'),
+            urlSettings = `width=(screen.availWidth-10),
+                           height=(screen.availHeight-40),
+                           left=0,top=0,toolbar=0,menubar=0,location=0,resizable=1,scrollbars=0,status=0,directories=0`;
+
+        if (rootUrl.val()) { window.open(`${rootUrl.val()}scheduler/webpopup.htm`, '', urlSettings); } else { window.open('../scheduler/webpopup.htm', '', urlSettings); }
+
+    }
+
+    $(function () {
+        var isiPad = navigator.userAgent.match(/iPad/i) != null;
+        if (isiPad)
+            $('.topnav').css('width', '1024px;');
+
+ 
+       
+     
+        SetupFavorites('_ctl0_mainmenu');
+     //Disable setup button control
+
+
+
+        var isPinned = false;
+        $('.windowPin').on('click', function () {
+            var isToggled = $(this).toggleClass('windowPinClass');
+
+            return isPinned ? isPinned = false : isPinned = true;
+
+        });
+
+        $('#show-shortcuts').on('click', function () {
+            $('#shortcut').show('20');
+        })
+
+        $('#show-shortcuts').on('click', function () {
+            $('#title').css('background', '');
+            $('#title-2').css('background', 'url(../images/topnav/tsp_logo_2018.png) no-repeat');
+        })
+
+        $('.hide-shortcuts').on('click', function () {
+            $('#title').css('background', 'url(../images/topnav/tsp_logo_2018.png) no-repeat');
+            $('#title-2').css('background', '');
+        })
+
+        $('.minifyme').on('click', function () {
+            var bodyId = $(this).parents('body').hasClass('minified');
+            var recentHolder = $('.recents_holder');
+            var recentHolderText = $('.recents_holder ul li .recentbutton');
+            var lowerHeader = $('#header .lower-header');
+            if (!bodyId) {
+                recentHolder.addClass("recents_holder-active");
+                recentHolderText.addClass('recents_holder-color');
+
+                lowerHeader.addClass('menu-closed');
+            } else {
+                recentHolder.removeClass("recents_holder-active");
+                recentHolderText.removeClass('recents_holder-color');
+
+                lowerHeader.removeClass('menu-closed');
+            }
+        })
+
+
+        var upperExpand = $('.expandBtn a');
+        upperExpand.on('click', function (event) {
+            event.preventDefault();
+            $(this).toggleClass('expanded');
+            $('.top-main-menu').toggleClass('expanded');
+        })
+
+        var basesList = $('.recentlist a ');
+
+        $.each(basesList, function (i, el) {
+            var oldUrls = $(this).attr('href');
+            oldUrls = oldUrls.replace('../', '../../../');
+            $(this).attr('href', oldUrls);
+        });
+
+
+
+
+
+    });
+ 
+    $(document).ready(function () {
+          
+         
+        //Recent        
+        $('.recentlist a').each(function () {
+            
+            var urlParamsFromAddAccount = new URLSearchParams(window.location.search);
+            var NewURLservCore = urlParamsFromAddAccount.get('corelink');
+
+            if (NewURLservCore != null) {
+                if (NewURLservCore.length > 0) {
+                    var oldUrl = $(this).attr("href");                    
+                    var host = getHost(oldUrl); 
+                    var hostNew = getHost(NewURLservCore);
+                    if (host != "localhost") {//localhost
+                        if (host != hostNew) {                            
+                            var newhref = oldUrl.trimLeft("../");                         
+                            $(this).attr("href", NewURLservCore + "/" + newhref);
+                        }
+                    }
+
+                }
+            }
+        });
+        //inbox Menu
+        $('.mailmenu a').each(function () {
+            var urlParamsFromAddAccount = new URLSearchParams(window.location.search);
+            var NewURLservCore = urlParamsFromAddAccount.get('corelink');
+             
+            if (NewURLservCore != null) {
+                if (NewURLservCore.length > 0) {
+                    var oldUrl = $(this).attr("href");
+                    var host = window.location.hostname;
+                    if (host != "localhost") {//localhost
+
+                        var LinkId = $(this).attr("id");
+                        if (LinkId == 'messagingSettingsButton') {
+
+                        } else {
+                            var hostold = getHost(oldUrl);
+                            var hostNew = getHost(NewURLservCore);
+                            if (hostold != hostNew) {
+                                var newhref = oldUrl.trimLeft("../");
+
+                                $(this).attr("href", NewURLservCore + "/" + newhref);
+
+                            }
+
+                        }
+                    }
+
+                }
+            }
+        });
+        // Favorities Menu
+        $("[id*='tblRightMenu'] > tbody > tr a").each(function (i, a) {
+            var urlParamsFromAddAccount = new URLSearchParams(window.location.search);
+            var NewURLservCore = urlParamsFromAddAccount.get('corelink');
+
+            if (NewURLservCore != null) {
+                if (NewURLservCore.length > 0) {
+                    var oldUrl = $(this).attr("href");
+                    var host = getHost(oldUrl);
+                    var hostNew =   getHost(NewURLservCore);
+                    if (host != "localhost") {//localhost
+                        if (host != hostNew) {
+                            var PageName = getBaseName(oldUrl)
+                            if (PageName == 'listreports' || PageName =='criteria2') {
+
+                            } else {
+                                var newhref = oldUrl.trimLeft("../");
+                                $(this).attr("href", NewURLservCore + "/" + newhref);
+                            }                            
+                        }
+                    }
+
+                }
+            }
+             
+        });
+
+        function getBaseName(url) {
+            if (!url || (url && url.length === 0)) {
+                return "";
+            }
+            var index = url.lastIndexOf("/") + 1;
+            var filenameWithExtension = url.substr(index);
+            var basename = filenameWithExtension.split(/[.?&#]+/)[0];
+
+            // Handle '/mypage/' type paths
+            if (basename.length === 0) {
+                url = url.substr(0, index - 1);
+                basename = getBaseName(url);
+            }
+            return basename ? basename : "";
+        }
+
+        function getHost(url) {
+            var a = document.createElement('a');
+            a.href = url;
+            return a.hostname;
+        }
+
+        
+
+
+        var liveChatEl = $("#lnkLiveChat_10155");
+        var liveChatName = liveChatEl.html();
+
+        liveChatEl.html('');
+
+        $("#lnkLiveChat_10155").append('<i class="material-icons">forum</i> <span class="ss-nav-link">' + liveChatName + '</span>');
+
+
+        if ($("#_ctl0_mainmenu_hdcustommenuname").val() == "") {
+            $("#_ctl0_mainmenu_liNorthWest").css('display', 'none');
+        }
+        else {
+            $("#_ctl0_mainmenu_liNorthWest").css('display', '');
+            $("#_ctl0_mainmenu_lnkcustommenu").text($("#_ctl0_mainmenu_hdcustommenuname").val());
+            $("#_ctl0_mainmenu_lnkcustommenu").attr("href", $("#_ctl0_mainmenu_hdcustommenulink").val());
+
+        }
+
+        $("#notif-group2").click(function (a) {
+            var b = $(this);
+
+            b.next(".ajax-dropdown").is(":visible") ? (b.next(".ajax-dropdown").fadeOut(150), b.removeClass("item-active")) : (b.next(".ajax-dropdown").fadeIn(150), b.addClass("item-active"));
+            var c = b.next(".ajax-dropdown").find(".btn-group > .active > input").attr("id");
+            if (b.hasClass('item-active')) {
+                max = $(window).height() - 100;
+                $('.recents_holder').css('max-height', max);
+            };
+
+            b = null, c = null, a.preventDefault()
+        });
+
+
+        $('.main-wrap').click(function (e) {
+            //e.stopPropagation();
+            if (e.target.parentElement.parentElement.className !== 'expandBtn') {
+
+                $('#expand-upper-header').removeClass('expanded');
+                $('.top-main-menu').removeClass('expanded');
+
+            }
+        });
+
+
+        $('.openFavoriteList').on('click', function () {
+            $('.favoritelist').toggle();
+        });
+
+
+
+
+
+
+        $(window).resize(function (e) {
+            if ($('#notif-group2').hasClass('item-active')) {
+                max = $(window).height() - $('.recents_holder').offset().top;
+                $('.recents_holder').css('max-height', max);
+            };
+        });
+
+        $('.recents_holder').parent().css({
+            'position': 'relative',
+            'max-height': 'unset',
+            'overflow-y': 'unset'
+        });
+
+
+        var recentList = $('.recentlist div');
+
+        $('.recentlist a').on('click', function () {
+            $('#notif-group2').removeClass('item-active');
+            $('#notif-content2').hide();
+        });
+
+        $.each(recentList, function (el, index) {
+            if ($(this).hasClass('middleheadertop')) {
+
+                var putIcons = '<i class="fa fa-th-large txt-color-blue"></i>';
+                var recentAccounts = $($(this)).nextUntil(".middleheadertop").find('a');
+
+                recentAccounts.append(putIcons);
+
+                recentAccounts.find('i').css({
+                    'float': 'left',
+                    'line-height': '1.5',
+                    'margin-right': '5px'
+                });
+            };
+        });
+
+        var titleRecentName = $("#lblTitle_6135").html();
+
+        $('.changeTitle__class').attr('title', titleRecentName);
+
+        if ($("#hcorerootpage").val() != "") {
+            $("a[href^='../']").each(function () {
+                $(this).attr("href", $("#hcorerootpage").val() + $(this).attr("href").replaceAll("../", ""));
+            });
+        }
+
+
+
+    });
+
+</script>
+
+
+<script>
+    $(function () {
+        $(document).click(function (e) {
+            if (e.target.parentElement) {
+                if (e.target.parentElement.className.split(' ')[2] !== 'openFavoriteList') {
+                    hideAll('_ctl0_mainmenu');
+                }
+            }
+        });
+
+        $(document).click(function (e) {
+            
+            var parentNotifyDiv = $(e.target).closest("#msgnotif-content");
+
+     
+            if ($(e.target).parents('#msgnotif-group').length <= 0 && parentNotifyDiv.length <= 0 && !$(e.target).hasClass('paginate_button')) {
+                $('#msgnotif-content').hide();
+            }
+        });
+    })
+</script>
+<style type="text/css">
+  
+</style>
+<header id="header">
+
+    <div class="upper-header">
+
+        <div class="logo" id='title'>
+            <h1><span></span></h1>
+        </div>
+
+        <div id="shortcut">
+
+            <div class="topleft recent_holder" style="margin-left: 200px; margin-top: 8px; float: left;">
+                  
+                <a id="notif-group2" class="ss-nav-link">
+                    
+                    <span id="activity" class="activity-dropdown changeTitle__class" title=""><i class="fa fa-th-large txt-color-blue"></i></span>
+                </a>
+                <div id="notif-content2" class="ajax-dropdown notificationBox">
+                    <div class="notification-header">
+                        
+                        <span id="_ctl0_mainmenu_lblTitle_6135" class="recent__class">Recent</span>
+                    </div>
+
+                    <div id="" class="notifications-scroll notification-body">
+                        <ul class="recents_holder notification-body">
+                            <li>
+                                <a class="recentbutton" style="display: none"><i class="material-icons">keyboard_arrow_down</i>recent</a><!-- href =~/user/home.aspx"-->
+                                <div id="_ctl0_mainmenu_basessm" class="recentlist"><div class='middleheadertop'>Recent Accounts</div>
+<div class='middleheaderwhite'><a target='_blank' href='../account/customerhome.aspx?accid=33800&cs=1'>33800 - Falcon</a></div>
+<div class='middleheaderother'><a target='_blank' href='../account/customerhome.aspx?accid=33799&cs=1'>33799 - Falcon</a></div>
+<div class='middleheaderwhite'><a target='_blank' href='../account/customerhome.aspx?accid=33796&cs=1'>33796 - Falcon</a></div>
+<div class='middleheaderother'><a target='_blank' href='../account/customerhome.aspx?accid=33798&cs=1'>33798 - Falcon</a></div>
+<div class='middleheaderwhite'><a target='_blank' href='../account/customerhome.aspx?accid=33797&cs=1'>33797 - Falcon</a></div>
+<div class='middleheaderother'><a target='_blank' href='../account/customerhome.aspx?accid=33795&cs=1'>33795 - Falcon</a></div>
+<div class='middleheaderwhite'><a target='_blank' href='../account/customerhome.aspx?accid=33793&cs=1'>33793 - Falcon</a></div>
+<div class='middleheaderother'><a target='_blank' href='../account/customerhome.aspx?accid=33794&cs=1'>33794 - Falcon</a></div>
+<div class='middleheaderwhite'><a target='_blank' href='../account/customerhome.aspx?accid=33792&cs=1'>33792 - Falcon</a></div>
+<div class='middleheaderother'><a target='_blank' href='../account/customerhome.aspx?accid=33791&cs=1'>33791 - Falcon</a></div>
+<div class='middleheaderwhite'><a target='_blank' href='../account/customerhome.aspx?accid=33790&cs=1'>33790 - Falcon</a></div>
+<div class='middleheaderother'><a target='_blank' href='../account/customerhome.aspx?accid=33789&cs=1'>33789 - Falcon</a></div>
+<div class='middleheaderwhite'><a target='_blank' href='../account/customerhome.aspx?accid=33788&cs=1'>33788 - Falcon</a></div>
+<div class='middleheaderother'><a target='_blank' href='../account/customerhome.aspx?accid=33787&cs=1'>33787 - Falcon</a></div>
+<div class='middleheaderwhite'><a target='_blank' href='../account/customerhome.aspx?accid=33786&cs=1'>33786 - Falcon</a></div>
+<div class='middleheadertop'>Recent Actions</div><div class='middleheaderwhite'><a target='_blank' href='../office/officetx.aspx?option=3'>Print Invoices</a></div><div class='middleheaderother'><a target='_blank' href='../office/officetx.aspx?option=5'>Print Statements</a></div><div class='middleheaderwhite'><a target='_blank' href='../office/officetx.aspx?option=1'>Print Work Orders</a></div><div class='middleheaderother'><a target='_blank' href='../office/officetx.aspx?option=8'>Release Workorders for the Month</a></div><div class='middleheaderwhite'><a target='_blank' href='../office/officetx.aspx?option=2'>Enter Completed Work Orders</a></div><div class='middleheadertop'>Frequent Actions</div><div class='middleheaderwhite'><a target='_blank' href='../office/officetx.aspx?option=6'>Show Batches</a></div></div>
+                            </li>
+                            
+                        </ul>
+
+                    </div>
+
+                    <div class="notification-footer">
+                    </div>
+                </div>
+
+
+
+            </div>
+
+                <div class="topleft notify_holder" style="margin-left: 10px; float: left">
+                 <link rel="stylesheet" text="text/css" href="/UserInterfaceV2/css/servSuite/notifications.css?v=C5376360" media="all" />
+
+
+  <span id="activity" class="activity-dropdown">
+       <span id="notif-group_notify" class="notification_icon">
+        <i id="NotificationIcon_notify" class="material-icons bell">notifications</i>
+        <b id="notifCounter_ring" class="badge badge-primary"><span class="unreadmsgscount">0</span></b>
+          </span>
+    </span>
+
+<div id="notif-content_notify" class="ajax-dropdown notificationBox">
+    <div class="notification-header">
+        <h5>Notifications </h5>
+        <button type="button" id="btnRefreshNotifications" class="btn btn-xs refresh-button">
+            <i class="material-icons" id="refresh-button">refresh</i>
+        </button>
+
+    </div>
+
+    <div id="notif-parent_notify" class="ajax-notifications notifications-scroll notification-body">
+        <div id="notif-nomessages_notify" style="display: none;">
+            <div class="alert alert-transparent">
+                <h4>No messages found.</h4>
+            </div>
+            <i class="material-icons">done_all</i>
+        </div>
+
+    </div>
+    <div class="notification-footer">
+        <small>Last updated on: <span id="notif-LastUpdated">12/12/2016 9:43AM</span></small>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+
+    function ShowMoreText() {
+        var maxheight = 40;
+        var showText = "More";
+        var hideText = "Less";
+        $('.textContainer_Truncate').each(function () {
+            var text = $(this);
+            if (text.height() > maxheight) {
+
+                var link = $('<a href="#" class ="font-customsize" height="' + text.height() + '">' + showText + '</a>');
+                text.css({ 'overflow': 'hidden', 'height': maxheight + 'px' });
+                var linkDiv = $('<div></div>');
+                linkDiv.append(link);
+                $(this).after(linkDiv);
+
+                link.click(function (event) {
+                    event.preventDefault();
+                    if (text.height() > maxheight) {
+                        $(this).html(showText);
+                        text.animate({ 'height': maxheight + 'px' }, "500");
+                    } else {
+                        $(this).html(hideText);
+                        text.animate({ 'height': this.getAttribute("height") }, "500");
+                    }
+                });
+            }
+        });
+    }
+    function getuserDatetime() { 
+        $.ajax({
+            url: '../controls/Notifications/notificationshandlerV2.ashx',
+            data: { action: 'getcurrentuserdate' },
+            success: function (response) {
+                $('#notif-LastUpdated').text(response);
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log('(ERROR) ' + errorThrown);
+            }
+        });
+     }
+    function NotificationIconAnimate(unreadsmgs) {
+
+        if (unreadsmgs < 1 || typeof unreadsmgs == "undefined") {
+            $("#NotificationIcon_notify").removeClass("newMsgAnimation");
+        }
+        else {
+            $("#NotificationIcon_notify").addClass("newMsgAnimation");
+        }
+    }
+
+
+    $(function () {
+        $('#notif-group_notify').click(function (event) {
+            event.preventDefault();
+            var thisRef = $(this);
+
+            if (!thisRef.hasClass('item-active')) {
+                thisRef.addClass('item-active');
+                $('#notif-content_notify').show();
+
+                //Only load the data the first time, then, on demand
+                if (!$('#notif-holder_notify').length) {
+               
+                    updateUnreadNotificationsCounter();
+                    updateNotifications();
+                }
+
+            } else {
+                hideNotifMenu();
+            }
+
+        });
+
+        $('#btnRefreshNotifications').click(function () {
+            $('#notif-holder_notify').remove();
+            updateUnreadNotificationsCounter();
+            updateNotifications();
+        });
+
+        updateUnreadNotificationsCounter();
+
+    });
+
+    function hideNotifMenu() {
+        var releasedoctoolbar = $('#notif-group_notify');
+        releasedoctoolbar.removeClass('item-active');
+
+        $('#notif-content_notify').hide();
+    }
+
+    function updateUnreadNotificationsCounter() {
+        $.ajax({
+            url: '../controls/Notifications/notificationshandlerV2.ashx',
+            data: { action: 'getunreadnotificationscount' },
+            success: function (response) {
+
+                $('.unreadmsgscount').text(response);
+
+                if (response * 1 == 0) {
+                    $("#notifCounter_ring").removeClass("badge-danger");
+                    $("#notifCounter_ring").addClass("badge-primary");
+                }
+                else {
+                    $("#notifCounter_ring").addClass("badge-danger");
+                    $("#notifCounter_ring").removeClass("badge-primary");
+                }
+                getuserDatetime();
+                //var now = new Date(); 
+                //debugger
+
+                //var checkExist = setInterval(function () {
+                //    if ($('#hdcaldtformat').length) {
+                //        var formatdate = $('#hdcaldtformat').val().toUpperCase();
+                //        var tempdate = "";
+                //        tempdate = moment(now).format(formatdate)
+                //        $('#notif-LastUpdated').text(tempdate);
+                //        clearInterval(checkExist);
+                //    }
+                //}, 100); // check every 100ms
+
+
+                var unreadsmgs = ($('.unreadmsgscount').first().text()) * 1;
+                NotificationIconAnimate(unreadsmgs)
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                $('#btnRefreshNotifications').removeAttr("disabled")
+                console.log('(ERROR) ' + errorThrown);
+            }
+        });
+
+    }
+
+    function updateNotifications() {
+        
+        $('#notif-holder_notify').remove(); //Gets appended from the ajax reponse
+        $('#notif-nomessages_notify').hide();
+        $("#refresh-button").addClass("refreshNotifications");
+        $('#btnRefreshNotifications').prop("disabled", true);
+
+        $.ajax({
+            url: '../controls/Notifications/notificationshandlerV2.ashx',
+            data: { action: 'getnotificationslist' },
+            success: function (response) {
+                $('#notif-parent_notify').append(response);
+
+                var notifHolder = $('#notif-holder_notify');
+
+                if (notifHolder.children().length == 0) {
+                    notifHolder.remove();
+
+                    $('#notif-nomessages_notify').show();
+                }
+                else {
+                    $('#notif-nomessages_notify').hide();
+                }
+
+                ShowMoreText()
+                var unreadsmgs = ($('.unreadmsgscount').first().text()) * 1;
+                NotificationIconAnimate(unreadsmgs)
+                $("#refresh-button").removeClass("refreshNotifications");
+                function removedisabledd() {
+                    $('#btnRefreshNotifications').removeAttr("disabled")
+                }
+                setTimeout(removedisabledd, 2000);
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                $("#refresh-button").removeClass("refreshNotifications");
+                $('#btnRefreshNotifications').removeAttr("disabled")
+                console.log('(ERROR) ' + errorThrown);
+            }
+        });
+    }
+
+    //function updateNotifications() {
+    //    $('#notif-holder').remove(); //Gets appended from the ajax reponse
+    //    $('#notif-nomessages').hide();
+    //    $("#refresh-button").addClass("refreshNotifications");
+    //    $('#btnRefreshNotifications').prop("disabled", true);
+
+    //    $.ajax({
+    //        url: '../controls/Notifications/notificationshandlerV2.ashx',
+    //        data: { action: 'getnotificationslist' },
+    //        success: function (response) {
+
+    //            $.get("../controls/Notifications/notifications-server-response.html", function (data) {
+
+    //                var demoMsgs = fillWithMessages();
+    //                $('#notif-parent').append(data);
+
+    //                var notifHolder = $('#notif-holder');
+
+    //                if (notifHolder.children().length == 0) {
+    //                    notifHolder.remove();
+    //                    $('#notif-nomessages').show();
+    //                }
+    //                else {
+    //                    $('#notif-nomessages').hide();
+    //                }
+
+    //                ShowMoreText()
+    //                var unreadsmgs = ($('.unreadmsgscount').first().text()) * 1;
+    //                NotificationIconAnimate(unreadsmgs)
+    //                $("#refresh-button").removeClass("refreshNotifications");
+    //                function removedisabledd() {
+    //                    $('#btnRefreshNotifications').removeAttr("disabled")
+    //                }
+    //                setTimeout(removedisabledd, 2000);
+
+    //            });
+    //        },
+    //        error: function (jqXHR, textStatus, errorThrown) {
+    //            $("#refresh-button").removeClass("refreshNotifications");
+    //            $('#btnRefreshNotifications').removeAttr("disabled")
+    //            console.log('(ERROR) ' + errorThrown);
+    //        }
+    //    });
+    //}
+
+    function markAsRead(btn) {
+        var thisRef = $(btn);
+        thisRef.addClass('disabled');
+
+        //Mark Notification as read
+        $.ajax({
+            url: '../controls/Notifications/notificationshandlerV2.ashx',
+            data: { action: 'marknotificationread', notificationid: thisRef.attr("notificationid") },
+            success: function (response) {
+                //get the current unread msgs count
+                var unreadsmgs = ($('.unreadmsgscount').first().text()) * 1;
+
+                //update the unread counter
+                $('.unreadmsgscount').text(unreadsmgs - 1);
+
+                if (unreadsmgs - 1 == 0) {
+                    $("#notifCounter_ring").removeClass("badge-danger");
+                    $("#notifCounter_ring").addClass("badge-primary");
+                }
+
+                //remove the unread visual style
+                thisRef.parent().parent().removeClass("unread");
+
+                //hide the mark as unread button
+                thisRef.hide();
+
+                unreadsmgs = ($('.unreadmsgscount').first().text()) * 1;
+                NotificationIconAnimate(unreadsmgs);
+
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log('(ERROR) ' + errorThrown);
+                thisRef.removeClass('disabled');
+            }
+        });
+    }
+
+    function markAsDeleted(btn) {
+        var thisRef = $(btn);
+        thisRef.addClass('disabled');
+
+        //Mark Notification as deleted
+        $.ajax({
+            url: '../controls/Notifications/notificationshandlerV2.ashx',
+            data: { action: 'marknotificationdeleted', notificationid: thisRef.attr("notificationid") },
+            success: function (response) {
+                var msgholder = thisRef.parent().parent();
+                var li = thisRef.parent().parent().parent();
+                var ul = thisRef.parent().parent().parent().parent();
+
+                //get the current unread msgs count
+                var unreadsmgs = ($('.unreadmsgscount').first().text()) * 1;
+
+                if (msgholder.hasClass("unread")) {
+                    //update the unread counter
+                    $('.unreadmsgscount').text(unreadsmgs - 1);
+
+                    if (unreadsmgs - 1 == 0) {
+                        $("#notifCounter_ring").removeClass("badge-danger");
+                        $("#notifCounter_ring").addClass("badge-primary");
+                    }
+                }
+
+                //Remove the message
+                li.remove();
+
+                //Remove the message holder if no messages left
+                if (ul.children().length == 0) {
+                    ul.remove();
+                    $('#notif-nomessages_notify').show();
+                }
+
+                unreadsmgs = ($('.unreadmsgscount').first().text()) * 1;
+                NotificationIconAnimate(unreadsmgs);
+
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log('(ERROR) ' + errorThrown);
+                thisRef.removeClass('disabled');
+            }
+        });
+
+
+    }
+
+</script>
+
+            </div>
+
+            <div class="topleft notify_holder" style="margin-left: 10px; float: left">
+                <link rel="stylesheet" text="text/css" href="/controls/notifications/styles/notifications.css?v=28ECA328" media="all" />
+
+
+    <!-- Theme style -->  
+     
+   
+    <!-- BootBox -->
+    <script type="text/javascript" src="/office/messaging/plugins/bootbox/bootbox.js?v=D6987801" ></script>
+
+
+
+     <script type="text/javascript" src="/office/messaging/plugins/bootstrap-notify/bootstrap-notify.min.js?v=FBD56B31" ></script>
+ 
+
+    <style>
+        .modal-lg {
+            width: 80% !important;
+            height: 100%;
+        }       
+    </style>
+
+ 
+ <input type="hidden" name="_ctl0:mainmenu:Notifications_new1:monthName" id="_ctl0_mainmenu_Notifications_new1_monthName" value="Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec;" />
+<input type="hidden" name="_ctl0:mainmenu:Notifications_new1:markasQW_4549" id="_ctl0_mainmenu_Notifications_new1_markasQW_4549" value="Mark As" />
+<input type="hidden" name="_ctl0:mainmenu:Notifications_new1:readQW_8707" id="_ctl0_mainmenu_Notifications_new1_readQW_8707" value="Read" /> 
+
+<input type="hidden" name="_ctl0:mainmenu:Notifications_new1:QW_8834" id="_ctl0_mainmenu_Notifications_new1_QW_8834" value="No new messages" />
+<input type="hidden" name="_ctl0:mainmenu:Notifications_new1:QW_20643" id="_ctl0_mainmenu_Notifications_new1_QW_20643" value="You do not have new messages to read" />
+<input type="hidden" name="_ctl0:mainmenu:Notifications_new1:QW_20644" id="_ctl0_mainmenu_Notifications_new1_QW_20644" value="No new tasks" />
+<input type="hidden" name="_ctl0:mainmenu:Notifications_new1:QW_20645" id="_ctl0_mainmenu_Notifications_new1_QW_20645" value="You Do Not have new tasks to do to complete" />
+<input type="hidden" name="_ctl0:mainmenu:Notifications_new1:QW_20646" id="_ctl0_mainmenu_Notifications_new1_QW_20646" value="No new reminder" />
+<input type="hidden" name="_ctl0:mainmenu:Notifications_new1:QW_20647" id="_ctl0_mainmenu_Notifications_new1_QW_20647" value="You do not have new reminders" />
+
+<input type="hidden" name="_ctl0:mainmenu:Notifications_new1:hostHidden" id="_ctl0_mainmenu_Notifications_new1_hostHidden" value="https://sprolive.theservicepro.net" />
+
+
+<div id="_ctl0_mainmenu_Notifications_new1_msgnotifgroupcouldnotbeusedincodebehind">
+    <div id="msgnotif-group" class="item-inactive">
+        <span id="msgsactivity" class="activity-dropdown">
+            <i id="_ctl0_mainmenu_Notifications_new1_msgNotificationIcon" class="fa fa-user"></i>
+            <b id="msgnotifCounter" class="badge bg-color-blue bounceIn animated"><span id="unreadmsgscount">0</span></b>
+        </span>
+    </div>
+</div>
+<div id="msgnotif-content" class="msgajax-dropdown">
+    <div id="msgnotif-parent" >
+       <div class="nav-tabs-custom">
+            <ul class="nav nav-tabs">
+             
+              <li><a href="#taskstab" data-toggle="tab"><i class="fa fa-tasks"></i> Tasks <span id="taskSpan" class="badge">0</span></a></li>
+              <li><a href="#contactlogmsgtab" data-toggle="tab"><i class="fa fa-bell-o"></i> Contact Log messages <span id="contactlogmsg" class="badge">0</span></a></li>
+            </ul>
+           <div class="tab-content" style="height:300px; overflow:auto; padding:0;">
+              
+               <!-- /.tab-pane -->
+               <div class="tab-pane active" id="taskstab">
+                   <div id="uncompleted_tasks_layer" class="box-body">
+                       <div class="alert alert-dismissible alert-info">
+                           <strong id="strongNoTask"></strong>
+                           <p id="ptextNoTask"></p>
+                       </div>
+                   </div>
+               </div>
+               <div class="tab-pane" id="contactlogmsgtab">
+                     <div id="dvalert">                        
+                   </div>
+                   <div class="container-fluid" style="padding:0;">
+                    <div class="row" id="sh_letterbatchview_02"> 
+                    <table id="contactlogtable" style="width:90%;">                       
+                    </table>
+                    </div>
+                </div>
+               </div>
+               <!-- /.tab-pane -->
+           </div>
+            <!-- /.tab-content -->
+          </div>
+    </div> 
+</div>
+
+<script> 
+    $(document).ready(function () {
+       
+        var _host = $("#hostHidden").val(); 
+        
+        UpdateUnreadMessagesCounter();
+
+        $('#msgnotif-group').click(function (event) {
+            
+            UpdateUnreadMessagesCounter();
+            var $this = $(this);
+            $this.toggleClass('item-inactive', 'item-active');
+            $('#msgnotif-content').show(300);
+           
+
+            //fill up messages     
+            var _filter = "archivedbyuserid=0|AND|readbyuserid=0|And|istask=0";
+            var _url = _host + "/office/messaging/handlers/MMNew_Handler.ashx?optionCase=GetDataByFilter&filter=" + _filter;
+           
+            $.ajax({
+                type: 'POST',
+                url: _url,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (messagesData) {
+                    $("#messagestab").empty();
+                    if (messagesData.length > 0) {
+                        var rowmessageCounter = 1;
+
+                        $.each(messagesData,
+                            function (i, message) {
+
+                                if (rowmessageCounter < 7) {
+                                    ++rowmessageCounter;
+                                    var messagefromtext = message.messagefromtext;
+                                    var subject = "";
+
+                                    subject += message.messagesubject.length > 100
+                                        ? message.messagesubject.substring(0, 100) + "..."
+                                        : message.messagesubject;
+
+
+                                    var createstamp = new Date(message.createstamp);
+                                    var createstampParts = message.createstamp.split('-');
+                                    var createstampYear = createstampParts[0];
+                                    var createstampMonth = createstampParts[1];
+                                    var createstampDay = createstampParts[2].substring(0, 2);
+
+                                    var todayStr = new Date();
+                                    var todayDay = fixNumber(todayStr.getDate());
+                                    var todayMonth = fixNumber(todayStr.getMonth() + 1);
+                                    var todayYear = todayStr.getFullYear();
+
+                                    var dateMessage = getMonthShortName(createstampMonth) + ' ' + createstampDay;
+
+                                    if (createstampYear == todayYear &&
+                                        createstampMonth == todayMonth &&
+                                        createstampDay == todayDay) {
+
+
+                                        dateMessage = createstamp.getHours() + ":" + createstamp.getMinutes();
+                                    }
+
+                                    $("#messagestab").append('<div>');
+                                    $("#messagestab").append('<div>');
+
+                                    $("#messagestab").append(
+                                        '<h5 style="width:100%" class="pull-left"><i class="fa fa-envelope-o"></i> <b>' +
+                                        messagefromtext +
+                                        '</b><small class="pull-right"><i class="fa fa-clock-o"></i> ' +
+                                        dateMessage +
+                                        '</small></h5>');
+
+
+                                    $("#messagestab").append('</div>');
+                                    $("#messagestab").append('<div>');
+                                    $("#messagestab").append('<p>' + subject + '</p></div></div> ');
+
+                                    //$("#messagestab").append(
+                                    //    '<div class="row"><div class="col-md-12"><a class="viewmessage btn btn-xs btn-primary pull-right" data-subject="' +
+                                    //    messagefromtext +
+                                    //    '" data-usermessageid="' +
+                                    //    message.usermessageid +
+                                    //    '"><i class="fa fa-eye"></i></a></div class="col-md-12"></div>');
+
+
+                                    $("#messagestab").append('</hr>');
+                                }
+                            });
+                    } else {
+                        var _Msg = ' <div class="alert alert-info alert-dismissible">';
+                        _Msg += ' <h4><i class="icon fa fa-info"></i> ' + $("#QW_8834").val() + '</h4>';
+                        _Msg += $("#QW_20643").val() + "</div>";
+
+                        $("#messagestab").append(_Msg);
+                    }
+
+
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log('(ERROR) ' + errorThrown);
+                }
+            }).done(function () {
+                var _filter_task = "archivedbyuserid=0|And|istask=1|And|readbyuserid=0";
+                var _url_task = _host + "/office/messaging/handlers/MMNew_Handler.ashx?optionCase=GetDataByFilter&filter=" +
+                    _filter_task;
+
+
+                $.ajax({
+                    type: "POST",
+                    async: true,
+                    url: _url_task,
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (taskData) {
+                        $("#uncompleted_tasks_layer").empty();
+                        if (taskData.length > 0) {
+
+
+                            $.each(taskData,
+                                function (i, task) {
+
+                                    var utctimestamp = task.createstamp;
+
+                                    $.ajax({
+                                        type: "POST",
+                                        async: false,
+                                        url:
+                                            _host + "/office/messaging/handlers/MMNew_Handler.ashx?optionCase=GeNotificationTimeOld&utctimestamp=" +
+                                            utctimestamp,
+
+
+                                        success: function (response) {
+                                             
+                                            utctimestamp = response;
+
+                                            var messagefromtext = task.messagefromtext;
+                                            var subject = "";
+                                            subject += task.messagesubject.length > 100
+                                                ? task.messagesubject.substring(0, 100) + "..."
+                                                : task.messagesubject;
+
+
+                                            //$("#uncompleted_tasks_layer").append('<div class="row">');
+                                            //$("#uncompleted_tasks_layer").append('<div class="col-md-12">'); 
+                                            var _maindiv = $("<div class='row'></div>");
+                                            var _col12 = $("<div class='col-md-12 text-left'></div>");
+
+                                            
+                                            
+
+                                            $(_col12).append(
+                                                '<h5 style="width:100%" class="pull-left"><i class="fa fa-envelope-o"></i> <b>' +
+                                                messagefromtext +
+                                                '</b><small class="pull-right"><i class="fa fa-clock-o pull-right"></i> ' +
+                                                utctimestamp +
+                                                '</small></h5>'); 
+
+                                            $(_maindiv).append(_col12);
+
+                                            $("#uncompleted_tasks_layer").append(_maindiv);
+
+                                            var _detaildiv = $("<div class='row'></div>");
+                                            var _detailcol12 = $("<div class='col-md-12 text-left'></div>");
+                                            var _p = $("<p></p>");
+
+                                            $(_p).append(subject);
+
+                                            $(_detailcol12).append(_p);
+                                            $(_detaildiv).append(_detailcol12);
+
+                                            $("#uncompleted_tasks_layer").append(_detaildiv);
+
+                                            var _linkdiv = $("<div class='row'></div>");
+                                            var _linkcol12 = $("<div class='col-md-12'></div>");
+                                            
+                                            
+                                            if (task.usermessageid > 0 && task.accountnum !== null)
+                                                $(_linkcol12).append('<a href = "../account/contactlog.aspx?accid=' + task.accountid + '" target = "_blank" class= "btn btn-xs btn-default pull-right"> Account #:' + task.accountnum + '</small></a>');
+
+                                            else
+                                                $(_linkcol12).append('<a href ="' + _host + '/office/messaging/pages/MessageManagement_New.aspx" target = "_blank" class= "btn btn-xs btn-default pull-right"><small> View in Contact log Module</small></a>');
+                                               
+                                            $(_linkdiv).append(_linkcol12);
+                                            $("#uncompleted_tasks_layer").append(_linkdiv);
+                                            $("#uncompleted_tasks_layer").append('</hr>');
+                                        }
+
+                                    });
+                                });
+                        } else {
+                            var _taskMsg = ' <div class="alert alert-info alert-dismissible">';
+                            _taskMsg += ' <h4><i class="icon fa fa-info"></i> ' + $("#QW_20644").val() + '</h4>';
+                            _taskMsg += $("#QW_20645").val() + "</div>";
+
+                            $("#uncompleted_tasks_layer").append(_taskMsg);
+                        }
+                    }
+                }).done(function () {
+                    //fill up reminders
+                    var _urlreminders = _host + '/office/messaging/handlers/MMNew_Handler.ashx?optionCase=GetUnreadReminders';
+                    $.ajax({
+                        type: 'POST',
+                        url: _urlreminders,
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (remindersData) {
+                            $("#reminderstab").empty();
+                            if (remindersData.length > 0) {
+                                $.each(remindersData,
+                                    function (i, reminder) {
+
+                                        var _contactinfo = ''
+                                        _contactinfo += '<p>';
+                                        _contactinfo +=
+                                            '<a style="margin-right:10px;" href = "../account/contactlog.aspx?accid=' +
+                                            reminder.accountid +
+                                            '" target = "_blank" class= "btn btn-xs btn-default"> Account #:' +
+                                            reminder.accountnum +
+                                            '</small>' +
+                                            '</a>';
+                                        _contactinfo += reminder.type === 1 ? reminder.emailaddress : reminder.phonenumber;
+                                        _contactinfo += '</p>';
+
+                                        $("#reminderstab").append('<blockquote><b><i class="fa fa-bell"></i> ' +
+                                            reminder.msgsubject +
+                                            '</b>' +
+                                            '<button type="button" class="markasread btn btn-primary btn-xs pull-right" style="margin-left:10px;"  data-reminderid=' +
+                                            reminder.notificationid +
+                                            '>' +
+                                            $('#markasQW_4549').val() +
+                                            ' ' +
+                                            $('#readQW_8707').val() +
+                                            '</button>' +
+                                            '<p style="margin-top:5px; margin-left:10px;">' +
+                                            reminder.utctimestamp.split("T")[0] +
+                                            '  ' +
+                                            reminder.utctimestamp.split("T")[1] +
+                                            '</p>' +
+                                            _contactinfo +
+                                            '<small>By: <cite title="Source Title">' +
+                                            reminder.msgfrom +
+                                            '</cite>' +
+                                            '<a class="pull-right" href = "' + _host + '/office/messaging/pages/MessageManagement_New.aspx?contactlogid=' +
+                                            reminder.contactlogid +
+                                            '" target = "_blank"> Contact log</a>'
+                                        );
+                                    });
+                            } else {
+                                var _reminderMsg = ' <div class="alert alert-info alert-dismissible">';
+                                _reminderMsg += ' <h4><i class="icon fa fa-info"></i> ' + $("#QW_20646").val() + '</h4>';
+                                _reminderMsg += $("#QW_20647").val() + "</div>";
+
+                                $("#reminderstab").append(_reminderMsg);
+                            }
+                        },
+                        error: function (jqXHR, textStatus, errorThrown) {
+                            console.log('(ERROR) ' + errorThrown);
+                        }
+                    });
+                }).done(function () {
+                    $("#dvalert").empty();
+                    $("#contactlogtable").dataTable({
+                        pageLength: 2,
+                        searching: false,
+                        "bRetrieve": true,
+                        "ordering": false,
+                        "lengthChange": false,
+                        "oLanguage": {
+                            "sEmptyTable": "You do not have new messages"
+                        },
+                        ajax: {
+                            url: "../office/messaging/handlers/MMNew_Handler.ashx",
+                            type: "POST",
+                            data: { optionCase: "GetUnreadContactLogFromClientjson" },
+                        },
+                        columns: [
+                            {
+                                data: "createdby",
+                                orderable: false,
+                                title: "",
+                                render: function (data, type, row) {
+                                    var utctimestamp = row.utctimestamp;
+                                    var nid = row.noteid;
+                                    var ntype = row.notetype;
+
+                                    return "<blockquote style='margin-bottom:2px!important;'><b><i class='fa fa-bell'></i> " + row.fromPhoneNumber + "</b>"
+                                        + "<button type='button' class='marknoteasread btn btn-primary btn-xs pull-right' "
+                                        + "style='margin-left:10px;'  data-noteid=" + nid + " data-notetype=" + ntype + ">"
+                                        + "Resolve</button>"
+                                        + "<p style='margin-top:5px; margin-left:10px; width:600px; word-wrap:break-word;'>"
+                                        + row.notetext + "</p>"
+                                        + "<a href = '../../account/contactlog.aspx?accid=" + row.accountid
+                                        + "' target = '_blank' class= 'btn btn-xs btn-default'> Account #:"
+                                        + row.accountnum + "</small>" + "</a>"
+                                        + "<small>By: <cite title='Source Title'>"
+                                        + row.createdby + "</cite></small></blockquote>";
+                                }
+                            }
+                        ]
+                    });
+                });
+            });
+        });
+
+        $('#msgnotif-content').mouseleave(function (event) {
+            var $this = $(this);
+            $this.hide(300);
+        });
+
+        //update msgcounter 
+        function UpdateUnreadMessagesCounter() {
+            
+            var _currentCount = 0;
+            _host = _host === undefined ? '../../..' : _host;
+            
+            var _filter_task = "archivedbyuserid=0|And|istask=1|And|readbyuserid=0";
+            var _url_task = _host + "/office/messaging/handlers/MMNew_Handler.ashx?optionCase=GetDataByFilter&filter=" + _filter_task;
+            $.ajax({
+                url: _url_task,
+                success: function (response) {
+                    if (isHTML(response))
+                        _currentCount = 0;
+                    else
+                        _currentCount += response.length
+
+                    $("#taskSpan").html(_currentCount);
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    return false;
+                }
+            }).done(function() {
+                var _urlreminders = '../../../office/messaging/handlers/MMNew_Handler.ashx?optionCase=GetUnreadContactLogFromClientjson';
+                $.ajax({
+                    url: _urlreminders,
+                    success: function (response) {
+                        if (isHTML(response))
+                            _currentCount = 0;
+                        else
+                            _currentCount += response?.aaData?.length ?? 0;
+
+                        $('#unreadmsgscount').html(_currentCount);
+                        if (_currentCount > 0) {
+                            $('#msgnotifCounter').removeClass("bg-color-blue").addClass("bg-color-red");
+                        } else {
+                            $('#msgnotifCounter').removeClass("bg-color-red").addClass("bg-color-blue");
+                        }
+
+                        $("#contactlogmsg").html(_currentCount);
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        return false;
+                    }
+                });
+            });
+        }
+
+        var getMonthShortName = function (monthNumber) {
+            var indexMonth = (monthNumber * 1) - 1;
+            var monthsShortName = $("#monthName").val().split(";");
+
+            var shortName = "";
+
+            try {
+                shortName = monthsShortName[indexMonth];
+            } catch (e) {
+                shortName = "";
+            }
+
+            return shortName;
+        };
+
+        var fixNumber = function (number) {
+            return number < 10 ? "0" + number : number;
+        }
+
+        $(document).delegate(".viewmessage", "click", function () {
+            
+            var usermessageid = $(this).data("usermessageid");
+            var titleDinamic = $(this).data("subject");
+            var _url = _host + "/Office/messaging/handlers/MMNew_Handler.ashx?optionCase=ReadMailPreview&usermessageid=" + usermessageid;
+            bootbox.dialog({
+                size: 'large',
+                onEscape: 'True',
+                title: '<h4>' + titleDinamic + '</h4>',
+                message: '<i class="fa fa-spinner fa-spin"></i> ' + 'Loading...'
+            });
+
+            $('.bootbox-body').load(_url, function (response, status, xhr) {
+                if (status == "error") {
+                    bootbox.alert({
+                        size: 'medium',
+                        title: '<h4>' + titleDinamic + '</h4>',
+                        message: '<div class="alert alert-dismissible alert-danger">' +
+                            _errorLoadingText +
+                            '</div>'
+                    })
+                }
+            });
+        });
+
+        $(document).on("click", ".markasread", function () {
+            var _reminderid = $(this).data("reminderid");
+            var _url = _host + "/office/messaging/handlers/MMNew_Handler.ashx?optionCase=MarkReminderAsRead&reminderid=" + _reminderid;
+            var notify = $.notify('<strong>Marking reminder as read: </strong> ...', {
+                allow_dismiss: false,
+                showProgressbar: true,
+                z_index: 9999999
+            });
+            $.ajax(
+                {
+                    type: "POST",
+                    async: true,
+                    url: _url,
+                    success: function (result) {
+                        if (result === 'success') {
+                            setTimeout(function () {
+                                notify.update({ 'type': 'success', 'message': '<strong>Marking reminder as read: </strong> Success!', 'progress': 100 });
+                            }, 500);
+                        }
+                    },
+                    error: function (msg) {
+                        console.log("error:" + msg);
+                    }
+                });
+        });
+
+
+        $(document).on("click", ".removeReminder", function () {
+            var _reminderid = $(this).data("reminderid");
+            var _url = _host + "/office/messaging/handlers/MMNew_Handler.ashx?optionCase=MarkReminderAsDelete&reminderid=" + _reminderid;
+
+            var notify = $.notify('<strong>Removing reminder: </strong> ...', {
+                allow_dismiss: false,
+                showProgressbar: true,
+                z_index: 9999999
+            });
+
+            $.ajax(
+                {
+                    type: "POST",
+                    async: true,
+                    url: _url,
+                    success: function (result) {
+                        if (result === 'success') {
+                            setTimeout(function () {
+                                notify.update({ 'type': 'success', 'message': '<strong>Removing reminder: </strong> Success!', 'progress': 100 });
+                            }, 500);
+                        }
+                    },
+                    error: function (msg) {
+                        console.log("error:" + msg);
+                    }
+                });
+        });
+        //NM-67 Contact Log messages    
+        $(document).on("click", ".marknoteasread", function () {
+            var table = $("#contactlogtable").DataTable();
+            var _noteid = $(this).data("noteid");
+            var _notetype = $(this).data("notetype");
+            var _note = $(this);
+            var _url = "../office/messaging/handlers/MMNew_Handler.ashx?optionCase=MarkContactLogAsResolved&id=" + _noteid + "&notetype=" + _notetype;
+            var notify = $.notify('<strong>Marking Contact Log as Resolved: </strong> ...', {
+                allow_dismiss: false,
+                showProgressbar: true,
+                z_index: 9999999
+            });                
+
+            $.ajax(
+                {
+                    type: "POST",
+                    async: true,
+                    url: _url,
+                    success: function (result) {
+                        if (result === 'success') {
+                            setTimeout(function () {
+                                notify.update({ 'type': 'success', 'message': '<strong>Marking Contact Log as Resolved: </strong> Success!', 'progress': 100 });
+                            }, 500);
+                        }
+                        UpdateUnreadMessagesCounter();
+
+                    },
+                    error: function (msg) {
+                        console.log("error:" + msg);
+                    },
+                }).done(function () {
+                    //remove the row from dataTable   
+                    table
+                        .row(_note.parents('tr'))
+                        .remove()
+                        .draw();
+                });
+
+        });
+    });
+
+    function isHTML(str) {
+        var a = document.createElement('div');
+        a.innerHTML = str;
+
+        for (var c = a.childNodes, i = c.length; i--;) {
+            if (c[i].nodeType == 1) return true;
+        }
+
+        return false;
+    }
+</script>
+            </div>
+
+            <ul class="top-main-menu ss-navbar ss-navbar-collapse">
+                <!-- .pull-right -->
+                <li id="_ctl0_mainmenu_Li1" class="ss-navitem segment-0">
+                    <i class="material-icons">home</i>
+                    <a href="/user/home.aspx" id="_ctl0_mainmenu_lnkHome_140" class="ss-nav-link icon-link">Home</a>
+                </li>
+                <li id="_ctl0_mainmenu_custommenu" class="ss-navitem has-dropdown" style="display: none;">
+                    <i class="material-icons">settings_applications</i>
+                    <a href="#" class="ss-nav-link icon-link">Customize</a>
+                    <ul class="ss-dropdown">
+                        
+                        <li id="_ctl0_mainmenu_customofficepages" class="segment-4 ss-dropdownitem">
+                            <i class="material-icons">work</i>
+                            <a href="../ss-ui-custom-pages/OfficePages.aspx" id="_ctl0_mainmenu_setup_pages" class="ss-dropdown-link icon-link">Custom Office</a>
+                        </li>
+                    </ul>
+                </li>
+                <li id="_ctl0_mainmenu_liSetup" class="ss-navitem segment-4" style="display:none;">
+                    <i class="material-icons">settings</i>
+                    <a href="/setupnew/setupmenu.aspx" id="_ctl0_mainmenu_lnkSetup_253" class="ss-nav-link icon-link">Setup</a>
+                </li>
+                <li id="_ctl0_mainmenu_SetupV2" class="ss-navitem segment-4">
+                    <i class="material-icons">settings</i>
+                    <a href="/setupnew/setupmenu.aspx" id="_ctl0_mainmenu_lnkSetupNew_253" class="ss-nav-link icon-link">Setup</a>
+                </li>
+
+                <li id="_ctl0_mainmenu_liOffice" class="ss-navitem segment-3"><i class="material-icons">business_center</i>
+                    <a href="/officeNew/officemenu.aspx" id="_ctl0_mainmenu_lnkOffice_162" target="_blank" class="ss-nav-link icon-link">Office</a> </li>
+                <li id="_ctl0_mainmenu_OfficeV2" class="ss-navitem segment-3" style="display:none;">
+                    <i class="material-icons">business_center</i> <a href="../officenew/officemenu.aspx" id="_ctl0_mainmenu_A1" target="_blank" class="ss-nav-link icon-link">Office</a>
+                </li>
+                 <li id="_ctl0_mainmenu_liScheduler" style="display:none" class="ss-navitem segment-1"><i class="material-icons">date_range</i> <a href="javascript:;" id="_ctl0_mainmenu_lnkScheduler_1442" onclick="redirectOldSchedule()" class="ss-nav-link icon-link">Scheduler</a> </li>
+                <li id="_ctl0_mainmenu_liSchedulerNew" class="ss-navitem segment-1"><i class="material-icons">date_range</i> <a href="https://sprolive.theservicepro.net/newscheduler/UserAccount/FromCore?url=/newscheduler/Calendar" id="_ctl0_mainmenu_lnkSchedulernew_17501" target="_blank" class="ss-nav-link icon-link">Scheduler</a> </li>
+                <li id="_ctl0_mainmenu_liReports" class="ss-navitem segment-2"><i class="material-icons">assessment</i> <a href="https://sprolivereporting.theservicepro.net/msrs/ReportEngineNew.aspx?corelink=https://sprolive.theservicepro.net" id="_ctl0_mainmenu_lnkReports_570" target="_blank" class="ss-nav-link icon-link">Reports</a> </li>
+                <li id="_ctl0_mainmenu_liAccount" class="ss-navitem segment-5"><i class="material-icons">person_add</i> <a href="/account/quickaddcriteria.aspx" id="_ctl0_mainmenu_lnkAddNew_284" target="_blank" class="ss-nav-link icon-link">Add New Account</a> </li>
+                <li id="_ctl0_mainmenu_liAccountNew" class="ss-navitem segment-5">
+                    <i class="material-icons">person_add</i><a href="/account/quickaddentry1.aspx" id="_ctl0_mainmenu_lnkAddAccount_18013" target="_blank" class="ss-nav-link icon-link">Add New Account (new)</a>
+                </li>
+                <li id="_ctl0_mainmenu_liNorthWest" class="ss-navitem segment-9" style="display:;">
+                    <i class="material-icons">explore
+                    </i>
+                    <a href="../controls/#" id="_ctl0_mainmenu_lnkcustommenu" target="_blank" class="ss-nav-link icon-link">Northwest</a>
+                </li>
+                <li class='ss-navitem segment-9 has-dropdown'><i class="material-icons">view_quilt</i> <a href="javascript:;" id="_ctl0_mainmenu_lnkModules_6233" class="ss-nav-link icon-link">Modules</a>
+                    <div id="_ctl0_mainmenu_modules" class="modulelist ss-dropdown">
+                        <ul id="_ctl0_mainmenu_tblModules">
+                            
+                            <li id="_ctl0_mainmenu_trDrawings" class="ss-dropdownitem">
+                                <a href="/account/wodrawings.aspx" id="_ctl0_mainmenu_lnkDrawings_3463" class="ss-dropdown-link" target="_blank">Drawings</a>
+                            </li>
+                            
+                            <li id="_ctl0_mainmenu_trInventory" class="ss-dropdownitem">
+                                <a href="/setup/inventory/" id="_ctl0_mainmenu_lnkInventory_1155" class="ss-dropdown-link" target="_blank">Inventory</a>
+                            </li>
+                            <li class="ss-dropdownitem">
+                               <a href="https://sprolive.theservicepro.net/inventory/app" id="_ctl0_mainmenu_lnkInventoryNewModule" class="ss-dropdown-link" target="_blank">Inventory New</a>
+                            </li>
+                            
+                            <li id="_ctl0_mainmenu_marketingModuleLink" class="ss-dropdownitem">
+                                <a href="/office/MarketingLetter/MarketingLetterpreviewlist.aspx" id="_ctl0_mainmenu_lnkMarketing_203" class="ss-dropdown-link" target="_blank">Marketing</a>
+                            </li>
+                            
+                            <li id="_ctl0_mainmenu_FleetModuleLink" class="ss-dropdownitem">
+                                <a href="/fleet/" id="_ctl0_mainmenu_lnkFleet_6298" class="ss-dropdown-link" target="_blank">Fleet</a>
+                            </li>
+                            <li id="_ctl0_mainmenu_GPSModuleLink" class="ss-dropdownitem">
+                                <a href="/GPS/gpshome.aspx" id="_ctl0_mainmenu_lnkGPS_12478" class="ss-dropdown-link" target="_blank">GPS</a>
+                            </li>
+                            <li id="_ctl0_mainmenu_trRouting" class="ss-dropdownitem">
+                                <a href="/office/tsprouting/Routing.aspx" id="_ctl0_mainmenu_lnkRouting_6234" class="ss-dropdown-link" target="_blank">Routing</a>
+                            </li>
+                            <li id="_ctl0_mainmenu_leadsAndPropousalLink" class="ss-dropdownitem">
+                                <a href="/office/leadsproposal.aspx" id="_ctl0_mainmenu_lnkLeadProposal_8670" class="ss-dropdown-link" target="_blank">Leads & Proposals</a>
+                            </li>
+                            
+
+                            <li class="ss-dropdownitem">
+                                <a href="/reportingdashboard/dashboard.aspx" id="_ctl0_mainmenu_lnkReportingDashbaord_9251" class="ss-dropdown-link" target="_blank">Reporting Dashboard</a>
+                            </li>
+                            <li class="ss-dropdownitem">
+                                <a href="/office/mobilemanagement/ProcessData.aspx" id="_ctl0_mainmenu_lnkMobileManagement_9448" class="ss-dropdown-link" target="_blank">ServSuite Mobile</a>
+                            </li>
+                            <li id="_ctl0_mainmenu_trphonecallahead" class="ss-dropdownitem">
+                                <a href="/office/PhoneCallAhead/phonecallahead.aspx?comefrom=module" id="_ctl0_mainmenu_lnkphonecallahead_10864" class="ss-dropdown-link" target="_blank">Notifications</a>
+                            </li>
+                            
+                            
+                            
+                            
+                            <li id="_ctl0_mainmenu_trSalesProModule" class="ss-dropdownitem" style="display:none;">
+                                <a href="../office/callagent/home.aspx" id="_ctl0_mainmenu_lnkCallAgent_10440" class="ss-dropdown-link" target="_blank" style="display:none;">ServSuite Call Agent</a>
+                            </li>
+                            
+                            
+                            
+                            
+                            <li id="_ctl0_mainmenu_trCollectionNew" class="ss-dropdownitem">
+                                <a href="/office/officetx.aspx?option=79" id="_ctl0_mainmenu_lnkCollectionNew_9129" class="ss-dropdown-link" target="_blank">Collection New</a>
+                            </li>
+                             
+                            <li class="ss-dropdownitem">
+                                <a href="https://sprolive.theservicepro.net/servsales/account/fromcore" id="_ctl0_mainmenu_lnkServSalesModule" class="ss-dropdown-link" target="_blank">ServSales</a>
+                            </li>
+                            
+                            <li id="_ctl0_mainmenu_trRoutingNew" class="ss-dropdownitem">
+                                <a href="https://sprolive.theservicepro.net/multiroute/app" id="_ctl0_mainmenu_lnkRoutingNew" class="ss-dropdown-link" target="_blank">Intelligent Routing</a>
+                            </li>
+                            
+
+                            
+                            <li id="_ctl0_mainmenu_trContact_log" class="ss-dropdownitem">
+                                <a href="/office/messaging/pages/MessageManagement_New.aspx" id="_ctl0_mainmenu_lnkContactlog_6477" class="ss-dropdown-link" target="_blank">Contact Log</a>
+                            </li>
+                            
+                            <li id="_ctl0_mainmenu_trMarketingAnalyticsAndReporting" class="ss-dropdownitem">
+                                <a href="/modules/emailanalytics/dashboard.aspx" id="_ctl0_mainmenu_lnkMarketingAnalyticsAndReporting_13491" class="ss-dropdown-link" target="_blank">Email Analytics Service</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class='ss-navitem segment-9 has-dropdown'><i class="material-icons">new_releases</i> <a href="javascript:;" id="_ctl0_mainmenu_lnkBetaFeatures_15205" class="ss-nav-link icon-link">Beta Features</a>
+                    <div id="_ctl0_mainmenu_betaFeatures" class="betalist ss-dropdown">
+                        <ul id="_ctl0_mainmenu_tblBetaFeatures">
+                            <li id="_ctl0_mainmenu_trremotemonitoring" class="ss-dropdownitem">
+                                <a href="/office/RemoteMonitoring/remotemonitoring.aspx?comefrom=module" id="_ctl0_mainmenu_lnkremotemonitoring_13659" class="ss-dropdown-link" target="_blank">Remote Monitoring</a>
+                            </li>
+                            <li id="_ctl0_mainmenu_officepage" class="ss-dropdownitem">
+                                <a href="/ss-ui-custom-pages/OfficePages.aspx" id="_ctl0_mainmenu_lnkcustomofficepages" class="ss-dropdown-link" target="_blank">Custom Office Pages</a>
+                            </li>
+                            <li id="_ctl0_mainmenu_setuppage" class="ss-dropdownitem">
+                                <a href="/ss-ui-custom-pages/SetupPages.aspx" id="_ctl0_mainmenu_lnkCustomsetuppages" class="ss-dropdown-link" target="_blank">Custom Setup Pages</a>
+                            </li>
+                            <li id="_ctl0_mainmenu_tr1" class="ss-dropdownitem">
+                                <a href="javascript:CoreApp();" id="_ctl0_mainmenu_lnkServSensor_17478" class="ss-dropdown-link">ServSensor</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <!--<li style="float: right; line-height: 2;"> <img class="lastpic windowPin" src="../styles/images/pin.png" width="25px" height="auto">
+                    
+                </li>-->
+            </ul>
+
+            <div class="expandBtn">
+                <a href="#" id="expand-upper-header">
+                    <i class="material-icons">menu</i>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="lower-header">
+
+        
+
+        
+
+        <div class="ss-secondary-nav-cont">
+            
+            <nav id="_ctl0_mainmenu_divLoginSupport" class="divLoginSupportClass">
+                <ul class="ss-navbar secondary-navbar">
+                    <li class="ss-navitem companyname">
+                        <a href="/user/changecompany.aspx" id="_ctl0_mainmenu_lnkchangecompany">
+                            <i class="material-icons">work</i>
+                            <span id="_ctl0_mainmenu_lblCompany_3637" class="ss-nav-link">Company</span><span class="ss-nav-link" style="margin-left: -3px;">:</span>
+                            <span id="_ctl0_mainmenu_lblCompanyName" class="ss-nav-link">Digital Logbook</span>
+                        </a>
+                    </li>
+                 
+                    <li class='ss-navitem segment-a openFavoriteList'><i class="material-icons">star</i>
+                        <a href="javascript:;" id="_ctl0_mainmenu_lnkFavorites_6232" class="ss-nav-link">Favorites</a>
+                        <div id="_ctl0_mainmenu_favorites" class="favoritelist">
+                            <table id="_ctl0_mainmenu_Mostoftennavigation1_tblRightMenu" border="0">
+	<tr class="middleheadertop">
+		<td align="center"><a href="../office/officemenu.aspx" style="color:White;">Office</a></td>
+	</tr><tr class="middleheaderwhite">
+		<td align="left"><span class="normal8">&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="../office/officetx.aspx?option=93" target="new">Vertex Batch Address Cleanup</a></td>
+	</tr><tr class="middleheaderother">
+		<td align="left"><span class="normal8">&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="../office/officetx.aspx?option=97" target="new">Print Seasonal Workorders New</a></td>
+	</tr><tr class="middleheaderwhite">
+		<td align="left"><span class="normal8">&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="../office/officetx.aspx?option=98" target="new">Print To Mail Overview</a></td>
+	</tr><tr class="middleheaderother">
+		<td align="left"><span class="normal8">&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="../office/officetx.aspx?option=53" target="new">Scan Out</a></td>
+	</tr><tr class="middleheaderwhite">
+		<td align="left"><span class="normal8">&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="../office/officetx.aspx?option=99" target="new">Scan In</a></td>
+	</tr><tr class="middleheadertop">
+		<td align="center"><a href="/reportsnew/listreports.aspx" style="color:White;">Reports</a></td>
+	</tr><tr class="middleheaderwhite">
+		<td><span class="normal8">&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="https://sprolivereporting.theservicepro.net/reports/criteria2.aspx?filter=landscape(&quot;branchid&quot;,&quot;asofdate&quot;,&quot;accountstatus&quot;)&amp;reportID=2635&amp;sort=0&amp;reportName= Active customer directory - Beta&amp;from=iscore" target="_blank"> Active customer directory - Beta</a><span class="normal8">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+	</tr><tr class="middleheaderother">
+		<td><span class="normal8">&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="https://sprolivereporting.theservicepro.net/reports/criteria2.aspx?filter=landscape(&quot;branchid&quot;,&quot;measurementcombo&quot;,&quot;mailinglist&quot;,&quot;sortby&quot;)&amp;reportID=1049&amp;sort=1&amp;reportName= Active Customers group by Measurement Item&amp;from=iscore" target="_blank"> Active Customers group by Measurement Item</a><span class="normal8">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+	</tr><tr class="middleheaderwhite">
+		<td><span class="normal8">&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="https://sprolivereporting.theservicepro.net/reports/criteria2.aspx?filter=portrait(&quot;branchid&quot;,&quot;asofdate&quot;,&quot;propertytypeid&quot;,&quot;daysold&quot;,&quot;senttocoll&quot;,&quot;sortby&quot;)&amp;reportID=2549&amp;sort=1&amp;reportName= AR Debit Management Report Over X Days Old with Finance Charge&amp;from=iscore" target="_blank"> AR Debit Management Report Over X Days Old with Finance Charge</a><span class="normal8">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+	</tr><tr class="middleheaderother">
+		<td><span class="normal8">&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="https://sprolivereporting.theservicepro.net/reports/criteria2.aspx?filter=portrait(&quot;branchid&quot;,&quot;startdate&quot;,&quot;asofdate&quot;,&quot;routecombo&quot;,&quot;includefinancialhold&quot;,&quot;finholdstatus&quot;)&amp;reportID=2418&amp;sort=0&amp;reportName= Daily Routes Summary Sheet - Cypress&amp;from=iscore" target="_blank"> Daily Routes Summary Sheet - Cypress</a><span class="normal8">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+	</tr><tr class="middleheaderwhite">
+		<td><span class="normal8">&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="https://sprolivereporting.theservicepro.net/reports/criteria2.aspx?filter=landscape(&quot;branchid&quot;,&quot;startdate&quot;,&quot;asofdate&quot;,&quot;sortby&quot;)&amp;reportID=630&amp;sort=1&amp;reportName=Sales detail by sales person - by event sale date&amp;from=iscore" target="_blank">Sales detail by sales person - by event sale date</a><span class="normal8">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+	</tr><tr class="middleheadertop">
+		<td align="center"><a href="../setup/setupmenu.aspx" style="color:White;">Setup</a></td>
+	</tr><tr class="middleheaderwhite">
+		<td><span class="normal8">&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="../setup/setuptx.aspx?option=80">Master Account Management</a><span class="normal8">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+	</tr><tr class="middleheaderother">
+		<td><span class="normal8">&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="../setup/setuptx.aspx?option=67">Who is Logged In?</a><span class="normal8">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+	</tr><tr class="middleheaderwhite">
+		<td><span class="normal8">&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="../setup/setuptx.aspx?option=1">Company Setup</a><span class="normal8">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+	</tr><tr class="middleheaderother">
+		<td><span class="normal8">&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="../setup/setuptx.aspx?option=628">Facility Template Type Setup</a><span class="normal8">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+	</tr><tr class="middleheaderwhite">
+		<td><span class="normal8">&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="../setup/setuptx.aspx?option=75">Customer Life Cycle Setup</a><span class="normal8">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+	</tr><tr class="middleheadertop">
+		<td align="center"><span class="normal8">&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="../usernew/preferences.aspx" style="color:White;">Click here to set My Preferences</a><span class="normal8">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+	</tr>
+</table>
+                        </div>
+                    </li>
+                    <li class="ss-navitem releaseHolder">
+                        
+
+<style type="text/css">
+    div#releasedoctoolbar {
+  
+    font-weight: 600!important;
+    font-size: 9pt;
+    padding-left: 0;
+    padding-right: 0.3rem!important;
+    color: #053c81!important;
+}
+    #releasedoctoolbar a {
+    text-decoration: none !important;
+    color:#053c81!important
+}
+    img#imgRelDocButton {
+    padding-left: 4px;
+    height: 20px;
+}
+</style>
+
+<script type="text/javascript">
+
+    var _releaseNotesList = [];
+    var _selectedRNIndex = 0;
+
+    $(function () {
+
+        $('#releasedoctoolbar').click(function (event) {
+            $(this).removeClass('has-news');
+            //var thisRef = $(this);
+
+            //if (!thisRef.hasClass('item-active')) {
+            //    thisRef.addClass('item-active');
+            //    thisRef.removeClass('hover');
+
+            //    var fixPos = function () {
+            //        var targetSize = { width: $('#reldocbutton').outerWidth(), height: $('#reldocbutton').outerHeight() };
+            //        var menuSize = { width: $('#reldocmenu').outerWidth() };
+            //        var pos = { top: targetSize.height, left: targetSize.width - menuSize.width };
+
+            //        $('#reldocmenu').css('top', pos.top + 'px');
+            //        $('#reldocmenu').css('left', (pos.left + 1) + 'px');
+            //    };
+
+            //    fixPos();
+
+            //    //Mark Release Notes are read if needed
+            //    if (thisRef.attr('releasenotesread') == '0') {
+            //        $.ajax({
+            //            url: '../controls/ReleaseDocumentation/releasedocumentationhandler.ashx',
+            //            data: { action: 'markreleasenotesread' },
+            //            success: function (response) {
+            //                $('#imgRelDocButton').attr('src', '../controls/ReleaseDocumentation/Images/megaphoneoff.png');
+            //                $('#imgRelDocButton').attr('releasenotesread', '1');
+            //            },
+            //            error: function (jqXHR, textStatus, errorThrown) {
+            //                console.log('(ERROR) ' + errorThrown);
+            //            }
+            //        });
+            //    }
+
+            //    $('#reldocmenu').slideDown(100);
+            //} else {
+            //    hideMenu();
+            //}
+        });
+
+        //Set the proper icon
+        $.ajax({
+            url: '../controls/ReleaseDocumentation/releasedocumentationhandler.ashx',
+            data: { action: 'releasenotesread' },
+            success: function (response) {
+                if (response == "0") {
+                     $('#imgRelDocButton').attr('src', '../controls/ReleaseDocumentation/Images/megaphone.gif');
+                    $('#releasedoctoolbar').attr('releasenotesread', '0');
+                    $('#releasedoctoolbar').addClass('has-news');
+                }
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log('(ERROR) ' + errorThrown);
+            }
+        });
+
+        LoadReleaseNotesList();
+
+        _selectedRNIndex = _releaseNotesList.length - 1;
+
+        LoadContent(_releaseNotesList[_selectedRNIndex]);
+
+    });
+
+    function hideMenu() {
+        var releasedoctoolbar = $('#releasedoctoolbar');
+        releasedoctoolbar.removeClass('item-active');
+
+        $('#reldocmenu').slideUp(100);
+    }
+
+    function LoadContent(id) {
+        $.ajax({
+            url: '../controls/ReleaseDocumentation/releasedocumentationhandler.ashx',
+            data: { action: 'getreleasenoteshtmlbyid', id: id },
+            success: function (response) {
+                $('#reldoccontent').html(response);
+
+
+                if ($("#nav-accordion").length) {
+                    $("#accordion").accordion({
+                        active: false,
+                        collapsible: true,
+                        heightStyle: "content"
+                    });
+                }
+
+                $('#imgClose').click(function () {
+                    hideMenu();
+                });
+
+                //Disable the NEXT button if showing the last item
+                if (_selectedRNIndex == (_releaseNotesList.length - 1)) {
+                    $('#btnRDNextRD').prop('disabled', true);
+                } else {
+                    $('#btnRDNextRD').removeAttr('disabled');
+                }
+
+                //Disable the BACK button if showing the first item
+                if (_selectedRNIndex == 0) {
+                    $('#btnRDBackRD').prop('disabled', true);
+                } else {
+                    $('#btnRDBackRD').removeAttr('disabled');
+                }
+
+                //Handle the BACK button click
+                $('#btnRDBackRD').click(function (e) {
+
+                    e.preventDefault();
+
+                    $('#btnRDBackRD').prop('disabled', true);
+
+                    _selectedRNIndex--;
+
+                    LoadContent(_releaseNotesList[_selectedRNIndex]);
+                });
+
+                //Handle the NEXT button click
+                $('#btnRDNextRD').click(function (e) {
+
+                    e.preventDefault();
+
+                    $('#btnRDNextRD').prop('disabled', true);
+
+                    _selectedRNIndex++;
+
+                    LoadContent(_releaseNotesList[_selectedRNIndex]);
+                });
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log('(ERROR) ' + errorThrown);
+            }
+        });
+    }
+
+    function LoadReleaseNotesList() {
+        $.ajax({
+            url: '../controls/ReleaseDocumentation/releasedocumentationhandler.ashx',
+            data: { action: 'getreleasenoteslist' },
+            dataType: "json",
+            async: false,
+            success: function (response) {
+                _releaseNotesList = $.map(response, function (el) { return el; });
+                _releaseNotesList.reverse();
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log('(ERROR) ' + errorThrown);
+            }
+        });
+    }
+</script>
+
+<div class="releasedoc-menu">
+  
+            <div id="reldocbutton" class="item">
+                <div id="releasedoctoolbar" class="toolbar">
+                   
+                    <a href="whatsnew_page.aspx" id="_ctl0_mainmenu_releasedocumentation1_releasedocumentationnew" class="whatsnew_link" target="_blank">
+                        <img id="imgRelDocButton"  style="margin-top: -1px;"  alt="nomsg" src="/controls/ReleaseDocumentation/Images/megaphoneoffhome.png" />
+                           <span id="_ctl0_mainmenu_releasedocumentation1_lbl_2563" class="ss-nav-link">What's New</span>
+                    </a>
+                </div>
+                <div id="reldocmenu" class="releasedoccontainer" style="display:none;">
+                    <div id="reldoccontent" class="releasedocmenu">
+                       
+                    </div>
+                </div>
+            </div>
+      
+</div>
+
+<script type="text/javascript">
+    //Task:[#54024] - Adding Megaphone icons to have notiffication when we are creating new publications
+    $(document).ready(function () {
+        $('.whatsnew_link').click(function () {
+            $.ajax({
+                url: '/controls/ReleaseDocumentation/releasedocumentationhandler.ashx',
+                data: { action: 'markreleasenotesread' },
+                success: function (response) {
+                    $('#imgRelDocButton').attr('src', '/controls/ReleaseDocumentation/Images/megaphoneoffhome.png');
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log('(ERROR) ' + errorThrown);
+                }
+            });
+        });
+        function releaseDocHandler() {
+            $.ajax({
+                url: '/controls/ReleaseDocumentation/releasedocumentationhandler.ashx',
+                data: { action: 'releasenotesread' },
+                success: function (response) {
+                    if (response === "0") {
+                        $('#imgRelDocButton').attr('src', '/controls/ReleaseDocumentation/Images/megaphonehome.gif');
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log('(ERROR) ' + errorThrown);
+                }
+            });
+        }
+        releaseDocHandler();
+    });
+</script>
+                    </li>
+
+                    <li class="ss-navitem">
+
+                        <a href="/user/passwordexpired.aspx" id="_ctl0_mainmenu_lnkpasswordexpired">
+                            <i class="material-icons">lock</i>
+                            <span id="_ctl0_mainmenu_lnkPassword_4051" class="ss-nav-link">Change password</span>
+
+                        </a>
+                    </li>
+                    <li class="ss-navitem messageHolder has-dropdown">
+                        <script type="text/javascript" src="/office/messaging/scripts/messaging_toolbar.js?v=F0BBEEF6" ></script>
+
+
+<script type = "text/javascript" >
+
+    $(function () {
+        //var hideMenu = Function() {
+        //var menubutton = $('#msgmenubutton');
+        //menubutton.removeClass('item-active');
+
+        //    $('#msgmenu').slideUp(100);
+        //};
+
+        //$('#msgmenu a').click(function () {
+        //    hideMenu();
+        //});
+
+        //$('#messagingSettingsButton').click(function () {
+        //    window.SS.Messaging.Settings.showEditDialog();
+        //});
+
+        //$('#msgmenubutton').hover(function (event) {
+        //    var thisRef = $(this);
+
+        //    If (!thisRef.hasClass('item-active')) {
+        //        thisRef.addClass('item-active');
+        //        thisRef.removeClass('hover');
+
+        //var fixPos = Function() {
+        //            var targetPos = $('#msgmenubutton').offset();
+        //var targetSize = {width:   $('#msgmenubutton').outerWidth(), height: $('#msgmenubutton').outerHeight() };
+        //            var menuSize = {width:   $('#msgmenu').outerWidth() }
+        //            var pos = {top: targetSize.height, Left: targetSize.width -menuSize.width };
+
+        //            $('#msgmenu').css('top', pos.top + 'px');
+        //            //$('#msgmenu').css('left', (pos.left + 1) + 'px');
+        //        };
+
+        //        fixPos();
+        //        $('#msgmenu').show();
+        //    }
+        //}, function () {
+        //    hideMenu();
+        //});
+
+
+        $('#msgmenubutton').click(function (event) {
+            event.preventDefault();
+            //hideMenu();
+            window.open('/office/messaging/pages/MessageManagement.aspx');
+        });
+
+        //$(window).resize(function () {
+        //    hideMenu();
+        //});
+
+        //$(document).click(function () {
+        //    hideMenu();
+        //});
+
+        $('#msgmenu').click(function (event) {
+            event.stopImmediatePropagation();
+        });
+
+        $('#msgcountcontainer').click(function () {
+            CheckForNewMessages();
+        });
+
+        $('#inboxlist').text(window.SS.Messaging.Words.INBOX);
+        $('#spanmsgmenubutton').attr('title', window.SS.Messaging.Words.MESSAGING_MENU);
+        $('#lnkCompose').text(window.SS.Messaging.Words.COMPOSE_MESSAGE);
+        $('#lnkInbox').text(window.SS.Messaging.Words.INBOX);
+        $('#lnkUnreadOnly').text(window.SS.Messaging.Words.UNREAD);
+        $('#lnkReadOnly').text(window.SS.Messaging.Words.READ);
+        $('#lnkNeedsAck').text(window.SS.Messaging.Words.NEEDS_ACKNOWLEDGED);
+        $('#lnkStarred').text(window.SS.Messaging.Words.STARRED);
+        $('#lnkSent').text(window.SS.Messaging.Words.SENT);
+        $('#lnkArchived').text(window.SS.Messaging.Words.ARCHIVED);
+        $('#lnkAll').text(window.SS.Messaging.Words.ALL);
+        $('#messagingSettingsButton').text(window.SS.Messaging.Words.MESSAGING_SETTINGS);
+        $('#msgcount').text($('#_ctl0_mainmenu_Messaging1_hfQtyNotified').val());
+
+        setInterval(function () {
+            var hfRemainingTime = $('#_ctl0_mainmenu_Messaging1_hfRemainingTime');
+
+            hfRemainingTime.val(hfRemainingTime.val() * 1 - 1000);
+
+            if (hfRemainingTime.val() <= 0) {
+                hfRemainingTime.val($('#_ctl0_mainmenu_Messaging1_hfUserInterval').val());
+
+                CheckForNewMessages();
+            }
+        }, 1000);
+
+        CheckForNewMessages(); //check for unread messages only the first time home page is opened instead of every 2 minutes.
+
+        window.onbeforeunload = function () {
+            $.ajax({
+                url: SS.Messaging.AJAX_HANDLER_URL,
+                data: 'q=settime&time=' + $('#_ctl0_mainmenu_Messaging1_hfRemainingTime').val() + '&qtyalreadynotified=' + $('#_ctl0_mainmenu_Messaging1_hfQtyNotified').val(),
+                dataType: "json"
+            });
+        }
+
+        function CheckForNewMessages() {
+            var hfQtyNotified = $('#_ctl0_mainmenu_Messaging1_hfQtyNotified');
+                var msgcount = $('#msgcount');
+                msgcount.text('...');
+
+                $.ajax({
+                    url: SS.Messaging.AJAX_HANDLER_URL,
+                    data: 'q=getunreadcount',
+                    dataType: "json",
+                    success: function (data) {
+                        if ((data.unreadcount * 1) > (hfQtyNotified.val() * 1)) {
+                            hfQtyNotified.val(data.unreadcount);
+                            PerformNewMessageHighlight('msgcount');
+                            SS.Messaging.Play($('#_ctl0_mainmenu_Messaging1_hfNotificationSound').val());
+                    } else if ((data.unreadcount * 1) < (hfQtyNotified.val() * 1)) {
+                        hfQtyNotified.val(data.unreadcount);
+                    }
+
+                    msgcount.text(hfQtyNotified.val()); //Endi: no reason to update after 1s.
+                    //setTimeout(function () { msgcount.text(hfQtyNotified.val()) }, 1000);
+                }
+            });
+        }
+    });
+
+</script>
+
+<span id="spanmsgmenubutton" class="mailtoolbtn" title="Messaging Menu -- MUST COME FROM USER STRINGS">
+    <i class="material-icons">mail</i>
+    <a href="" id="inboxlist" class="ss-nav-link">Inbox</a>
+</span>
+
+<div id="msgcountcontainer" class="item badge badge-default counter">
+    <span id="msgcount" class="msgcount">0</span>
+</div>
+
+<div id="msgmenubutton" class="item ss-dropdown">
+    <div id="msgmenu" class="mailmenucontainer">
+        <div class="mailmenu">
+            <ol>
+                <li class="ss-dropdownitem"><i class="material-icons">create</i>
+                    <a class="ss-dropdown-link icon-link" id="lnkCompose" href="/office/messaging/pages/MessageManagement.aspx?view=-1" target="_blank">Compose</a>
+                </li>
+                <li class="ss-dropdownitem"><i class="material-icons">inbox</i>
+                    <a class="ss-dropdown-link icon-link" id="lnkInbox" href="/office/messaging/pages/MessageManagement.aspx?view=0" target="_blank">Inbox</a>
+                </li>
+                <li class="ss-dropdownitem"><i class="material-icons">mail</i>
+                    <a class="ss-dropdown-link icon-link" id="lnkUnreadOnly" href="/office/messaging/pages/MessageManagement.aspx?view=1" target="_blank">Unread Only</a>
+                </li>
+                <li class="ss-dropdownitem"><i class="material-icons">drafts</i>
+                    <a class="ss-dropdown-link icon-link" id="lnkReadOnly" href="/office/messaging/pages/MessageManagement.aspx?view=2" target="_blank">Read Only</a>
+                </li>
+                <li class="ss-dropdownitem"><i class="material-icons">next_week</i>
+                    <a class="ss-dropdown-link icon-link" id="lnkNeedsAck" href="/office/messaging/pages/MessageManagement.aspx?view=3" target="_blank">Needs Acknowledge</a>
+                </li>
+                <li class="ss-dropdownitem"><i class="material-icons">star</i>
+                    <a class="ss-dropdown-link icon-link" id="lnkStarred" href="/office/messaging/pages/MessageManagement.aspx?view=4" target="_blank">Starred</a>
+                </li>
+                <li class="ss-dropdownitem"><i class="material-icons">send</i>
+                    <a class="ss-dropdown-link icon-link" id="lnkSent" href="/office/messaging/pages/MessageManagement.aspx?view=5" target="_blank">Sent</a>
+                </li>
+                <li class="ss-dropdownitem"><i class="material-icons">archive</i>
+                    <a class="ss-dropdown-link icon-link" id="lnkArchived" href="/office/messaging/pages/MessageManagement.aspx?view=6" target="_blank">Archived</a>
+                </li>
+                <li class="ss-dropdownitem">
+                    <i class="material-icons">all_inclusive</i>
+                    <a class="ss-dropdown-link icon-link" id="lnkAll" href="/office/messaging/pages/MessageManagement.aspx?view=7" target="_blank">All Mail</a>
+                </li>
+                <li class="ss-dropdownitem has-icon"><i class="material-icons">settings_applications</i>
+                    <a class="ss-dropdown-link icon-link" id="messagingSettingsButton" href="javascript:void(0);">messaging settings</a>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<input type="hidden" name="_ctl0:mainmenu:Messaging1:hfRemainingTime" id="_ctl0_mainmenu_Messaging1_hfRemainingTime" value="120000" />
+<input type="hidden" name="_ctl0:mainmenu:Messaging1:hfUserInterval" id="_ctl0_mainmenu_Messaging1_hfUserInterval" value="120000" />
+<input type="hidden" name="_ctl0:mainmenu:Messaging1:hfQtyNotified" id="_ctl0_mainmenu_Messaging1_hfQtyNotified" value="0" />
+<input type="hidden" name="_ctl0:mainmenu:Messaging1:hfNotificationSound" id="_ctl0_mainmenu_Messaging1_hfNotificationSound" value="1" />
+
+                    </li>
+                    <li class="ss-navitem">
+
+                        <a id="_ctl0_mainmenu_lnkLiveChat_10155" href="javascript:__doPostBack(&#39;_ctl0$mainmenu$lnkLiveChat_10155&#39;,&#39;&#39;)">Live Chat</a>
+                    </li>
+                    <li class="ss-navitem has-dropdown supportHolder">
+                        <i class="material-icons">help</i>
+                        <a id="_ctl0_mainmenu_lnkSupport_569" class="ss-nav-link">Support</a>
+                        <ul id="_ctl0_mainmenu_support" class="ss-dropdown">
+                            
+                             
+                            <li class="ss-dropdownitem"><a href="https://pestroutes.my.site.com/greencommunity/s/login/" id="_ctl0_mainmenu_lnkSupport2_569" class="ss-dropdown-link" target="_blank">Support</a></li>
+                                                         
+                            
+                            <li class="ss-dropdownitem"><a href="javascript: __doPostBack('learndash', '')" id="_ctl0_mainmenu_lnLearnDashLogin_15872" class="ss-dropdown-link" onclick="javascript: __doPostBack(&#39;learndash&#39;, &#39;&#39;)">ServSuite Explore</a></li>
+                        </ul>
+                    </li>
+                    <li id="_ctl0_mainmenu_liLogOut" class="ss-navitem" style="display:;">
+
+                        <a href="/logout.aspx" id="_ctl0_mainmenu_lnklogout">
+                            <i class="material-icons">exit_to_app</i>
+                            <span id="_ctl0_mainmenu_lnkLogout_2766" class="ss-nav-link">Log Out</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        
+    </div>
+
+</header>
+
+<script type="text/javascript">SS.Messaging.AJAX_HANDLER_URL = '../office/messaging/handlers/MessagingSettingsHandler.ashx';window.SS.Messaging.Words.EDIT_DIAG_TITLE='Edit My Messaging Settings';window.SS.Messaging.Words.NOTIFICATION_SOUND='Notification Sound';window.SS.Messaging.Words.NOTIFICATION_SOUND_DESC='This is your new message notification sound';window.SS.Messaging.Words.SYS_NOTIFICATION_SOUND='System Notification Sound';window.SS.Messaging.Words.SYS_NOTIFICATION_SOUND_DESC='This is the system notification sound';window.SS.Messaging.Words.MSG_PER_PAGE='Messages Per Page';window.SS.Messaging.Words.MSG_PER_PAGE_DESC='Number of elements to show on each page';window.SS.Messaging.Words.DEF_VIEW='Default View';window.SS.Messaging.Words.DEF_VIEW_DESC='Your default message management view';window.SS.Messaging.Words.CHECK_MSGS='Check for New Messages';window.SS.Messaging.Words.CHECK_MSGS_DESC='Amount of time for checking new messages';window.SS.Messaging.Words.SOUND='Sound';window.SS.Messaging.Words.NONE='None';window.SS.Messaging.Words.MESSAGES='Messages';window.SS.Messaging.Words.INBOX='Inbox';window.SS.Messaging.Words.UNREAD='Unread';window.SS.Messaging.Words.READ='Read';window.SS.Messaging.Words.NEEDS_ACKNOWLEDGED='Needs Acknowledged';window.SS.Messaging.Words.STARRED='Starred';window.SS.Messaging.Words.SENT='Sent';window.SS.Messaging.Words.ARCHIVED='Archived';window.SS.Messaging.Words.ALL='All';window.SS.Messaging.Words.MINUTES='Minutes';window.SS.Messaging.Words.MESSAGING_MENU='Messaging Menu';window.SS.Messaging.Words.NO_NEW_MESSAGES='No new messages';window.SS.Messaging.Words.MESSAGING_SETTINGS='Messaging Settings';window.SS.Messaging.Words.COMPOSE_MESSAGE='Compose Message';</script><span id="_ctl0_mainmenu_msgSettings"></span>
+<span id="_ctl0_mainmenu_jslibs"></span>
+
+<input name="_ctl0:mainmenu:hdservsensorurl" type="hidden" id="_ctl0_mainmenu_hdservsensorurl" value="https://sprolive.theservicepro.net/servsensor/CoreApp.aspx?method=createCookie" />
+<input name="_ctl0:mainmenu:hdcustommenuname" type="hidden" id="_ctl0_mainmenu_hdcustommenuname" value="Northwest" />
+<input name="_ctl0:mainmenu:hdcustommenulink" type="hidden" id="_ctl0_mainmenu_hdcustommenulink" value="https://sprolive.theservicepro.net/office/nwutilities.aspx" />
+<input name="_ctl0:mainmenu:hcorerootpage" type="hidden" id="_ctl0_mainmenu_hcorerootpage" value="https://sprolive.theservicepro.net/" />
+
+<input name="_ctl0:mainmenu:hdIsCooks" type="hidden" id="_ctl0_mainmenu_hdIsCooks" value="0" />
+
+
+
+
+        <div class="main-wrap">
+            <div class="mainContainer body-holder">
+                
+    <div id="advertisement">
+        <link rel="stylesheet" text="text/css" href="/styles/accbase/animate.css?v=81E9A906" media="all" />
+
+<link rel="stylesheet" text="text/css" href="/account/WDO3/css/bootstrap.min.css?v=12D9C070" media="all" />
+
+<link rel="stylesheet" text="text/css" href="/account/WDO3/css/font-awesome.css?v=91CCC24A" media="all" />
+
+
+   <!-- Ad -->
+    <script type="text/javascript">
+        $(document).ready(function () { 
+
+         $('.close-ad').click(function () {
+            $('.home-ad').removeClass('slideInRight').addClass('animated slideOutRight');
+            setTimeout(function () {
+                $('.home-ad').addClass('hide-ad');
+            }, 1000);
+            $('.mfb-component__button--main').addClass('active');
+        });
+        });
+        window.onload = function () {
+            $('.home-ad').removeClass('hide-ad').addClass('animated slideInRight');
+            setTimeout(function () {
+                $('.home-ad').removeClass('slideInRight').addClass('animated slideOutRight');
+                setTimeout(function () {
+                    $('.home-ad').addClass('hide-ad');
+                    
+                }, 1000);
+                $('.mfb-component__button--main').addClass('active');
+            }, 5000);
+        };
+        function open_ad() {
+            $('.home-ad').removeClass('slideOutRight')
+            $('.home-ad').removeClass('hide-ad')
+            $('.home-ad').addClass('animated slideInRight');
+            $('.mfb-component__button--main').removeClass('active');
+        }
+    </script>
+    <a href="javascript:void(0)" id="advert_show" class="mfb-component__button--main bubble-wrap-main" onclick="open_ad()" name="advert_show" style="display:none;">
+        <i class="fa fa-arrow-circle-left mfb-component__main-icon--resting "></i>      
+    </a>
+
+    <div id="advert" class="home-ad hide-ad" name="advert" style="display:none;">
+        <div class="close-ad-helper">
+          <div class="close-ad"><i class="fa fa-close"></i></div>
+        </div>
+        <div class="ad-image"><div id="imgcontainer"></div></div>
+        <div class="ad-text"><span id="lblDescr">description</span></div>
+        <a href="javascript:void(0)" id="lnk_16937" class="ad-button" target="_blank">Click Here for More</a>
+        
+         <input type="hidden" name="_ctl0:body:Advertisement1:hdadid" id="hdadid" value="0" />
+    </div>
+    </div>
+    <div style="width: 100%; margin-top: 0px; margin-bottom: 8px; margin-left:10px; font-size: 12px;">
+        <i class="fa fa-user-circle" style="color: #053c81; font-size: 20px !important; line-height: 7px;"
+            aria-hidden="true"></i>
+        <span id="_ctl0_body_lblWelcome" class="welcomeuser">Welcome,&nbsp;Dragan FRS</span>
+        <i class="fa fa-caret-right" aria-hidden="true"></i>
+        <span id="_ctl0_body_lblCompanyName" class="normal8" style="font-weight: 600; color: #666;">Digital Logbook [rds05.servsuitecloud.net].FRSALES01D</span>
+    </div>
+    <div class="container">
+        <div class="">
+
+            <!-- Nav tabs -->
+            <div class="card">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#search_tab" aria-controls="search_tab" role="tab" data-toggle="tab">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                            <span id="_ctl0_body_lblUserCallAgent">Search</span></a>
+
+                    </li>
+                    <li role="presentation"><a href="#dashboard_tab" aria-controls="dashboard_tab" role="tab" data-toggle="tab" onclick="Dahboardtab2(-3,'StandardReport');">
+                        <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                        <span id="_ctl0_body_lblDashboard">Dashboard</span></a></li>
+
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+
+                    <div role="tabpanel" class="tab-pane active" id="search_tab">
+                        <div id="salespro">
+                            <link rel="stylesheet" text="text/css" href="/user/salespro/Styles/salespro.css?v=C98FEAA0" media="all" />
+
+<link rel="stylesheet" text="text/css" href="/user/salespro/Styles/theme.blue.css?v=859D5692" media="all" />
+
+<link rel="stylesheet" text="text/css" href="/user/salespro/Styles/salespro_design_edit.css?v=ED7BD4BC" media="all" />
+
+
+<!-----------------Bootstrap ---------->
+<link rel="stylesheet" text="text/css" href="/setup/webportal/css/bootstrap.min.css?v=941DB43" media="all" />
+
+<link rel="stylesheet" text="text/css" href="/setup/webportal/css/bootstrap-theme.min.css?v=6BFE841C" media="all" />
+
+<!-----------------Bootstrap ---------->
+
+
+
+<script type="text/javascript" src="/user/salespro/Scripts/new.jquery.tablesorter.js?v=A9E53C3" ></script>
+
+<script type="text/javascript" src="/user/salespro/Scripts/new.jquery.tablesorter.widgets.js?v=3C694A8F" ></script>
+
+<script type="text/javascript" src="/user/salespro/Scripts/new.jquery.tablesorter.pager.js?v=24A7311F" ></script>
+
+
+<script type="text/javascript" src="/scripts/select2/select2.min.js?v=43B74C47" ></script>
+
+<link rel="stylesheet" text="text/css" href="/scripts/select2/select2.css?v=FD8B01D0" media="all" />
+
+
+<script type="text/javascript" src="/user/salespro/Scripts/datatables/jquery.dataTables.min.js?v=16009423" ></script>
+
+<script type="text/javascript" src="/user/salespro/Scripts/datatable-responsive/datatables.responsive.min.js?v=22EDC0D3" ></script>
+
+
+
+<script type="text/javascript" src="/user/salespro/Scripts/datatables/dataTables.colVis.js?v=7C4DDED2" ></script>
+
+
+
+<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/colvis/1.1.2/css/dataTables.colVis.min.css">
+
+<script type="text/javascript" src="/user/salespro/Scripts/jquery.loadmask.js?v=E19167DD" ></script>
+
+<script type="text/javascript" src="/user/salespro/Scripts/salespro.js?v=8832C4F" ></script>
+
+
+<style>
+    .select2-container {
+        margin: 0px !important;
+        background: white !important;
+        height: 30px !important;
+        font-size: 12px;
+    }
+
+    .select2-selection {
+        height: 30px !important;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        min-width: 100% !important;
+    }
+
+
+    .acc_right {
+    margin-right: 6px !important;
+}
+
+    table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before, table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before {
+    top: 0px !important;
+    left: 0px;
+    margin-right: 10px;
+    height: 14px;
+    width: 14px;
+    display: inline-block;
+    float: left;
+    position: relative;
+    color: white;
+    border: 2px solid white;
+    border-radius: 14px;
+    box-shadow: 0 0 3px #444;
+    box-sizing: content-box;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 14px;
+    content: '+';
+    background-color: #31b131;
+}
+
+    #tblNewSearchResults > tbody > tr > td, #tblNewSearchResults > tbody > tr > th, #tblNewSearchResults > tfoot > tr > td, #tblNewSearchResults > tfoot > tr > th, #tblNewSearchResults > thead > tr > td, #tblNewSearchResults > thead > tr > th {
+        outline:0;
+    }
+
+
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+
+        .ipad-padding-last-0 {
+            padding: 0;
+        }
+
+        .ipad-padding-0 {
+            padding-left: 0;
+        }
+    }
+
+    @media (min-width: 320px) and (max-width: 767px) {
+
+        .no-pad-mobile {
+            padding-left: 0;
+        }
+
+        .dataTables_processing {
+            position: fixed !important;
+            background: linear-gradient(to right,rgba(255,255,255,0)0%,rgba(255,255,255,.9)0%,rgba(255,255,255,.9)100%,rgba(255,255,255,0)100%) !important;
+            z-index: 99 !important;
+        }
+
+        #processingIndicator {
+            left: 42% !important;
+        }
+    }
+
+    /*@media only screen and (max-width : 1600px) {
+        .acc_blue {
+            float: left;
+            margin-left: 35px;
+        }
+    }*/
+</style>
+
+<script type="text/javascript">
+    function isValidUSZip(sZip) {
+        return /^\d{5}(-\d{4})?$/.test(sZip);
+    }
+
+
+    $(document).ready(function () {
+
+        var df = $('#hdcaldtformat').val();
+        //convert format
+        df = df.replace("MM", "mm");
+        df = df.replace("M", "mm");
+        df = df.replace("yyyy", "yy");
+        $(".clDate").datepicker({ dateFormat: df, showOn: "both", buttonImage: "../images/new_calendar.gif" }).width(72);
+
+
+        //Task:[FLA-592-59543] Quick Search issue. RQ. 6/20/2016 RQ
+        $("#divMainView input").keypress(function (e) {
+            if (e.keyCode === 13) {
+                loadAccTableRows(1)
+            }
+        });
+
+        //BEGIN Task:[SSC-3992] Search screen to be removed from Home screen 04/19/2019 AH
+        $.prototype.enable = function () {
+            $.each(this, function (index, el) {
+                $(el).removeAttr('disabled');
+            });
+        }
+
+        $.prototype.disable = function () {
+            $.each(this, function (index, el) {
+                $(el).attr('disabled', 'disabled');
+            });
+        };
+
+        $("#disableSearchs").val() === 'True' ? $("a, select, input").disable() : $("a, select, input").enable();
+        //END  Task:[SSC-3992] Search screen to be removed from Home screen 04/19/2019 AH
+    });
+
+</script>
+<div id="divMainView" style="margin: 10px 10px 10px 10px;">
+    
+    <input type="hidden" name="_ctl0:body:salelproControl:disableSearchs" id="disableSearchs" value="False" />
+    
+    <div style="padding: 0px 0px 0px 0px;">
+        
+        <div class="row">
+            <div class="col-sm-3 col-md-3">
+                <div class="input-group mar_bot_10">
+                    <span class="first1 input-group-addon"><i class="fa  fa-play-circle  fa-sm fa-fw"></i></span>
+                    <span id="tdSearchCriteria"><select name="_ctl0:body:salelproControl:ddlSearchCriteria" id="ddlSearchCriteria" class="form-control input-sm" onchange="javascript:ddlSearchCriteriaChanged(this)">
+	<option value="0">Account #</option>
+	<option value="1">Work Order #</option>
+	<option value="2">Invoice #</option>
+	<option value="3">Phone #</option>
+	<option value="4">Check #</option>
+	<option value="5">My Search</option>
+	<option value="6">Email Address</option>
+	<option value="7">CC Last 4 Digits</option>
+	<option value="8">Transaction ID</option>
+	<option value="9">Program Reference #</option>
+	<option value="10">Account UDF Field #5</option>
+	<option value="11">Old WO Num #</option>
+	<option value="13">Site Reference #</option>
+	<option value="12">Edit Program Search</option>
+	<option value="14">PO Number</option>
+	<option value="15">Third party Ref No.</option>
+	<option value="16">Registration Number</option>
+	<option value="17">Barcode Number</option>
+	<option value="18">Company UDF-Company ID 1</option>
+	<option value="19">Invoice PO#</option>
+
+</select></span>
+                </div>
+            </div>
+            <div class="col-sm-3 col-md-3 ">
+                <div class="input-group mar_bot_10">
+                    <span class="first1 input-group-addon"><i class="fa   fa-arrow-circle-right  fa-sm fa-fw"></i></span>
+                    <input name="_ctl0:body:salelproControl:txtSearchCriteria" type="text" id="txtSearchCriteria" class="form-control input-sm" placeholder="Enter Criteria" />
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <a href="javascript:void(0)" id="search_button" style="margin-right: 20px !important;" type="button" class="btn btn-primary spec-abutton mar_bot_10" onclick="loadAccTableRows(1); return false;"><i class="fa  fa-search fa-lg fa-fw "></i>&nbsp;<span id="lbl_571">Search</span></a>
+                <a href="javascript:void(0)" id="filter_button" style="margin-right: 20px !important;" type="button" class="btn btn-primary spec-abutton mar_bot_10"><i class="fa  fa-arrow-circle-down fa-lg fa-fw newico"></i>&nbsp;<span id="lbla_16740">Show/Hide Advanced Search</span></a>
+                
+                <a href="javascript:void(0)" id="clear_button" style="margin-right: 20px !important;" type="button" class="btn btn-primary spec-abutton mar_bot_10" onclick="clearPage(true); return false;"><i class="fa  fa-times fa-lg fa-fw "></i>&nbsp;<span id="btnClear_2456">Clear</span></a>
+                <span class="no-wrap" style="font-size: 14px !important; color: #555;">
+                    <input id="chkClearSearchCriateria_20593" type="checkbox" name="_ctl0:body:salelproControl:chkClearSearchCriateria_20593" onclick="javascript:toggleClearCriteriaOption();" /><label for="chkClearSearchCriateria_20593">Clear Criteria upon Search</label></span>
+
+            </div>
+        </div>
+        <div class="row no-mar-left no-mar-right">
+            <div id="additional_info" class="col-xs-12 col-sm-12 " style="display: none; border: 1px solid rgb(204, 204, 204); border-radius: 0px; padding: 10px; background-color: #f4f4f4;">
+
+                <div class="row no-mar-left no-mar-right">
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 ipad-padding-0">
+                        <div class="row" style="margin: 2px 0px; border: 1px solid rgb(204, 204, 204); border-radius: 0px; padding: 0px 10px 15px; background-color: rgb(238, 236, 236);">
+                            <div class="col-xs-12  no-pad-left no-pad-right ">
+                                <span id="lblFirstName_78">First Name</span><input name="_ctl0:body:salelproControl:txtFirstName" type="text" id="txtFirstName" class="form-control input-sm" placeholder="First Name" />
+                            </div>
+                            <div class="col-xs-12  no-pad-left no-pad-right ">
+                                <span id="lblLastName_79">Last Name</span><br>
+                                <input name="_ctl0:body:salelproControl:txtLastName" type="text" id="txtLastName" class="form-control input-sm" placeholder="Last Name" />
+                            </div>
+                            <div class="col-xs-12  no-pad-left no-pad-right ">
+                                <span id="lblCompanyName_19">Company Name</span><br>
+                                <input name="_ctl0:body:salelproControl:txtCompanyName" type="text" id="txtCompanyName" class="form-control input-sm" placeholder="Company Name" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 ipad-padding-0">
+                        <div class="row" style="margin: 2px 0px; border: 1px solid rgb(204, 204, 204); border-radius: 0px; padding: 0px 10px 15px; background-color: rgb(238, 236, 236);">
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3  no-pad-left no-pad-right">
+                                <span id="lblAddress_14604">Street #</span><br>
+                                <input name="_ctl0:body:salelproControl:txtStreetNum" type="text" id="txtStreetNum" class="form-control input-sm" placeholder="Street #" />
+
+                            </div>
+                            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 no-pad-right no-pad-mobile">
+                                <span id="lbl_6191">Street Name</span><br>
+                                <input name="_ctl0:body:salelproControl:txtAddress" type="text" id="txtAddress" class="form-control input-sm" placeholder="Street Name" />
+                            </div>
+
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-pad-left no-pad-right">
+                                <span id="lblZip_4745">City</span><br />
+                                <input name="_ctl0:body:salelproControl:txtCity" type="text" id="txtCity" class="form-control input-sm" placeholder="City" />
+
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 no-pad-left no-pad-right ">
+                                <span id="lbl_56">State</span><br />
+                                <input name="_ctl0:body:salelproControl:txtState" type="text" id="txtState" class="form-control input-sm" placeholder="State" />
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6  no-pad-right no-pad-mobile">
+                                <span id="lbl_57">Zip</span><br />
+                                <input name="_ctl0:body:salelproControl:txtZip" type="text" id="txtZip" class="form-control input-sm" placeholder="Zip" />
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 ipad-padding-last-0">
+                        <div class="row" style="margin: 2px 0px; border: 1px solid rgb(204, 204, 204); border-radius: 0px; padding: 0px 10px 15px; background-color: rgb(238, 236, 236);">
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 no-pad-right no-pad-left">
+                                <span id="lblLotNum_14101">Lot #</span><br>
+                                <input name="_ctl0:body:salelproControl:txtLotNum" type="text" id="txtLotNum" class="form-control input-sm" placeholder="Lot #" />
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 no-pad-right no-pad-mobile">
+                                <span id="lblmapcode_4746">Map Code</span><br>
+                                <input name="_ctl0:body:salelproControl:txtMapCode" type="text" id="txtMapCode" class="form-control input-sm" placeholder="Map Code" />
+                            </div>
+                            <div class="col-xs-12  no-pad-left no-pad-right ">
+                                <span id="lblBuilder_5455">Builder</span><br>
+                                <div style="width: 100%" class="input-group">
+                                    
+                                    <span id="tdBuilder"><select name="_ctl0:body:salelproControl:ddlBuilder" id="ddlBuilder" class="js-example-basic-single">
+	<option value="0">None</option>
+	<option value="121">ERWR23Rwefwef23Q</option>
+	<option value="115">Falcon</option>
+	<option value="118">Filipovska Angela</option>
+	<option value="120">TEST </option>
+
+</select></span>
+                                </div>
+                                
+                            </div>
+                            <div class="col-xs-12  no-pad-left no-pad-right ">
+                                <span id="lblSubdivision_317">Subdivision</span>
+                                <br>
+                                <div style="width: 100%" class="input-group">
+                                    
+                                    <span id="tdSubdivision"><select name="_ctl0:body:salelproControl:ddlSubdivision" id="ddlSubdivision" class="js-example-basic-single">
+	<option value="0">None</option>
+	<option value="315">1</option>
+	<option value="169">APPLE ORCHARD</option>
+	<option value="140">ARBOR VIEW</option>
+	<option value="11">ARDEN TRACE</option>
+	<option value="36">ARRANMORE</option>
+	<option value="56">ATLANTA COUNTRY CLUB</option>
+	<option value="168">AUTUMN BROOK</option>
+	<option value="202">AUTUMN GLEN</option>
+	<option value="170">AUTUMN WOODS ESTATES</option>
+	<option value="123">BANY</option>
+	<option value="171">BARRETT FARMS</option>
+	<option value="38">BARRETT GREEN</option>
+	<option value="136">BARRETTGREEN</option>
+	<option value="120">BATTLECREEK</option>
+	<option value="125">BELBELLMONT</option>
+	<option value="32">BENTWOOD</option>
+	<option value="59">BLACKHAWK HILLS</option>
+	<option value="5">BLUE SPRINGS</option>
+	<option value="141">BRADSHAW FARM</option>
+	<option value="100">BRAMELETT FARMS</option>
+	<option value="203">BRANNON ESTATES</option>
+	<option value="204">BRECKENRIDGE</option>
+	<option value="142">BRIDGEMILL</option>
+	<option value="60">BRISTAL WOODS</option>
+	<option value="28">BRITLEY PARK</option>
+	<option value="61">BROOK WOOD PARK</option>
+	<option value="65">BROOKE SHIRE POND</option>
+	<option value="31">BROOKHAVEN</option>
+	<option value="110">BROOKHAVEN HIGHETS</option>
+	<option value="95">BROOKSTONE 3 </option>
+	<option value="81">BROOKSTONE COUNTRY CLUB</option>
+	<option value="126">BROOKWOOD</option>
+	<option value="46">BROOKWOOD HILLS</option>
+	<option value="58">BULLARD PLACE </option>
+	<option value="18">BURNT HICKORY ESTATES/HWY 61</option>
+	<option value="192">CADENCE</option>
+	<option value="90">CAMDEN POINT</option>
+	<option value="130">CAMERONS CROSSING</option>
+	<option value="131">CAMERONS CROSSING</option>
+	<option value="53">CANTERBERRY SUB</option>
+	<option value="172">CARRINGTON FARM</option>
+	<option value="109">CEDAR FORKS </option>
+	<option value="41">CEDAR MOUNTAIN PARK</option>
+	<option value="114">CEDARCREST</option>
+	<option value="98">CHADDS FORD OFF JOHNSON FERRY</option>
+	<option value="2">CHASTAIN LAKES SUBDV</option>
+	<option value="25">CHASTAIN LANDINGS</option>
+	<option value="67">CHEATHAM LAKE</option>
+	<option value="92">CHESTNUT SPRINGS</option>
+	<option value="42">CHIMNEY LAKES</option>
+	<option value="47">CHIMNEY SPRINGS</option>
+	<option value="127">CLEARWATER</option>
+	<option value="205">COPOPER HILLS</option>
+	<option value="143">COPPER CREEK</option>
+	<option value="145">COPPER RIDGE</option>
+	<option value="144">COTTONWOOD CREEK</option>
+	<option value="79">COUNTRY CLUB OF THE SOUTH</option>
+	<option value="137">COVEREDBRIDGECROSSING</option>
+	<option value="206">CRABAPPLE FALLS</option>
+	<option value="173">CRESTMONT</option>
+	<option value="16">CUMBERLAND CREEK</option>
+	<option value="259">DAMJAN SUB</option>
+	<option value="258">DAMJANSUB</option>
+	<option value="35">DEER LAKE</option>
+	<option value="73">DEERFIELD LANDING</option>
+	<option value="296">DRAG</option>
+	<option value="138">EAGLEWATCH</option>
+	<option value="174">EAST HICKORY SPRINGS</option>
+	<option value="116">ECHO MILL</option>
+	<option value="146">ENCLAVE AT HOLLY MILL</option>
+	<option value="175">ESTATES AT BROOKE PARK</option>
+	<option value="14">EVANS MILL </option>
+	<option value="139">EVANSMILL</option>
+	<option value="133">FAIRFIELD</option>
+	<option value="71">FALCON HILLS</option>
+	<option value="207">FALLING WATER</option>
+	<option value="176">FOREST CREEK</option>
+	<option value="96">FOX CREEK</option>
+	<option value="208">FOX HOLLOW</option>
+	<option value="1">FREYS FARM</option>
+	<option value="193">GARRISON FARMS</option>
+	<option value="147">GLEN BROOKE</option>
+	<option value="77">GLEN HAVEN</option>
+	<option value="122">GRAYSTONE</option>
+	<option value="118">HAMBY PLACE</option>
+	<option value="178">HAMPTON STATION</option>
+	<option value="115">HARDAGE PLACE</option>
+	<option value="194">HARDWOOD MANOR</option>
+	<option value="177">HARMONY ON THE LAKES</option>
+	<option value="107">HERATIAGE </option>
+	<option value="15">HERITAGE SUBDV OFF ATLANTA ROAD/</option>
+	<option value="108">HERMITAGE</option>
+	<option value="148">HIDDEN CREEK</option>
+	<option value="149">HIDDEN LAKE</option>
+	<option value="196">HILLCREST</option>
+	<option value="209">HILTON CHASE</option>
+	<option value="221">HOLLLYCROSSING</option>
+	<option value="197">HOLLY COMMONS</option>
+	<option value="179">HOLLY CREEK ESTATES</option>
+	<option value="150">HOLLY MILL</option>
+	<option value="3">HOPELAND PARK</option>
+	<option value="129">HOWELLFARMS</option>
+	<option value="151">INDIAN BROOK</option>
+	<option value="69">INDIAN HILLS</option>
+	<option value="152">INDIAN WELLS</option>
+	<option value="121">INMANPARK</option>
+	<option value="280">IVAVAVA1</option>
+	<option value="68">IVEY GREEN</option>
+	<option value="111">JOHN WARD AND DALLAS HWY</option>
+	<option value="289">JOV SUB2</option>
+	<option value="106">KENNESAW SPRINGS SUB.</option>
+	<option value="22">KERRY CREEK</option>
+	<option value="78">KINGS WOOD CLUB ESTATES</option>
+	<option value="134">KINGVALLEYATVINNINGS</option>
+	<option value="80">KINSINGTON PLACE</option>
+	<option value="153">LAKE SOVEREIGN</option>
+	<option value="210">LAKESIDE AT ALLATOONA</option>
+	<option value="211">LAUREL BROOKE</option>
+	<option value="88">LEE CROSSING</option>
+	<option value="10">LEES CROSSING</option>
+	<option value="75">LEGACY AT THE RIVER LINE</option>
+	<option value="66">LEGACY PARK</option>
+	<option value="105">LORING SQUARE </option>
+	<option value="21">LOST MOUNTAIN</option>
+	<option value="97">LOST MOUNTAIN LAKES</option>
+	<option value="266">MANDIBLE</option>
+	<option value="180">MANOUS MANOR</option>
+	<option value="154">MEADOW BROOK</option>
+	<option value="198">MIDDLEBROOKE</option>
+	<option value="155">MILLSTON AT LITTLE RIVER</option>
+	<option value="181">MORGAN PARK</option>
+	<option value="124">MOSSPLANTATION</option>
+	<option value="23">MOUNT VERNON ESATES</option>
+	<option value="212">MOUNTAIN VIEW</option>
+	<option value="213">NEWCASTLE</option>
+	<option value="214">NORTHBROOKE</option>
+	<option value="182">NORTHBROOKE MANOR</option>
+	<option value="183">OAK RIDGE ESTATES</option>
+	<option value="89">OAK WOOD</option>
+	<option value="8">OFF TERRELL MILL</option>
+	<option value="103">OLD MILL FOREST</option>
+	<option value="156">OLDE HERITAGE</option>
+	<option value="257">ORANGE COUNTY</option>
+	<option value="157">OVERLOOK AT SIXES ROAD</option>
+	<option value="87">PACES CLUB SUBDIVISION</option>
+	<option value="158">PALM RIDGE</option>
+	<option value="184">PARK CREEK</option>
+	<option value="91">PARK MANOR</option>
+	<option value="62">PIEDMONT AND ROSWELL RD</option>
+	<option value="132">PIEDMONTHILLS</option>
+	<option value="83">PLANTATION AT DORSET SHOALS</option>
+	<option value="102">POST OAK &amp; HEMBREE</option>
+	<option value="50">POST OAK SPRINGS</option>
+	<option value="219">POWDERCOVE</option>
+	<option value="215">QUAIL WOODS</option>
+	<option value="45">QUEENSBORO SQUARE</option>
+	<option value="104">QUEENSBURY ORCHARD</option>
+	<option value="216">REGENCY PARKE</option>
+	<option value="49">RIVER CLIFF/NO SIGN</option>
+	<option value="160">RIVER PARK</option>
+	<option value="159">RIVERGREEN</option>
+	<option value="161">RIVERS EDGE</option>
+	<option value="63">ROLLING ACRES</option>
+	<option value="273">RRRRR</option>
+	<option value="72">SADDLE BROOK FARMES</option>
+	<option value="39">SAINT CHARLES SQ.</option>
+	<option value="17">SAINT CHARLES SQUARE</option>
+	<option value="217">SAVANNAH ESTATES</option>
+	<option value="54">SAXON TRACE</option>
+	<option value="220">SEVENHILLS</option>
+	<option value="112">SEWLL MILL</option>
+	<option value="94">SHADOWOOD MOBILE HOME PARK</option>
+	<option value="30">SHARON POINT</option>
+	<option value="20">SIXES &amp; 575</option>
+	<option value="43">SOUTHLAND</option>
+	<option value="162">SPRING RIDGE</option>
+	<option value="185">SPRINGFIELD PLACE</option>
+	<option value="314">STER2333E@!WEQS</option>
+	<option value="13">STILLS</option>
+	<option value="82">STILLSBORO CROSSING</option>
+	<option value="4">STILLSBORO CROSSING - OFF STILLSBORO RD.</option>
+	<option value="113">STILSBORO CROSSING</option>
+	<option value="9">STRAFFORD</option>
+	<option value="26">STRATHMOORE</option>
+	<option value="199">SUMMER WALK</option>
+	<option value="128">SUMMERSPRINGS</option>
+	<option value="85">SWEET PINE CREEK</option>
+	<option value="200">SWEETBRIAR</option>
+	<option value="223">TA SUBIVISION</option>
+	<option value="224">TA SUBIVISION</option>
+	<option value="225">TA SUBIVISION</option>
+	<option value="226">TA SUBIVISION</option>
+	<option value="227">TA SUBIVISION</option>
+	<option value="228">TA SUBIVISION</option>
+	<option value="229">TA SUBIVISION</option>
+	<option value="230">TA SUBIVISION</option>
+	<option value="231">TA SUBIVISION</option>
+	<option value="233">TA SUBIVISION</option>
+	<option value="84">TARA</option>
+	<option value="52">TAYLORS FARM</option>
+	<option value="241">TEST MARK</option>
+	<option value="261">TEST2</option>
+	<option value="262">TEST3</option>
+	<option value="263">TEST4</option>
+	<option value="264">TEST5</option>
+	<option value="37">THE CAPITAL </option>
+	<option value="186">THE FALLS OF MILL CREEK</option>
+	<option value="51">THE HERMITAGE </option>
+	<option value="40">THE HUNT CLUB</option>
+	<option value="188">THE MANOR AT MILL CREEK</option>
+	<option value="187">THE ORCHARDS</option>
+	<option value="163">THE PARK AT STEELE BRIDGE</option>
+	<option value="48">THE RESERVE</option>
+	<option value="189">THE SPRINGS</option>
+	<option value="76">TIMBER CREEK TOWNHOMES</option>
+	<option value="218">TOMAHAWK</option>
+	<option value="7">TREY MOORE</option>
+	<option value="190">VALLEY BROOK</option>
+	<option value="19">VICTORIA LANDING</option>
+	<option value="164">VIEW AT HOLLY MILL</option>
+	<option value="64">VILLAGE AT KENDRICK FARMS</option>
+	<option value="165">VILLAGE AT LAKE NORTON</option>
+	<option value="166">VILLAS AT DOWNING CREEK</option>
+	<option value="57">VINNINGS ESTATES </option>
+	<option value="135">VINNINGSESTATES</option>
+	<option value="167">WALNUT CREEK</option>
+	<option value="34">WATERFORD</option>
+	<option value="33">WEATHERSTONE</option>
+	<option value="201">WENTWORTH</option>
+	<option value="6">WESTERNES MOBILE HOME PARK</option>
+	<option value="44">WHITLOCK HEIGHTS</option>
+	<option value="93">WHITLOCK HIEGHTS</option>
+	<option value="55">WILLINGTON</option>
+	<option value="12">WILLOW CREEK OVERLOOK</option>
+	<option value="101">WILLOW CREEK SUB</option>
+	<option value="119">WILLOWSPRINGS</option>
+	<option value="74">WINDGATE</option>
+	<option value="70">WOODLAND BROOKE</option>
+	<option value="191">WOODMONT</option>
+	<option value="99">WYNFORD CHASE</option>
+
+</select></span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 " style="margin-top: 5px;">
+
+                        <div class="wrapper-border combobox">
+                            <span class="no-wrap">
+                                <input id="chkSearchAccounts_16738" type="checkbox" name="_ctl0:body:salelproControl:chkSearchAccounts_16738" onclick="javascript:toggleAccSiteSearch(0);" /><label for="chkSearchAccounts_16738">Search Accounts</label></span>
+                            <span class="no-wrap">
+                                <input id="cbSearchSites_12898" type="checkbox" name="_ctl0:body:salelproControl:cbSearchSites_12898" onclick="javascript:toggleAccSiteSearch(1);" /><label for="cbSearchSites_12898">Search Sites</label></span>
+                            <span class="no-wrap">
+                                <input id="chkSearchProspects_16768" type="checkbox" name="_ctl0:body:salelproControl:chkSearchProspects_16768" onclick="javascript:toggleAccSiteSearch(2);" /><label for="chkSearchProspects_16768">Search Prospects</label></span>
+                            <span class="no-wrap">
+                                <input id="cbActiveOnly_2189" type="checkbox" name="_ctl0:body:salelproControl:cbActiveOnly_2189" /><label for="cbActiveOnly_2189">Active only</label></span>
+                            <span class="no-wrap">
+                                </span>
+                            
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2 " style="margin-top: 5px;">
+
+                        <a id="search_button_2" href="javascript:void(0)" style="margin-right: 30px !important; margin-bottom: 0px !important;" type="button" class="btn btn-primary spec-abutton " onclick="loadAccTableRows(1); return false;"><i class="fa  fa-search fa-lg fa-fw "></i>&nbsp;<span id="lbla_571">Search</span></a>
+
+                    </div>
+                    
+                </div>
+
+
+
+            </div>
+        </div>
+        <span id="lbl_16770">Accounts with <b>Asterisk</b> are <b>Active</b>,&nbsp&nbsp&nbsp&nbsp<b>'A'</b> indicates Account Data,&nbsp&nbsp&nbsp&nbsp<b>'S'</b> indicates Site Data,&nbsp&nbsp&nbsp&nbsp<b>'P'</b> indicates Prospect Data</span>
+    </div>
+    <div id="oldsearch">
+        
+        <div id="Panel1">
+	
+            <table id="tblAccList" class="tablesorter">
+                <thead>
+                    <tr>
+                        <th>
+                            <span id="lblAccNum1_7344">Acc # </span></th>
+                        <th>
+                            <span id="lblFirstName1_78">First Name</span></th>
+                        <th>
+                            <span id="lblLastName1_79">Last Name</span></th>
+                        <th>
+                            <span id="lblCompanyName1_19">Company Name</span></th>
+                        <th>
+                            <span id="lblAddress1_358">Address</span></th>
+                        <th>
+                            <span id="lblCity_55">City</span></th>
+                        <th>
+                            <span id="lblZip1_57">Zip</span></th>
+                        <th>
+                            <span id="lblState_56">State</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        
+</div>
+    </div>
+    <div id="dialog-phone" title="Quick Search">
+        &nbsp;          
+    </div>
+    <div id="dialog-notclose" title="Close Page">
+        <p>
+            <span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 50px 0;"></span>
+            We are not ablle to close web page. Please do that manually!
+        </p>
+    </div>
+    
+    <div id="newSearchResults" style="overflow: auto; padding-top: 0px;">
+        <table id="tblNewSearchResults" class="display table table-striped table-bordered table-hover" width="100%" cellspacing="0">
+            <thead>
+                <tr>
+                    <th class="sorting_asc" style="min-width: 166px !important">
+                        <span id="lblAccNum_308">Account #</span></th>
+                    <th class="sorting">
+                        <span id="lblfn_78">First Name</span></th>
+                    <th class="sorting">
+                        <span id="lblln_79">Last Name</span></th>
+                    <th class="sorting">
+                        <span id="lblcn_19">Company Name</span></th>
+                    <th class="sorting">
+                        <span id="lblsn_14604">Street #</span></th>
+                    <th class="sorting">
+                        <span id="lblsn_6191">Street Name</span></th>
+                    <th class="sorting">
+                        <span id="lblc_55">City</span></th>
+                    <th class="sorting">
+                        <span id="lbls_56">State</span></th>
+                    <th class="sorting">
+                        <span id="lblz_57">Zip</span></th>
+                    <th class="sorting">
+                        <span id="lblmysearch_1409">My Search</span></th>
+                    <th class="sorting">
+                        <span id="lbll_316">Lot #</span></th>
+                    <th class="sorting">
+                        <span id="lblb_5455">Builder</span></th>
+                    <th class="sorting">
+                        <span id="lbls_317">Subdivision</span></th>
+                    <th class="sorting">
+                        <span id="lblmapcode1_4746">Map Code</span></th>
+                    <th class="sorting">
+                        <span id="lblpd_5253">Payment Date</span></th>
+                    <th class="sorting">
+                        <span id="lblpa_3191">Payment Amount</span></th>
+                </tr>
+            </thead>
+        </table>
+        <div id="specmsg"></div>
+    </div>
+    
+    <div id="dialog-subaccounts" title="Subaccounts modal dialog" style="display: none">
+        <table id="tSubAccountsPopup" class="display table table-striped table-bordered table-hover" width="100%" cellspacing="0">
+            <thead>
+                <tr>
+                    <th class="sorting_asc">
+                        <span id="lbl2AccNum_308">Account #</span></th>
+                    <th class="sorting">
+                        <span id="lbl2fn_78">First Name</span></th>
+                    <th class="sorting">
+                        <span id="lbl2ln_79">Last Name</span></th>
+                    <th class="sorting">
+                        <span id="lbl2cn_19">Company Name</span></th>
+                    <th class="sorting">
+                        <span id="lbl2sn_14604">Street #</span></th>
+                    <th class="sorting">
+                        <span id="lbl2sn_6191">Street Name</span></th>
+                    <th class="sorting">
+                        <span id="lbl2c_55">City</span></th>
+                    <th class="sorting">
+                        <span id="lbl2s_56">State</span></th>
+                    <th class="sorting">
+                        <span id="lbl2z_57">Zip</span></th>
+                    <th class="sorting">
+                        <span id="lbl2mysearch_1409">My Search</span></th>
+                    <th class="sorting">
+                        <span id="lbl2l_316">Lot #</span></th>
+                    <th class="sorting">
+                        <span id="lbl2b_5455">Builder</span></th>
+                    <th class="sorting">
+                        <span id="lbl2s_317">Subdivision</span></th>
+                    <th class="sorting">
+                        <span id="lbl2mapcode1_4746">Map Code</span></th>
+                    <th class="sorting">
+                        <span id="lbl2pd_5253">Payment Date</span></th>
+                    <th class="sorting">
+                        <span id="lbl2pa_3191">Payment Amount</span></th>
+                </tr>
+            </thead>
+
+        </table>
+    </div>
+    
+</div>
+<div id="divLoading" style="display: none; position: absolute; top: -45px; left: 44%; background: #FFFFFF; border: 2px blue solid; padding: 5px;">
+    <table>
+        <tr>
+            <td>
+                <img src="../images/loading3.gif" />
+            </td>
+            <td>
+                <span id="spanLoadingMessage" style="vertical-align: middle; padding-left: 10px; font-weight: bold; font-size: large; font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;"></span>
+            </td>
+        </tr>
+    </table>
+</div>
+<input name="_ctl0:body:salelproControl:hdmessages" type="hidden" id="hdmessages" value="Define the value of at least one criteria item;Program Name;Sale date;From;Sales Person;Status;Programs Sold;Case ID;There is no data to display;Proposals;Proposal;Employee;Proposal Date;Is Rejected;Loading;Your search criteria return no matched results;Please Select an Estimate;Please Select an Account;N/A;Renewal Date;Renewal fee;Cancel date;Save;Cancel;?????;There is Criteria set on Both Searches! You can either use the Regular Search or the Advanced Search.;Accounts with &lt;b>Asterisk&lt;/b> are &lt;b>Active&lt;/b>,&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&lt;b>&#39;A&#39;&lt;/b> indicates Account Data,&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&lt;b>&#39;S&#39;&lt;/b> indicates Site Data,&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&lt;b>&#39;P&#39;&lt;/b> indicates Prospect Data;Sub-search;Show / Hide Columns;No data available in table;Show _MENU_ entries;First;Last;Next;Previous;Showing _START_ to _END_ of _TOTAL_ entries;" />
+<input name="_ctl0:body:salelproControl:hdphoneid" type="hidden" id="hdphoneid" />
+<input name="_ctl0:body:salelproControl:hdphonestatus" type="hidden" id="hdphonestatus" />
+<input name="_ctl0:body:salelproControl:hdphoneacc" type="hidden" id="hdphoneacc" value="false" />
+
+<script>
+    $("form>div").css("min-width", "0px");
+    $('#filter_button').click(function () {
+        toggleAdvancedSearch();
+    });
+</script>
+
+                        </div>
+
+
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane" id="dashboard_tab">
+
+                        <div class="" style="margin-top: 0px;">
+                            <div id="sb-site">
+                                <div id="Div1">
+                                    <div id="dashboard" style="width: 100%; height:300px;">
+                                        <div class="loading-circle"></div>
+                                        <ul id="myDashboard" class="column sDashboard">
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div id="tabs">
+        
+
+
+        <!--Worklist: 201421292739MC - Search Pro Sales Module GPE 3/5/2014 Moved from NC to FR Trunks  -->
+        
+    </div>
+
+    <div id="modalSplash" class="reveal-modal" style="top: 130px;">
+        <div id="_ctl0_body_msgContent"></div>
+        <a class="close-reveal-modal">&#215;</a>
+    </div>
+
+    <div id="notificationDB" class="notificationDB reveal-modal" style="top: 130px;">
+        <div id="_ctl0_body_notificationContentDB" class="notificationContentDB"></div>
+        <a class="close-reveal-modal">&#215;</a>
+    </div>
+
+    <div class="normal8" id="dglobal"></div>
+    <div id="divmsg"></div>
+    <input name="_ctl0:body:huid" type="hidden" id="_ctl0_body_huid" value="295626" />
+    <input name="_ctl0:body:hsearch" type="hidden" id="_ctl0_body_hsearch" />
+    <input name="_ctl0:body:hsearchajax" type="hidden" id="_ctl0_body_hsearchajax" />
+    <input name="_ctl0:body:hsearchtype" type="hidden" id="_ctl0_body_hsearchtype" value="ajax" />
+    <input name="_ctl0:body:hfDateFormat" type="hidden" id="_ctl0_body_hfDateFormat" value="M/d/yyyy" />
+    <input name="_ctl0:body:hAdditionalDashboard" type="hidden" id="_ctl0_body_hAdditionalDashboard" value="True" />
+    <input type="hidden" name="_ctl0:body:hcurrenttab" id="_ctl0_body_hcurrenttab" value="0" />
+    <input type="hidden" name="_ctl0:body:hPdf" id="_ctl0_body_hPdf" value="0" />
+    <input type="hidden" name="_ctl0:body:CoreAuthTokenValue" id="CoreAuthTokenValue" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJJZCI6Mjk1NjI2LCJVc2VybmFtZSI6ImZhbGNvbkBmcnNhbGVzLmNvbSIsIkxhbmd1YWdlSWQiOjAsIkNvbXBhbnlJZCI6MSwiQ29tcGFueU5hbWUiOiJEaWdpdGFsIExvZ2Jvb2siLCJJc0FkbWluaXN0cmF0b3IiOnRydWUsIklzTW9iaWxlQWRtaW5pc3RyYXRvciI6dHJ1ZSwiSXNTZXJ2U2FsZXNBZG1pbmlzdHJhdG9yIjp0cnVlLCJBdXRoZW50aWNhdGlvblVSTCI6InNwcm9saXZlLnRoZXNlcnZpY2Vwcm8ubmV0IiwiSXNTZXJ2U2Vuc29yQWRtaW5pc3RyYXRvciI6ZmFsc2UsIlBlcm1pc3Npb25zIjpbXSwiRGJJZCI6MTM0NCwiRGJOYW1lIjoiRlJTQUxFUzAxRCIsIkxvY2FsZUlkIjoxMDMzLCJEaXNwbGF5TGFuZ3VhZ2UiOiJlbiIsIlRva2VuRGF0ZSI6IjIwMjYtMDQtMDhUMTA6MTY6MjIuNjY1MDE0NFoiLCJVdGNPZmZzZXQiOi0zMDAsIlVzZURzdCI6dHJ1ZSwiVGltZXpvbmVTdGFuZGFyZE5hbWUiOiJFYXN0ZXJuIFN0YW5kYXJkIFRpbWUifQ.XdKDT72F-aBw771-p_VPHRQj0_b8ymDj13nPcdz64VQ" />
+    <input type="hidden" name="_ctl0:body:CoreAuthTokenExpirationTimeInSeconds" id="CoreAuthTokenExpirationTimeInSeconds" value="57600" />
+
+    <br />
+    <table id="_ctl0_body_tabmsg" class="normal8" border="0">
+
+</table>
+     <script type="text/javascript">
+         $(function () {
+             var currentToken = $("#CoreAuthTokenValue").val();
+             currentToken = checkRefreshToken(currentToken);
+
+             setItemInStorage("id_token", currentToken);
+             setItemInStorage("expires_at", $("#CoreAuthTokenExpirationTimeInSeconds").val());
+         });
+
+         function setItemInStorage(item, value) {
+             //SSC-3642 User should always get new token and expiration on login
+             if (window.localStorage.getItem(item) === null || window.localStorage.getItem(item) !== value) {
+                 window.localStorage.setItem(item, value);
+             }
+         }
+
+         function checkRefreshToken(currentToken) {
+             const refreshKey = "refresh_token";
+             const refreshToken = window.localStorage.getItem(refreshKey);
+
+             if (typeof (refreshToken) != 'undefined' && refreshToken != null) {
+                 if (refreshToken !== "" && refreshToken.length > 0 && refreshToken !== currentToken) {
+                     currentToken = refreshToken;
+                     $("#CoreAuthTokenValue").val(refreshToken);
+                 }
+             }
+             return currentToken;
+         }
+
+     </script>
+
+            </div>
+        </div>
+    </form>
+
+
+     <!-- POPPER JS (also the main importing in the master was for the tooltip on hover to work with jquery latest version) -->
+    
+
+    <!-- BOOTSTRAP JS -->
+    <script type="text/javascript" src="/UserInterfaceV2/js/bootstrap-4.3.1/bootstrap.min.js?v=F003F42D" ></script>
+
+
+    <!-- IMPORTANT: APP CONFIG -->
+    <script type="text/javascript" src="/UserInterfaceV2/js/app.config.js?v=1E2668A2" ></script>
+
+
+    <!-- MAIN APP JS FILE -->
+    <script type="text/javascript" src="/UserInterfaceV2/js/app.min.js?v=BCCD6EFB" ></script>
+
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+.combo-box-list 
+{
+	list-style: none;
+	padding: 0px;
+	margin: 0;
+	display: block;
+	float: left;
+	width: 280px;
+}
+
+.combo-box-list .ui-selected a
+{
+    background: #F39814; 
+    color: white; 
+}
+
+.combo-box-list li
+{
+    margin: 0!important;
+	padding: 0!important;
+	float: left!important;
+	clear: left!important;
+	width: 280px!important;
+	height: 14px!important;
+	cursor: pointer!important;
+	list-style-type: none!important;
+	line-height: 14px!important;
+}
+
+.combo-box-list li a,
+.combo-box-list li a:visited
+{ 
+    width: 280px;
+    height: 14px!important;
+    line-height: 14px!important;
+    display: block!important;
+    font-size: 12px!important;
+    font-family: Arial!important;
+    text-decoration: none!important;
+    color: #000000!important;
+}
+
+.combo-box-list li a:hover
+{
+    background:#005AAB !important;  /*#F39814*/
+    color: white!important;
+}
+
+.combo-box-content
+{
+    position: absolute; 
+    padding: 0px;
+    display: none;
+    width: 680px;
+    height: auto;
+    overflow: hidden;
+    background-color: #FFFFFA;
+    border: solid 1px silver;
+    z-index: 9999;
+}
+
+.combo-box-content-table
+{
+    height: 238px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.combo-box-loading
+{
+    display: block;
+    width: 300px;
+    height: 200px;
+    background-image: url(../libs/JQueryAutoComplete/indicator.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.combo-box-dropdownbutton
+{
+    width: 20px; 
+    height: 20px; 
+    display: block;
+    background-image: url(../Images/dropdown.gif);
+    background-repeat: no-repeat;
+    margin: 0px;
+    padding: 0px;
+    /*border: 0px;*/
+    
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.combo-box-paging-info
+{
+    margin-top: 10px; 
+    margin-left: 5px;
+    color: Green; 
+    font-size: 11px; 
+    font-weight: bold;
+}
+
+.combo-box-paging-box
+{
+    margin-top: 0px;
+    margin-left: 5px;
+}
+
+.combo-box-showall
+{
+    color: black;
+    font-size: 11px; 
+    font-weight: normal;
+}
+
+.ui-autocomplete {
+    position: absolute;
+    cursor: default;
+    z-index: 9999;
+}
+
+body .ui-autocomplete .ui-menu-item.ui-state-focus {
+    border: 1px solid black;
+    background: #0A246A !important;
+    background-color: #0A246A !important;
+    font-weight: normal;
+    color: black;
+}
+
+    body .ui-autocomplete .ui-menu-item.ui-state-focus a {
+        color: white !important;
+        text-decoration: none;
+    }
+
+    body .ui-autocomplete .ui-menu-item a {
+        text-decoration: none;
+        color: black;
+    }

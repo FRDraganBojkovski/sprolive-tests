@@ -1,0 +1,224 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+	<HEAD><script type="text/javascript" src="/scripts/jquery-3.6.4.min.js?v=751AE140" fetchpriority="high"></script><script type="text/javascript" src="/scripts/JQuery-UI-1.13.2/jquery-ui-1.13.2.min.js?v=DC9EEC91" fetchpriority="high"></script><meta charset="utf-8"><script type="text/javascript" src="/scripts/jquery-migrate3.0.0.js?v=9D21989C" ></script><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Google tag (gtag.js) --> 
+        <!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-2R3HNFLE21"></script> -->
+        <!--<script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-2R3HNFLE21'); </script>-->
+		<title>
+	ServSuite
+</title><link rel="stylesheet" text="text/css" href="/styles/tspstyle.css?v=6E3B3ACA" media="all" />
+<link rel="stylesheet" text="text/css" href="/styles/css/bootstrap.min.css?v=41923EB8" media="all" />
+<link rel="stylesheet" text="text/css" href="/styles/css/font-awesome.min.css?v=1CE6BEA4" media="all" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,300,300italic,400italic,600,600italic,700italic,800italic" rel="stylesheet" type="text/css" /><link rel="stylesheet" text="text/css" href="/styles/css/animate.min.css?v=7BF9675E" media="all" />
+<link id="Link1" rel="shortcut icon" href="favicon.ico" type="image/x-icon" /><link id="Link2" rel="icon" href="favicon.ico" type="image/ico" />
+        <script type="text/javascript">
+		    $(function() {
+		        dt = new Date();
+		        $("#txtTimeOffset").val(dt.getTimezoneOffset());
+		        $("#txtUserName").focus();
+                $('#btnReset').click(function () {
+                    $('#valPassword_42').addClass('fadeOutLeft animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                        $(this).removeClass('fadeOutLeft animated');
+                        $('#valPassword_42').hide();
+		    });
+                    $('#lblMessage').addClass('fadeOutUp animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                        $(this).removeClass('fadeOutUp animated');
+                        $('#lblMessage').hide();
+                    });
+                    $("input[type=text], textarea").val("");
+                });
+                //hookup the event
+                $('input').keypress(function () {
+                    $('#valPassword_42').addClass('fadeOutLeft animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                        $(this).removeClass('fadeOutLeft animated');
+                        $('#valPassword_42').hide();
+                    });
+                    $('#lblMessage').addClass('fadeOutUp animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                        $(this).removeClass('fadeOutUp animated');
+                        $('#lblMessage').hide();
+                    });
+                });
+            });
+		</script>
+	<link rel="stylesheet" text="text/css" href="/scripts/JQuery-UI-1.13.2/jquery-ui-1.13.2.min.css?v=9D9276B2" media="all" /><script type="text/javascript" src="/scripts/JQPlugins/jquery.log.js?v=20166136" ></script><script type="text/javascript" src="/scripts/JQPlugins/jquery.mousewheel-3.1.13.min.js?v=B21FE3A9" ></script><script type="text/javascript" src="/scripts/JQPlugins/JQueryPagination/jquery.pagination.js?v=181A60D6" ></script><link rel="stylesheet" text="text/css" href="/scripts/JQPlugins/JQueryPagination/pagination.css?v=1CF76902" media="all" /><script type="text/javascript" src="/scripts/JQPlugins/JQueryAutocomplete/jquery.autocomplete.1.11.4.min.js?v=C16DDE75" ></script><link rel="stylesheet" text="text/css" href="/scripts/JQPlugins/JQueryAutocomplete/jquery.autocomplete.1.11.4.min.css?v=B846EA07" media="all" /><script type="text/javascript" src="/scripts/JQPlugins/jquery.watch.js?v=2B0C232C" ></script></HEAD>
+	<BODY bottomMargin="0" leftMargin="0" topMargin="0" rightMargin="0" class="login-back">
+	    <form name="frmLogin" method="post" action="./" language="javascript" onsubmit="javascript:return WebForm_OnSubmit();" id="frmLogin">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE2MjQ5MTc2OTUPFgIeE1ZhbGlkYXRlUmVxdWVzdE1vZGUCARYCAgMPZBYCAgEPDxYOHgdKUVdhdGNoZx4OSlFBdXRvQ29tcGxldGVnHgxKUU1vdXNlV2hlZWwLKXBUc3BXZWJDb250cm9scy5KUU1vdXNlV2hlZWxWZXJzaW9uRW51bSwgQXBwX0NvZGUubXQzamZkcHgsIFZlcnNpb249MC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsAh4MSlFQYWdpbmF0aW9uZx4PSlF1ZXJ5VUlWZXJzaW9uCylsVHNwV2ViQ29udHJvbHMuSlF1ZXJ5VUlWZXJzaW9uRW51bSwgQXBwX0NvZGUubXQzamZkcHgsIFZlcnNpb249MC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsBR4USlF1ZXJ5VmVyc2lvbk1pZ3JhdGULKXFUc3BXZWJDb250cm9scy5KUXVlcnlWZXJzaW9uTWlncmF0ZUVudW0sIEFwcF9Db2RlLm10M2pmZHB4LCBWZXJzaW9uPTAuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49bnVsbAEeDUpRdWVyeVZlcnNpb24LKWpUc3BXZWJDb250cm9scy5KUXVlcnlWZXJzaW9uRW51bSwgQXBwX0NvZGUubXQzamZkcHgsIFZlcnNpb249MC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsCmRkZAgdlJLFr809prQnkq/+dL6Udmpc8BqT+G092uV1rRnF" />
+
+<script type="text/javascript">
+<!--
+var theForm = document.forms['frmLogin'];
+if (!theForm) {
+    theForm = document.frmLogin;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+// -->
+</script>
+
+
+<script src="/WebResource.axd?d=kCfzxTNug-NgRu4Lh2QbKcZHxq5sR51ieSkX_D6pWLHTuf1KPsIAmKalxbBL_yd6xi0B4xYrh9Af9KgBT1xzdg5lgwZcncaImbXmtOIGhYc1&amp;t=638628207619783110" type="text/javascript"></script>
+
+
+<script language="javascript" src="/scripts/DomValidation.js"></script>
+<script type="text/javascript">
+<!--
+function WebForm_OnSubmit() {
+return ValidatorOnSubmit();
+return true;
+}
+// -->
+</script>
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C2EE9ABB" />
+        <span id="jslibs"></span>
+		<table id="htHeader" height="7%" width="100%" >
+			<tr>
+				<td id="topnavhome" style="min-width:0px !important;">
+                  <span>
+                      <IMG height="33"  alt="ServSuite" src="/images/logo1033.png" >
+                 </span>
+				</td>
+			</tr>
+		</table>
+		<noscript>
+			<p style='COLOR: red;TEXT-ALIGN: center'>You must have a JavaScript enabled browser 
+				to use our software.</p>
+		</noscript>
+		<p id="lblCookies" style="DISPLAY: none;COLOR: red;TEXT-ALIGN: center">Your 
+			browser must allow our website to use cookies.</p>
+		<table id="content" width="100%" border="0">
+			<tr>
+				   <td>&nbsp;<br /><br /></td>
+                </tr>
+			<tr>
+				<td vAlign="middle"><!-- autocomplete="off" -->
+					 <TABLE id="Table2" cellSpacing="0" cellPadding="4" border="0" align="center"  class="table-beckground">
+							<tr>
+							    <td colspan=4 align=center>
+                                    
+							        
+							    </td>
+							</tr>
+						</TABLE>
+					 <TABLE id="Table1" cellSpacing="0" cellPadding="4" border="0" align="center" class="table-beckground">
+							<TR>
+								<TD colspan="3"></TD>
+							</TR>
+							<TR>
+								
+								<td colspan="3" ><div style="text-align: center"><span class="login-font-blue-bolder" >ServSuite &trade; Login</span></div></td>
+							</TR>
+                            
+							<TR class="spacetop_middleheadertop">
+								<TD align="right"><span id="lblUsername_6609" class="login-font-blue-bold">Email Address/Alias</span></TD>
+								<TD>
+                                 <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                    <input name="txtUserName" type="text" size="30" id="txtUserName" class="form-control" placeholder="Enter Email/Alias" />
+                                     </div>
+                                     </TD>
+								<TD></TD>
+							</TR>
+                         <tr>
+                             <td style="width: 25%" align="right">
+                                 <span id="lblPassword_12" class="login-font-blue-bold">Password</span></td>
+                             
+                             <td >
+                              
+                                 <div class="input-group">
+                                     <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                                     <input name="txtPassword" type="password" size="30" id="txtPassword" class="form-control" AutoComplete="Off" type="password" placeholder="Enter password" />
+                                 </div>
+                             </td>
+                             <td style="width: 25%;">
+                                 <span id="valPassword_42" class="btn btn-primary" controltovalidate="txtPassword" errormessage="Password Required" display="Dynamic" evaluationfunction="RequiredFieldValidatorEvaluateIsValid" initialvalue="" style="color:White;display:none;">Password Required</span></td>
+                         </tr>
+                           	<TR class="spacebottom_middleheadertop">
+								<TD align="right"></TD>
+								<TD><br /><INPUT id="txtTimeOffset" style="WIDTH: 48px; HEIGHT: 22px" type="hidden" size="2" name="txtTimeOffset">
+									<input type="submit" name="btnLogin" value="SUBMIT" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;btnLogin&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" language="javascript" id="btnLogin" class="btn btn-block   btn-flat" />
+									<INPUT class="button btn btn-block   btn-flat" id="btnReset" type="reset" value="RESET" name="btnReset" ></TD>
+								<TD></TD>
+							</TR>
+							
+							<TR>								
+								<TD colspan="3" align="center">
+								        &nbsp;&nbsp;&nbsp;&nbsp;
+									</TD>
+							</TR>
+                             <TR>
+								<TD colspan="3"></TD>
+							</TR>
+                            </TABLE>
+                    <br />
+
+					     <TABLE id="Table3" cellSpacing="0" cellPadding="4" border="0" align="center" Width="80%" >
+                             <tr><td colspan=4 align=center>
+                             <div style="text-align: center"><IMG height="27"   alt="ServSuite" src="/images/topnav/logo.png"><span></span></div></td>
+                             </tr><tr>
+							    
+							</tr>
+                             </TABLE>
+					</td>
+			</tr>
+		</table>
+		
+<script type="text/javascript">
+<!--
+var Page_Validators =  new Array(eval(_val_allString + "valPassword_42" + _val_endAllString));
+// -->
+</script>
+
+
+<script language="javascript">
+<!--
+
+var Page_ValidationActive = false;
+if (typeof(Page_DomValidationVer) == "undefined")
+    alert("Validation script is missing '/scripts/DomValidation.js'");
+else
+    ValidatorOnLoad();
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+}
+
+// -->
+</script>
+        </form>
+     <!--Task:[SSC-466] Add Google AdWords-->
+	<script type="text/javascript">
+        var google_tag_params = {
+            dynx_itemid: 'REPLACE_WITH_VALUE',
+            dynx_itemid2: 'REPLACE_WITH_VALUE',
+            dynx_pagetype: 'REPLACE_WITH_VALUE',
+            dynx_totalvalue: 'REPLACE_WITH_VALUE',
+        };
+    </script>
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        var google_conversion_id = 871883417;
+        var google_custom_params = window.google_tag_params;
+        var google_remarketing_only = true;
+        /* ]]> */
+    </script>
+    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+    </script>
+    <noscript>
+        <div style="display: inline;">
+            <img height="1" width="1" style="border-style: none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/871883417/?guid=ON&amp;script=0" />
+        </div>
+    </noscript>
+	</BODY>
+</HTML>
