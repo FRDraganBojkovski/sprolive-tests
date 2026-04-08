@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Page } from "@playwright/test";
 import { faker } from "@faker-js/faker";
 import { Browser } from "@playwright/test";
@@ -145,5 +146,22 @@ async inteligentRoutingModule(){
     await page1.getByRole('checkbox', { name: 'I am sure this is where I' }).check();
   //  await page1.getByRole('button', { name: 'Commit Changes' }).click();
 }
+=======
+import { Locator, Page } from "@playwright/test";
+import { faker } from "@faker-js/faker";
+import { delay } from "rxjs-compat/operator/delay";
+import { Browser } from "@playwright/test";
+
+
+
+export class ModulesNavigationPage {
+ readonly page: Page
+
+ constructor(page:Page){
+     
+     this.page=page
+ }
+
+>>>>>>> 4279bb2479469d18a2530214d3a6d7f5edb9f799
 
  }

@@ -1,5 +1,6 @@
 {
   "dependencies": {
+<<<<<<< HEAD
     "@types/express": "^5.0.6",
     "express": "^5.2.1",
     "force": "^0.0.3",
@@ -11,15 +12,26 @@
     "@playwright/test": "^1.58.2",
     "@types/node": "^25.5.1",
     "playwright-xray": "^0.6.22"
+=======
+    "force": "^0.0.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.1",
+    "@types/node": "^25.1.0"
+>>>>>>> 4279bb2479469d18a2530214d3a6d7f5edb9f799
   },
   "scripts": {
     "test": "playwright test",
     "test:headed": "playwright test --headed",
     "test:ui": "playwright test --ui",
+<<<<<<< HEAD
     "test:debug": "playwright test --debug",
     "test:chromium": "playwright test --project=chromium",
     "test:chromium:report": "playwright test --project=chromium && playwright show-report",
     "server": "ts-node --transpile-only server.ts"
+=======
+    "test:debug": "playwright test --debug"
+>>>>>>> 4279bb2479469d18a2530214d3a6d7f5edb9f799
   },
   "name": "sprolive-tests",
   "version": "1.0.0",
